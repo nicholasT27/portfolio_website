@@ -1,3 +1,51 @@
+<script>
+import { onMount } from 'svelte';
+import emailjs from '@emailjs/browser';
+import { PUBLIC_EMAILJS_KEY, PUBLIC_EMAILJS_TEMPLATE_ID, PUBLIC_EMAILJS_SERVICE_ID } from '$env/static/public'
+
+let fullName ="";
+let userEmail = "";
+let message = "";
+
+onMount(() => {
+    emailjs.init(PUBLIC_EMAILJS_KEY);
+});
+
+
+async function sendEmail() {
+
+  const emailData = {
+      "service_id": PUBLIC_EMAILJS_SERVICE_ID,
+      "template_id": PUBLIC_EMAILJS_TEMPLATE_ID,
+      "user_id": PUBLIC_EMAILJS_KEY,
+      "template_params": {
+        "full_name": fullName,
+        "to_name": userEmail,
+        "message": message,
+        "from_name": "nicholas"
+      }
+  }
+
+  const resp = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method:'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(emailData)
+  })
+  if (resp.status == 200){
+    console.log('email successfully sent')
+  }else{
+    const res = await resp.json();
+		formErrors = res.error;
+    console.log(formErrors)
+  }
+}
+
+</script>
+
+
 <div class="bg-gradient-to-r from-indigo-200 to-purple-200">
     <img class="h-16 w-16"src="logo.png" alt="..."/>
 
@@ -22,21 +70,21 @@
 
     <!-- Card -->
     <div class="mt-5 p-4 relative z-10 border rounded-xl sm:mt-10 md:p-10 dark:bg-gray-800 dark:border-gray-700 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl">
-      <form>
+      <form on:submit|preventDefault={sendEmail}>
         <div class="mb-4 sm:mb-8">
           <label for="hs-feedback-post-comment-name-1" class="block mb-2 text-sm font-medium dark:text-white">Full name</label>
-          <input type="text" id="hs-feedback-post-comment-name-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Full name">
+          <input bind:value={fullName} type="text" id="hs-feedback-post-comment-name-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Full name">
         </div>
 
         <div class="mb-4 sm:mb-8">
           <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Email address</label>
-          <input type="email" id="hs-feedback-post-comment-email-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Email address">
+          <input bind:value={userEmail} type="email" id="hs-feedback-post-comment-email-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Email address">
         </div>
 
         <div>
           <label for="hs-feedback-post-comment-textarea-1" class="block mb-2 text-sm font-medium dark:text-white">Message</label>
           <div class="mt-1">
-            <textarea id="hs-feedback-post-comment-textarea-1" name="hs-feedback-post-comment-textarea-1" rows="3" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Leave your message here..."></textarea>
+            <textarea bind:value={message} id="hs-feedback-post-comment-textarea-1" name="hs-feedback-post-comment-textarea-1" rows="3" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Leave your message here..."></textarea>
           </div>
         </div>
 

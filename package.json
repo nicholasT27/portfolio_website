@@ -26,7 +26,12 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@emailjs/browser": "^3.12.1",
 		"@preline/tooltip": "^2.0.2",
+		"@sendgrid/mail": "^8.1.0",
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"nodemailer": "^6.9.8",
 		"preline": "^2.0.3"
 	}
 }

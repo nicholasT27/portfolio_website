@@ -2,17 +2,19 @@
 import { onMount } from 'svelte';
 import emailjs from '@emailjs/browser';
 import { PUBLIC_EMAILJS_KEY, PUBLIC_EMAILJS_TEMPLATE_ID, PUBLIC_EMAILJS_SERVICE_ID } from '$env/static/public'
+import { writable } from 'svelte/store';
 
 let fullName ="";
 let userEmail = "";
 let message = "";
+let notification = writable("");
 
 onMount(() => {
     emailjs.init(PUBLIC_EMAILJS_KEY);
 });
 
 
-async function sendEmail() {
+async function sendEmail(evt) {
 
   const emailData = {
       "service_id": PUBLIC_EMAILJS_SERVICE_ID,
@@ -35,11 +37,16 @@ async function sendEmail() {
       body: JSON.stringify(emailData)
   })
   if (resp.status == 200){
-    console.log('email successfully sent')
+    notification.set("message successfully sent! Will reply to u as soon as possible, Tq 😉");
+    setTimeout(() => {
+      notification.set("");
+    }, 5000);
+    evt.target.reset()
   }else{
-    const res = await resp.json();
-		formErrors = res.error;
-    console.log(formErrors)
+    notification.set("message is not sent due to some error, Please check the details and try again !");
+    setTimeout(() => {
+      notification.set("");
+    }, 5000);
   }
 }
 
@@ -62,10 +69,7 @@ async function sendEmail() {
 
       <h3 class="mt-4 font-semibold ml-4">you can contact me for freelance opportunities - or just chat to chat !</h3>
       <h4 class="mt-2 font-semibold ml-4 flex">
-        Just drop your email and message at here and I will reply to you as soon as possible.
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-fill mt-1 ml-2" viewBox="0 0 16 16">
-            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8"/>
-        </svg>
+        Just drop your email and message at here and I will reply to you as soon as possible. 😁
     </h4>
 
     <!-- Card -->
@@ -73,23 +77,26 @@ async function sendEmail() {
       <form on:submit|preventDefault={sendEmail}>
         <div class="mb-4 sm:mb-8">
           <label for="hs-feedback-post-comment-name-1" class="block mb-2 text-sm font-medium dark:text-white">Full name</label>
-          <input bind:value={fullName} type="text" id="hs-feedback-post-comment-name-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Full name">
+          <input bind:value={fullName} type="text" id="hs-feedback-post-comment-name-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Full name" required>
         </div>
 
         <div class="mb-4 sm:mb-8">
           <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Email address</label>
-          <input bind:value={userEmail} type="email" id="hs-feedback-post-comment-email-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Email address">
+          <input bind:value={userEmail} type="email" id="hs-feedback-post-comment-email-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Email address" required>
         </div>
 
         <div>
           <label for="hs-feedback-post-comment-textarea-1" class="block mb-2 text-sm font-medium dark:text-white">Message</label>
           <div class="mt-1">
-            <textarea bind:value={message} id="hs-feedback-post-comment-textarea-1" name="hs-feedback-post-comment-textarea-1" rows="3" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Leave your message here..."></textarea>
+            <textarea bind:value={message} id="hs-feedback-post-comment-textarea-1" name="hs-feedback-post-comment-textarea-1" rows="3" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Leave your message here..." required></textarea>
           </div>
         </div>
 
         <div class="mt-6 grid">
           <button type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-black text-white disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Submit</button>
+        </div>
+        <div class="mt-2">
+        {$notification}
         </div>
       </form>
     </div>

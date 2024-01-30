@@ -26,12 +26,12 @@
     </div>
 
     <div class="flex justify-center items-end h-10 mt-8 relative hs-tooltip inline-block top-1 slide-up">
-        <button class="p-4 rounded-s-full rounded-e-full backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl font-semibold">
-            <span class="p-4 text-lg hover:bg-gradient-to-br from-indigo-200 via-fuchsia-200 to-blue-200 rounded-full">Home</span>
-            <span class="p-4 text-lg hover:bg-gradient-to-br from-teal-300 via-bg-indigo-400 to-purple-200 rounded-full">Portfolio</span>
-            <span class="p-4 text-lg hover:bg-gradient-to-br from-yellow-200 via-rose-300 to-orange-200 rounded-full">About</span>
-            <span class="p-4 text-lg hover:bg-gradient-to-r from-indigo-200 to-purple-200 rounded-full">Contact</span>
-        </button>
+        <div class="rounded-s-full rounded-e-full backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl font-semibold grid grid-cols-4">
+            <button class="text-center p-4 text-lg hover:bg-gradient-to-br from-indigo-200 via-fuchsia-200 to-blue-200 rounded-s-full">Home</button>
+            <button class="text-center p-4 text-lg hover:bg-gradient-to-br from-teal-300 via-bg-indigo-400 to-purple-200">Portfolio</button>
+            <button class="text-center p-4 text-lg hover:bg-gradient-to-br from-yellow-200 via-rose-300 to-orange-200">About</button>
+            <button class="text-center p-4 text-lg hover:bg-gradient-to-br from-blue-200 via-sky-300 to-blue-400 rounded-e-full">Contact</button>
+        </div>
 
 
         <audio src="background-music.mp3" loop bind:this={audio}></audio>

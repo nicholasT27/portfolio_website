@@ -1,6 +1,6 @@
 <div class="bg-gradient-to-br from-teal-300 via-bg-indigo-400 to-purple-200">
     <img class="h-16 w-16"src="logo.png" alt="..."/>
-    <h1 class="text-9xl font-semibold mt-20 ml-10">
+    <h1 class="text-9xl font-semibold mt-20 ml-10" id="portfolio-page-title">
         Portfolio
     </h1>
 
@@ -9,7 +9,7 @@
     <div class="mt-5 ml-48 border-2 border-pink-700 w-48"></div>
 
     <div class="flex">
-    <div class="mt-10 ml-48 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl portfolio-div-1 rounded-lg p-5">
+    <div class="mt-10 ml-48 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl portfolio-div-1 rounded-lg p-5 slideRight">
         <h1 class="text-2xl font-bold">Next Job Website</h1>
         <p class="text-justify font-semibold mt-2">The website is constructed using HTML, Tailwind CSS, SvelteKit, Amazon AWS and Pocketbase. 
            It serves as a dynamic job portal, facilitating job seekers in their search for employment opportunities,
@@ -22,7 +22,7 @@
     </div>
 
     <div id="next-job-pic" class="m-2">
-        <img src="portfolio-pic-1.png" alt="..." class="h-96 ml-24 mt-10 drop-shadow-xl shadow-xl"/>
+        <img src="portfolio-pic-1.png" alt="..." class="h-96 ml-10 mt-10 drop-shadow-xl shadow-xl slideLeft"/>
     </div>
     </div>
 
@@ -30,25 +30,24 @@
     <div class="mt-2 ml-48 border-2 border-rose-800 w-56"></div>
     <div class="mt-5 ml-48 border-2 border-pink-700 w-48"></div>
 
-    <div class="flex">
-        <div>
-            <img id="email-automator-pic" src="portfolio-pic-2.png" alt="..." class="ml-36 drop-shadow-xl shadow-xl mt-24"/>
-        </div>
-        <div class="ml-10 mt-10 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl portfolio-div-1 rounded-lg p-5">
-        <h1 class="text-2xl font-bold">Email Automator</h1>
-        <p class="text-justify font-semibold mt-2">
-            This application is built on Node.js and utilizes Nodemailer to handle email reception and automate the sending 
-            of auto-reply emails to recipients.
-        </p>
-        <div class="flex mt-5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right text-orange-600 mt-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            <a href="https://901ed19e.portfolio-next-job.pages.dev" target="_blank" class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Live Preview</a>
-        </div>
+    <div class="flex p-10">
+        <img id="email-automator-pic" src="portfolio-pic-2.png" alt="..." class="ml-24 mb-10 drop-shadow-xl shadow-xl mt-24 slideRight"/>
+        <div class="ml-5 mt-10 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl portfolio-div-1 rounded-lg p-5 slideLeft">
+           
+            <h1 class="text-2xl font-bold">Email Automator</h1>
+            <p class="text-justify font-semibold mt-2">
+                This application is built on Node.js and utilizes Nodemailer to handle email reception and automate the sending 
+                of auto-reply emails to recipients.
+            </p>
+            <div class="flex mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right text-orange-600 mt-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                <a href="https://901ed19e.portfolio-next-job.pages.dev" target="_blank" class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Live Preview</a>
+            </div>
     </div>
     </div>
 
-    <div class="flex">
-        <div class="ml-36 mt-20 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl portfolio-div-1 rounded-lg p-5">
+    <div class="flex p-10">
+        <div class="ml-24 mt-20 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl portfolio-div-1 rounded-lg p-5 slideRight">
         <h1 class="text-2xl font-bold">Luno Premium</h1>
         <p class="text-justify font-semibold mt-2">
             This command-line application is developed using Node.js, integrating Luno
@@ -59,10 +58,10 @@
             <a href="https://901ed19e.portfolio-next-job.pages.dev" target="_blank" class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Live Preview</a>
         </div>
         </div>
-        <div>
-            <img id="email-automator-pic" src="portfolio-pic-2.png" alt="..." class="ml-10 drop-shadow-xl shadow-xl mt-32"/>
+        <div class="wrapper">
+            <img id="email-automator-pic" src="portfolio-pic-2.png" alt="..." class="ml-5 drop-shadow-xl shadow-xl mt-32 border border-black slideLeft"/>
         </div>
-    </div>
+        </div>
 </div>
 
 <style>
@@ -78,4 +77,50 @@
     #email-automator-pic{
         width: 500px;
     }
+
+    @keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+#portfolio-page-title{
+    animation: text-clip 1s;
+}
+
+@keyframes slide-to-right {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.slideRight {
+	animation: slide-to-right 2s;
+}
+
+@keyframes slide-to-left {
+	0% {
+		opacity: 0;
+		transform: translateX(20%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.slideLeft {
+	animation: slide-to-left 2s;
+}
+
 </style>

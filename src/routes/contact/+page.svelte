@@ -53,15 +53,15 @@ async function sendEmail(evt) {
 </script>
 
 
-<div class="bg-gradient-to-r from-indigo-200 to-purple-200">
+<div class="bg-gradient-to-br from-blue-200 via-sky-300 to-blue-400">
     <img class="h-16 w-16"src="logo.png" alt="..."/>
 
-    <h1 class="text-9xl font-semibold mt-20 ml-10">
+    <h1 class="text-9xl font-semibold mt-20 ml-10" id="contact-page-title">
         Contact
     </h1>
 
     <!-- Comment Form -->
-<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto slide-up">
   <div class="mx-auto max-w-2xl">
       <h2 class="text-xl text-gray-800 font-bold sm:text-3xl dark:text-white mt-36 ml-8">
         Project in mind ?
@@ -105,3 +105,34 @@ async function sendEmail(evt) {
 </div>
 <!-- End Comment Form -->
 </div>
+
+<style>
+   @keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+#contact-page-title{
+    animation: text-clip 1s;
+}
+
+@keyframes slideUp {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.slide-up {
+	animation: slideUp 2s ease forwards;
+}
+</style>

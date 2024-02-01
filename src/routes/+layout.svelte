@@ -122,7 +122,7 @@
         }
     }
 
-    @media(min-width: 410px) and (max-width: 500px) {
+    @media(min-width: 410px) and (max-width: 699px) {
         
         #music-button{
             position:absolute;

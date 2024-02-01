@@ -53,7 +53,7 @@ async function sendEmail(evt) {
 </script>
 
 
-<div class="bg-gradient-to-br from-blue-200 via-sky-300 to-blue-400 md:h-screen lg:h-full">
+<div class="bg-gradient-to-br from-blue-200 via-sky-300 to-blue-400" id="contact-page-background">
     <img class="h-16 w-16"src="logo.png" alt="..."/>
 
     <h1 class="text-9xl font-semibold mt-20 ml-10" id="contact-page-title">
@@ -152,6 +152,12 @@ async function sendEmail(evt) {
 @media (min-width: 401px) and (max-width: 800px){
   #contact-page-title{
     font-size: 60px;
+  }
+}
+
+@media (min-height: 1179px) and (max-height: 1400px){
+  #contact-page-background{
+    height: 100vh;
   }
 }
 </style>

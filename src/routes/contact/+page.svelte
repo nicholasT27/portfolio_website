@@ -53,7 +53,7 @@ async function sendEmail(evt) {
 </script>
 
 
-<div class="bg-gradient-to-br from-blue-200 via-sky-300 to-blue-400">
+<div class="bg-gradient-to-br from-blue-200 via-sky-300 to-blue-400 md:h-screen lg:h-full">
     <img class="h-16 w-16"src="logo.png" alt="..."/>
 
     <h1 class="text-9xl font-semibold mt-20 ml-10" id="contact-page-title">
@@ -61,9 +61,9 @@ async function sendEmail(evt) {
     </h1>
 
     <!-- Comment Form -->
-<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto slide-up">
-  <div class="mx-auto max-w-2xl">
-      <h2 class="text-xl text-gray-800 font-bold sm:text-3xl dark:text-white mt-36 ml-8">
+<div class="max-w-[85rem] px-4 py-2 sm:px-6 lg:px-8 lg:py-2 mx-auto slide-up">
+  <div class="mx-auto max-w-2xl pb-24">
+      <h2 class="text-xl text-gray-800 font-bold sm:text-3xl dark:text-white mt-20 ml-8">
         Project in mind ?
       </h2>
 
@@ -134,5 +134,24 @@ async function sendEmail(evt) {
 
 .slide-up {
 	animation: slideUp 2s ease forwards;
+}
+
+@media(max-width: 289px) {
+  #contact-page-title{
+    font-size: 60px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 290px) and (max-width: 400px){
+  #contact-page-title{
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 800px){
+  #contact-page-title{
+    font-size: 60px;
+  }
 }
 </style>

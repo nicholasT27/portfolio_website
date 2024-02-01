@@ -144,7 +144,7 @@
 
     @media (min-width: 700px) and (max-width: 1000px){
         .button{
-            font-size: 30px;
+            font-size: 20px;
             padding: 20px;
         }
 

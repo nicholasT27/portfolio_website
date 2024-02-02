@@ -35,7 +35,7 @@
 					><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg
 				>
 				<a
-					href="https://901ed19e.portfolio-next-job.pages.dev"
+					href="https://cb0c89c8.portfolio-next-job.pages.dev"
 					target="_blank"
 					class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Live Preview</a
 				>

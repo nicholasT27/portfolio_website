@@ -10,9 +10,9 @@
 	<div class="mt-2 ml-2 lg:ml-48 border-2 border-rose-800 w-56" />
 	<div class="mt-5 ml-2 lg:ml-48 border-2 border-pink-700 w-48" />
 
-	<div class="flex flex-col lg:flex-row p-2">
+	<div class="flex flex-col justify-center lg:flex-row w-auto">
 		<div
-			class="mt-10 lg:ml-24 lg:max-w-lg lg:max-h-96 lg:mt-36 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg p-5 slideRight"
+			class="mt-10 lg:max-w-lg lg:max-h-96 lg:mt-16 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg p-5 slideRight"
 		>
 			<h1 class="text-2xl font-bold">Next Job Website</h1>
 			<p class="text-justify font-semibold mt-2=">
@@ -42,11 +42,11 @@
 			</div>
 		</div>
 
-		<div class="m-2 flex justify-center w-screen">
+		<div class="m-5 lg:w-4/12 flex justify-center">
 			<img
 				src="portfolio-pic-1.png"
 				alt="..."
-				class="w-4/6 lg:w-5/6 md:mt-10 mt-4 drop-shadow-xl shadow-xl slideLeft"
+				class="lg:mt-0 drop-shadow-xl shadow-xl slideLeft"
 			/>
 		</div>
 	</div>
@@ -57,16 +57,16 @@
 	<div class="mt-2 ml-2 lg:ml-48 border-2 border-rose-800 w-56" />
 	<div class="mt-5 ml-2 lg:ml-48 border-2 border-pink-700 w-48" />
 
-	<div class="flex flex-col lg:flex-row p-2">
-		<div class="flex justify-center w-full">
+	<div class="flex flex-col justify-center lg:flex-row">
+		<div class="m-5 lg:w-5/12 flex justify-center lg:justify-start">
 			<img
 				src="portfolio-pic-2.png"
 				alt="..."
-				class="lg:mb-10 mb-2 drop-shadow-xl shadow-xl md:mt-24 slideRight mt-5 w-5/6"
+				class="lg:mb-10 mb-2 drop-shadow-xl shadow-xl md:mt-24 slideRight"
 			/>
 		</div>
 		<div
-			class="lg:max-w-md w-fit lg:mr-5 lg:mt-10 mt-2 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg p-5 slideLeft"
+			class="lg:max-w-md w-fit lg:mr-5 lg:mt-10 mt-2 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg p-5"
 		>
 			<h1 class="text-2xl font-bold">Email Automator</h1>
 			<p class="text-justify font-semibold mt-2">
@@ -96,9 +96,9 @@
 		</div>
 	</div>
 
-	<div class="flex flex-col lg:flex-row p-2 pb-28">
+	<div class="flex flex-col lg:flex-row pb-28 justify-center">
 		<div
-			class="lg:max-w-md lg:ml-10 mt-20 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg p-5 slideRight"
+			class="lg:max-w-md mt-20 ml-4 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg p-5 slideRight"
 		>
 			<h1 class="text-2xl font-bold">Luno Premium</h1>
 			<p class="text-justify font-semibold mt-2">
@@ -126,8 +126,12 @@
 				>
 			</div>
 		</div>
-		<div class="lg:ml-5 lg:mt-20 mt-4 flex justify-center lg:mr-5">
-			<img src="portfolio-pic-2.png" alt="..." class="drop-shadow-xl shadow-xl" />
+		<div class="lg:mt-24 mt-4 lg:w-5/12 flex justify-center m-5">
+			<img
+				src="portfolio-pic-2.png"
+				alt="..."
+				class="drop-shadow-xl shadow-xl slideLeft"
+			/>
 		</div>
 	</div>
 </div>
@@ -165,7 +169,7 @@
 	@keyframes slide-to-left {
 		0% {
 			opacity: 0;
-			transform: translateX(20%);
+			transform: translateX(12%);
 		}
 
 		100% {

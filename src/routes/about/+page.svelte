@@ -1,5 +1,5 @@
 <script>
-  import { PUBLIC_GOOGLE_DRIVE_URL } from '$env/static/public';
+  import { PUBLIC_GOOGLE_DRIVE_URL_RESUME, PUBLIC_GOOGLE_DRIVE_URL_CERT } from '$env/static/public';
 </script>
 
 
@@ -29,7 +29,7 @@
             Next Academy - Full Stack Web Development
             <div class="flex mt-5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right text-orange-600 mt-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                <a href="https://drive.google.com/file/d/1TC5cQ-ors8yiV2AKKXMkgwWDJolJhBmW/view?usp=drive_link" target="_blank" class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Cert</a>
+                <a href={PUBLIC_GOOGLE_DRIVE_URL_CERT} target="_blank" class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Cert</a>
             </div>
 
             <div class="mt-10">
@@ -49,7 +49,7 @@
             My resume
             <div class="flex mt-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right text-orange-600 mt-0.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                <a href={PUBLIC_GOOGLE_DRIVE_URL} target="_blank" class="text-base font-semibold ml-2 hover:text-red-500">Click here to view my resume</a>
+                <a href={PUBLIC_GOOGLE_DRIVE_URL_RESUME} target="_blank" class="text-base font-semibold ml-2 hover:text-red-500">Click here to view my resume</a>
             </div>
         </h1>
         </div>

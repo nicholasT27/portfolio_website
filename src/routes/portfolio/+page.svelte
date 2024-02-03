@@ -89,7 +89,7 @@
 				<a
 					href="https://github.com/nicholasT27/email_automator"
 					target="_blank"
-					class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Live Preview</a
+					class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Source Code</a
 				>
 			</div>
 		</div>

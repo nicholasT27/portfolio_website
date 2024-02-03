@@ -70,8 +70,7 @@
 		>
 			<h1 class="text-2xl font-bold">Email Automator</h1>
 			<p class="text-justify font-semibold mt-2">
-				This application is built on Node.js and utilizes Nodemailer to handle email reception and
-				automate the sending of auto-reply emails to recipients.
+				This application is built on Node.js, Nodemailer, IMAP to monitor inbox, detects new email and sends automated replies based on predefined script.
 			</p>
 			<div class="flex mt-5">
 				<svg
@@ -88,7 +87,7 @@
 					><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg
 				>
 				<a
-					href="https://901ed19e.portfolio-next-job.pages.dev"
+					href="https://github.com/nicholasT27/email_automator"
 					target="_blank"
 					class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Live Preview</a
 				>

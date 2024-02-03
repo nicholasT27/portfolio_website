@@ -43,11 +43,7 @@
 		</div>
 
 		<div class="m-5 lg:w-4/12 flex justify-center">
-			<img
-				src="portfolio-pic-1.png"
-				alt="..."
-				class="lg:mt-0 drop-shadow-xl shadow-xl slideLeft"
-			/>
+			<img src="portfolio-pic-1.png" alt="..." class="lg:mt-0 drop-shadow-xl shadow-xl slideLeft" />
 		</div>
 	</div>
 
@@ -70,7 +66,8 @@
 		>
 			<h1 class="text-2xl font-bold">Email Automator</h1>
 			<p class="text-justify font-semibold mt-2">
-				This application is built on Node.js, Nodemailer, IMAP to monitor inbox, detects new email and sends automated replies based on predefined script.
+				This application is built on Node.js, Nodemailer, IMAP to monitor inbox, detects new email
+				and sends automated replies based on predefined script.
 			</p>
 			<div class="flex mt-5">
 				<svg
@@ -89,7 +86,7 @@
 				<a
 					href="https://github.com/nicholasT27/email_automator"
 					target="_blank"
-					class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Source Code</a
+					class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">View Source Code</a
 				>
 			</div>
 		</div>
@@ -102,7 +99,7 @@
 			<h1 class="text-2xl font-bold">Luno Premium</h1>
 			<p class="text-justify font-semibold mt-2">
 				This command-line application is developed using Node.js, integrating Luno and Binance APIs
-				to console logs out the price difference between Luno and Binance of BTC.
+				to console logs out the price difference between Luno and Binance for different cryptocurrency.
 			</p>
 			<div class="flex mt-5">
 				<svg
@@ -119,18 +116,14 @@
 					><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg
 				>
 				<a
-					href="https://901ed19e.portfolio-next-job.pages.dev"
+					href="https://github.com/nicholasT27/luno-premium"
 					target="_blank"
-					class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Live Preview</a
+					class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">View Source Code</a
 				>
 			</div>
 		</div>
 		<div class="lg:mt-24 mt-4 lg:w-5/12 flex justify-center m-5">
-			<img
-				src="portfolio-pic-2.png"
-				alt="..."
-				class="drop-shadow-xl shadow-xl slideLeft"
-			/>
+			<img src="portfolio-pic-3.png" alt="..." class="drop-shadow-xl shadow-xl slideLeft" />
 		</div>
 	</div>
 </div>

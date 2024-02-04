@@ -66,7 +66,7 @@
 			/>
 		</div>
 		<div
-			class="lg:max-w-md w-fit lg:mr-5 lg:mt-10 mt-2 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg p-5"
+			class="slideLeft lg:max-w-md w-fit lg:mr-5 lg:mt-10 mt-2 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg p-5"
 		>
 			<h1 class="text-2xl font-bold">Email Automator</h1>
 			<p class="text-justify font-semibold mt-2">

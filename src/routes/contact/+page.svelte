@@ -52,6 +52,9 @@ async function sendEmail(evt) {
 
 </script>
 
+<svelte:head>
+	<title>Nicholas | Contact</title>
+</svelte:head>
 
 <div class="bg-gradient-to-br from-blue-200 via-sky-300 to-blue-400" id="contact-page-background">
     <img class="h-16 w-16"src="logo.png" alt="..."/>

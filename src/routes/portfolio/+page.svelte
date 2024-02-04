@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Nicholas | Portfolio</title>
+</svelte:head>
+
 <div class="bg-gradient-to-br from-teal-300 via-bg-indigo-400 to-purple-200">
 	<img class="h-16 w-16" src="logo.png" alt="..." />
 	<h1 class="text-6xl md:text-9xl font-semibold mt-20 lg:ml-10 ml-2" id="portfolio-page-title">

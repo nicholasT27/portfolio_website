@@ -16,7 +16,9 @@
     // }
 </script>
 
-
+<svelte:head>
+	<title>Nicholas | Web Developer</title>
+</svelte:head>
 
 <div class="bg-gradient-to-br from-indigo-200 via-fuchsia-200 to-blue-200 h-screen">
     <img id="logo" class="h-16 w-16"src="logo.png" alt="..."/>

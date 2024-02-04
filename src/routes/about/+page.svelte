@@ -2,6 +2,9 @@
   import { PUBLIC_GOOGLE_DRIVE_URL_RESUME, PUBLIC_GOOGLE_DRIVE_URL_CERT } from '$env/static/public';
 </script>
 
+<svelte:head>
+	<title>Nicholas | About</title>
+</svelte:head>
 
 <div class="bg-gradient-to-br from-orange-200 via-rose-300 to-yellow-200 h-full">
     <img class="h-16 w-16"src="logo.png" alt="..."/>

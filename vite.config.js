@@ -6,7 +6,6 @@ export default defineConfig({
 	build: {
     rollupOptions: {
       input: {
-        main: 'src/main.js',
         vendor: 'node_modules/preline/dist/preline.js'
       }
     }

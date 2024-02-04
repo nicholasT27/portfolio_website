@@ -64,8 +64,8 @@ async function sendEmail(evt) {
     </h1>
 
     <!-- Comment Form -->
-<div class="max-w-[85rem] px-4 py-2 sm:px-6 lg:px-8 lg:py-2 mx-auto">
-  <div class="mx-auto max-w-2xl pb-24 slide-up">
+<div class="max-w-[85rem] px-4 py-2 sm:px-6 lg:px-8 lg:py-2 mx-auto slide-up">
+  <div class="mx-auto max-w-2xl pb-24">
       <h2 class="text-xl text-gray-800 font-bold sm:text-3xl dark:text-white mt-20 ml-8">
         Project in mind ?
       </h2>
@@ -76,7 +76,7 @@ async function sendEmail(evt) {
     </h4>
 
     <!-- Card -->
-    <div class="mt-5 p-4 relative z-10 border rounded-xl sm:mt-10 md:p-10 dark:bg-gray-800 dark:border-gray-700 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl">
+    <div class="mt-5 p-4 border rounded-xl sm:mt-10 md:p-10 dark:bg-gray-800 dark:border-gray-700 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl">
       <form on:submit|preventDefault={sendEmail}>
         <div class="mb-4 sm:mb-8">
           <label for="hs-feedback-post-comment-name-1" class="block mb-2 text-sm font-medium dark:text-white">Full name</label>
@@ -123,22 +123,6 @@ async function sendEmail(evt) {
     animation: text-clip 1s;
 }
 
-@keyframes slideUp {
-	0% {
-		opacity: 0;
-		transform: translateY(100%);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.slide-up {
-	animation: slideUp 2s ease forwards;
-}
-
 @media(max-width: 289px) {
   #contact-page-title{
     font-size: 60px;
@@ -158,9 +142,9 @@ async function sendEmail(evt) {
   }
 }
 
-@media (min-height: 1179px) and (max-height: 1400px){
+/* @media (min-height: 1179px) and (max-height: 1400px){
   #contact-page-background{
     height: 100vh;
   }
-}
+} */
 </style>

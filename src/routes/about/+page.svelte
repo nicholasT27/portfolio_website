@@ -80,11 +80,13 @@
 @keyframes slide-to-right {
 	0% {
 		opacity: 0;
+    visibility: hidden;
 		transform: translateX(-100%);
 	}
 
 	100% {
 		opacity: 1;
+    visibility: visible;
 		transform: translateX(0);
 	}
 }
@@ -96,11 +98,13 @@
 @keyframes slide-to-left {
 	0% {
 		opacity: 0;
+    visibility: hidden;
 		transform: translateX(10%);
 	}
 
 	100% {
 		opacity: 1;
+    visibility: visible;
 		transform: translateX(0);
 	}
 }

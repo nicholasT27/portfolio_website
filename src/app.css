@@ -15,21 +15,23 @@
 }
 
 .slide-down {
-	animation: slideDown 2s ease forwards;
+	animation: slideDown 2s;
 }
 
 @keyframes slideUp {
 	0% {
 		opacity: 0;
+		visibility: hidden;
 		transform: translateY(100%);
 	}
 
 	100% {
 		opacity: 1;
+		visibility: visible;
 		transform: translateY(0);
 	}
 }
 
 .slide-up {
-	animation: slideUp 2s;
+	animation: slideUp 2s ease forwards;
 }

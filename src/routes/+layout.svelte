@@ -4,7 +4,7 @@
   import { writable } from 'svelte/store';
 
   afterNavigate(() => {
-    HSStaticMethods.autoInit();
+    window.HSStaticMethods.autoInit();
   });
 
     let audio;

@@ -98,7 +98,7 @@
 
 	<div class="flex flex-col lg:flex-row pb-28 justify-center">
 		<div
-			class="lg:max-w-md mt-20 ml-4 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg p-5 slideRight"
+			class="lg:max-w-md mt-20 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg p-5 slideRight"
 		>
 			<h1 class="text-2xl font-bold">Luno Premium</h1>
 			<p class="text-justify font-semibold mt-2">
@@ -149,13 +149,11 @@
 	@keyframes slide-to-right {
 		0% {
 			opacity: 0;
-			visibility: hidden;
 			transform: translateX(-100%);
 		}
 
 		100% {
 			opacity: 1;
-			visibility: visible;
 			transform: translateX(0);
 		}
 	}
@@ -164,16 +162,16 @@
 		animation: slide-to-right 2s;
 	}
 
+
+@media(min-width: 1024px){
 	@keyframes slide-to-left {
 		0% {
 			opacity: 0;
-			visibility: hidden;
 			transform: translateX(12%);
 		}
 
 		100% {
 			opacity: 1;
-			visibility: visible;
 			transform: translateX(0);
 		}
 	}
@@ -181,4 +179,5 @@
 	.slideLeft {
 		animation: slide-to-left 2s ease;
 	}
+}
 </style>

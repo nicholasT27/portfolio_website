@@ -95,22 +95,22 @@
 	animation: slide-to-right 2s;
 }
 
-@keyframes slide-to-left {
-	0% {
-		opacity: 0;
-    visibility: hidden;
-		transform: translateX(10%);
+@media(min-width: 1024px){
+	@keyframes slide-to-left {
+		0% {
+			opacity: 0;
+			transform: translateX(12%);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 
-	100% {
-		opacity: 1;
-    visibility: visible;
-		transform: translateX(0);
+	.slideLeft {
+		animation: slide-to-left 2s ease;
 	}
-}
-
-.slideLeft {
-	animation: slide-to-left 2s;
 }
 
 @media(max-width: 289px) {

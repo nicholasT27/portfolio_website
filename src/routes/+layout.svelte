@@ -34,12 +34,12 @@
 
     function goToAbout() {
         window.scroll(0, 0);
-        goto("/contact");
+        goto("/about");
     }
 
     function goToContact(){
         window.scroll(0,0);
-        goto("/about")
+        goto("/contact")
     }
 </script>
 

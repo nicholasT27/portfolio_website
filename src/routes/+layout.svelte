@@ -48,7 +48,7 @@
 <div id="navBar"class="fixed bottom-24 w-full">
 <div class="flex justify-center items-end h-10 mt-8 absolute inline-block slide-up w-full z-30 bg-transparent">
         <div class="rounded-s-full rounded-e-full backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl font-semibold grid grid-cols-4">
-            <button class="button text-center p-4 text-lg hover:bg-gradient-to-br from-indigo-200 via-fuchsia-200 to-blue-200 rounded-s-full" href="/">Home</button>
+            <a class="button text-center p-4 text-lg hover:bg-gradient-to-br from-indigo-200 via-fuchsia-200 to-blue-200 rounded-s-full" href="/">Home</a>
             <button on:click={goToPortfolio} class="button text-center p-4 text-lg hover:bg-gradient-to-br from-teal-300 via-bg-indigo-400 to-purple-200">Portfolio</button>
             <button on:click={goToAbout} class="button text-center p-4 text-lg hover:bg-gradient-to-br from-yellow-200 via-rose-300 to-orange-200">About</button>
             <button on:click={goToContact} class="button text-center p-4 text-lg hover:bg-gradient-to-br from-blue-200 via-sky-300 to-blue-400 rounded-e-full">Contact</button>

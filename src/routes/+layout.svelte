@@ -58,7 +58,7 @@
         <audio src="background-music.mp3" loop bind:this={audio}></audio>
 
         <div class="flex mb-14 mt-2 border border-black">
-        <div class="hs-tooltip">
+        <!-- <div class="hs-tooltip"> -->
          <button id="music-button" on:click={togglePlayPause} class="hs-tooltip-toggle absolute lg:right-24 p-2 rounded-lg bg-white/60 drop-shadow-xl shadow-xl">
             {#if $play}
             <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="-0.5 0 25 25" fill="none">
@@ -77,10 +77,10 @@
 
              {/if}  
         </button>
-        <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-white rounded-lg drop-shadow-xl shadow-xl" role="tooltip">
+        <!-- <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-white rounded-lg drop-shadow-xl shadow-xl " role="tooltip">
                 {$play ? 'play music' : 'mute music'}
         </span>
-        </div>
+        </div> -->
 
         <div class="hs-tooltip">
         <button id="backToTop" on:click={backToTop} class="bg-white/60 drop-shadow-xl shadow-xl absolute lg:right-6 p-3 rounded-lg hs-tooltip-toggle">

@@ -58,8 +58,8 @@
         <audio src="background-music.mp3" loop bind:this={audio}></audio>
 
         <div class="flex mb-14 mt-2 border border-black">
-        <!-- <div class="hs-tooltip"> -->
-         <button id="music-button" on:click={togglePlayPause} class="hs-tooltip-toggle absolute lg:right-24 p-2 rounded-lg bg-white/60 drop-shadow-xl shadow-xl">
+        <div class="hs-tooltip">
+         <!-- <button id="music-button" on:click={togglePlayPause} class="hs-tooltip-toggle absolute lg:right-24 p-2 rounded-lg bg-white/60 drop-shadow-xl shadow-xl">
             {#if $play}
             <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="-0.5 0 25 25" fill="none">
                 <path d="M12.5493 4.50005C11.3193 4.04005 8.70926 5.49996 6.54926 7.40996H4.94922C3.88835 7.40996 2.87093 7.83145 2.12079 8.58159C1.37064 9.33174 0.949219 10.3491 0.949219 11.41V13.41C0.949219 14.4708 1.37064 15.4883 2.12079 16.2385C2.87093 16.9886 3.88835 17.41 4.94922 17.41H6.54926C8.65926 19.35 11.2693 20.78 12.5493 20.33C14.6493 19.55 14.9992 15.33 14.9992 12.41C14.9992 9.48996 14.6493 5.28005 12.5493 4.50005Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -76,22 +76,23 @@
             </svg>
 
              {/if}  
-        </button>
+        </button> -->
         <!-- <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-white rounded-lg drop-shadow-xl shadow-xl " role="tooltip">
                 {$play ? 'play music' : 'mute music'}
         </span>
         </div> -->
 
-        <!-- <div class="hs-tooltip"> -->
+        <div class="hs-tooltip">
         <button id="backToTop" on:click={backToTop} class="bg-white/60 drop-shadow-xl shadow-xl absolute lg:right-6 p-3 rounded-lg hs-tooltip-toggle">
             <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5"/>
             </svg>
         </button>
-        <!-- <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-white rounded-lg drop-shadow-xl shadow-xl" role="tooltip">
+        <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-white rounded-lg drop-shadow-xl shadow-xl" role="tooltip">
             back to top
         </span>
-        </div> -->
+        </div>
+        </div>
     </div>
     </div>
 </div>

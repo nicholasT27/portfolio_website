@@ -100,11 +100,11 @@
 <style>
     @media(min-width: 270px) and (max-width: 350px) {
         
-        #music-button{
+        /* #music-button{
             position:absolute;
             right: 8px;
             bottom: 150px;
-        }
+        } */
 
         #backToTop{
             position: absolute;
@@ -124,11 +124,11 @@
 
     @media(min-width: 360px) and (max-width: 400px) {
         
-        #music-button{
+        /* #music-button{
             position:absolute;
             right: 8px;
             bottom: 150px;
-        }
+        } */
 
         #backToTop{
             position: absolute;
@@ -139,11 +139,11 @@
 
     @media(min-width: 410px) and (max-width: 699px) {
         
-        #music-button{
+        /* #music-button{
             position:absolute;
             right: 8px;
             bottom: 150px;
-        }
+        } */
 
         #backToTop{
             position: absolute;
@@ -163,11 +163,11 @@
             padding: 20px;
         }
 
-        #music-button{
+        /* #music-button{
             position:absolute;
             right: 8px;
             bottom: 150px;
-        }
+        } */
 
         #backToTop{
             position: absolute;

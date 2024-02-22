@@ -6,7 +6,7 @@
 	<title>Nicholas | About</title>
 </svelte:head>
 
-<div class="bg-gradient-to-br from-orange-200 via-rose-300 to-yellow-200 h-full">
+<div class="bg-gradient-to-br from-orange-200 via-rose-300 to-yellow-200 h-full overflow-x-hidden">
     <img class="h-16 w-16"src="logo.png" alt="..."/>
     <h1 class="text-9xl font-semibold mt-20 ml-10" id="about-page-title">
         About
@@ -95,11 +95,10 @@
 	animation: slide-to-right 2s;
 }
 
-@media(min-width: 1024px){
 	@keyframes slide-to-left {
 		0% {
 			opacity: 0;
-			transform: translateX(12%);
+			transform: translateX(100%);
 		}
 
 		100% {
@@ -111,7 +110,6 @@
 	.slideLeft {
 		animation: slide-to-left 2s ease;
 	}
-}
 
 @media(max-width: 289px) {
   #about-page-title{

@@ -2,7 +2,7 @@
 	<title>Nicholas | Portfolio</title>
 </svelte:head>
 
-<div class="bg-gradient-to-br from-teal-300 via-bg-indigo-400 to-purple-200">
+<div class="bg-gradient-to-br from-teal-300 via-bg-indigo-400 to-purple-200 overflow-x-hidden">
 	<img class="h-16 w-16" src="logo.png" alt="..." />
 	<h1 class="text-6xl md:text-9xl font-semibold mt-20 lg:ml-10 ml-2" id="portfolio-page-title">
 		Portfolio
@@ -163,21 +163,16 @@
 	}
 
 
-@media(min-width: 1024px){
 	@keyframes slide-to-left {
 		0% {
-			opacity: 0;
-			transform: translateX(12%);
-		}
-
-		100% {
-			opacity: 1;
-			transform: translateX(0);
-		}
+                transform: translateX(100%);
+            }
+        100% {
+                transform: translateX(0);
+            }
 	}
 
 	.slideLeft {
-		animation: slide-to-left 2s ease;
+		animation: slide-to-left 2s ease-out;
 	}
-}
 </style>

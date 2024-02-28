@@ -20,7 +20,7 @@
 		>
 			<h1 class="text-2xl font-bold">Next Job Website</h1>
 			<p class="text-justify font-semibold mt-2=">
-				The website is constructed using HTML, Tailwind CSS, SvelteKit, Amazon AWS and Pocketbase.
+				The website is constructed using HTML, CSS, Javascript, Flowbite, Daisy UI, Tailwind CSS, SvelteKit, Amazon AWS and Pocketbase.
 				It serves as a dynamic job portal, facilitating job seekers in their search for employment
 				opportunities, while employers can seamlessly post and manage job vacancies on the platform.
 			</p>

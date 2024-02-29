@@ -1,3 +1,30 @@
+<script>
+import { onMount } from 'svelte';
+
+  let emailDivision;
+  let lunoDivision;
+
+  onMount ( () => {
+    emailDivision = document.getElementById("emailDiv");
+    lunoDivision = document.getElementById("lunoDiv");
+  })
+  
+  const scrollFunc = () => {
+     const y = window.scrollY;
+     console.log(y)
+     if( y >= 400 ) {
+       emailDivision.style.display = "flex";
+     }
+     
+     if ( y >= 1000 ) {
+      lunoDivision.style.display = "flex";
+     }
+  }
+
+  window.addEventListener("scroll", scrollFunc);
+
+</script>
+
 <svelte:head>
 	<title>Nicholas | Portfolio</title>
 </svelte:head>
@@ -57,7 +84,7 @@
 	<div class="mt-2 ml-2 lg:ml-48 border-2 border-rose-800 w-56" />
 	<div class="mt-5 ml-2 lg:ml-48 border-2 border-pink-700 w-48" />
 
-	<div class="flex flex-col justify-center lg:flex-row">
+	<div id="emailDiv" class="flex flex-col justify-center lg:flex-row">
 		<div class="m-5 lg:w-5/12 flex justify-center lg:justify-start">
 			<img
 				src="portfolio-pic-2.png"
@@ -96,7 +123,7 @@
 		</div>
 	</div>
 
-	<div class="flex flex-col lg:flex-row pb-28 justify-center">
+	<div id="lunoDiv" class="flex flex-col lg:flex-row pb-28 justify-center">
 		<div
 			class="lg:max-w-md mt-20 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg p-5 slideRight"
 		>
@@ -133,6 +160,14 @@
 </div>
 
 <style>
+	#emailDiv{
+		display: none;
+	}
+
+	#lunoDiv{
+		display: none;
+	}
+
 	@keyframes text-clip {
 		from {
 			clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);

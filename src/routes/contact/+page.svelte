@@ -121,6 +121,7 @@ async function sendEmail(evt) {
 
 #contact-page-title{
     animation: text-clip 1s;
+    font-family: 'Young-serif', serif;
 }
 
 @media(max-width: 289px) {

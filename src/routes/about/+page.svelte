@@ -17,7 +17,7 @@
        eduDivision.style.display = "flex";
      }
      
-     if ( y >= 600 ) {
+     if ( y >= 550 ) {
       resumeDivision.style.display = "flex";
      }
   }
@@ -38,7 +38,7 @@
 
     <div class="flex justify-center flex-col md:flex-row md:ml-36 p-2 lg:ml-44 w-fit" >
         <div class="flex flex-col">
-          <div class="w-10 text-center md:ml-16 ml-10 mt-8 font-semibold slideRight">Info</div>
+          <div id="title" class="w-10 text-center md:ml-16 ml-10 mt-8 font-semibold slideRight text-cyan-800">Info</div>
           <h1 class="md:max-w-lg slideRight text-2xl p-5 font-bold backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg">A web developer passionate about creating <span class="text-fuchsia-700">clean</span> and <span class="text-pink-600">intuitive user experiences</span>. Proficient in <span class="text-blue-600">HTML</span>, <span class="text-teal-600">CSS</span>, and <span class="text-lime-600">JavaScript</span>, I enjoy turning ideas into interactive websites. Eager to learn and contribute to dynamic projects, I'm excited about the possibilities in <span class="text-purple-500">web development</span> !!!</h1>
         </div>
         <div class="flex justify-center">
@@ -51,7 +51,7 @@
             <img src="profile-image-4.png" class="w-80 h-80 mt-8 slideRight" alt=""  id="image1"/>
         </div>
         <div class="flex flex-col slideLeft" id="div1">
-        <div class="w-10 text-center ml-10 mb-2 font-semibold">Education</div>
+        <div id="title" class="w-10 text-center ml-10 mb-2 font-semibold text-blue-800">Education</div>
         <h1 class="md:max-w-lg text-2xl font-bold pt-10 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl p-5 rounded-lg flex flex-col">
             Next Academy - Full Stack Web Development
             <div class="flex mt-5">
@@ -71,7 +71,7 @@
 
     <div id="resumeDiv" class="flex flex-col md:flex-row justify-center p-2 mt-10 pb-10">
         <div class="flex flex-col h-fit mt-10">
-        <div class="font-semibold slideRight h-fit w-fit ml-10">Resume</div>
+        <div id="title" class="text-indigo-700 font-semibold slideRight h-fit w-fit ml-10">Resume</div>
         <h1 class="lg:max-w-md text-2xl h-56 font-bold mt-3 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl p-5 rounded-lg slideRight">
             My resume
             <div class="flex mt-2">
@@ -108,6 +108,10 @@
 
 #about-page-title{
     animation: text-clip 1s;
+}
+
+#title, #about-page-title{
+    font-family: 'Young-serif', serif;
 }
 
 @keyframes slide-to-right {

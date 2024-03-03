@@ -7,20 +7,20 @@
     window.HSStaticMethods.autoInit();
   });
 
-    let audio;
-    let play = writable(true);
+    // let audio;
+    // let play = writable(true);
 
-    function togglePlayPause(){
+    // function togglePlayPause(){
 
-        play.update(state => !state);
+    //     play.update(state => !state);
 
-        if($play == false){
-            audio.play()
-        }else{
-            audio.pause()
-        }
+    //     if($play == false){
+    //         audio.play()
+    //     }else{
+    //         audio.pause()
+    //     }
        
-    }
+    // }
 
     function backToTop() {
        document.body.scrollTop = 0; //For Safari.
@@ -55,7 +55,7 @@
         </div>
 
 
-        <audio src="background-music.mp3" loop bind:this={audio}></audio>
+        <!-- <audio src="background-music.mp3" loop bind:this={audio}></audio> -->
 
         <div class="flex mb-14 mt-2 border border-black">
         <div class="hs-tooltip">

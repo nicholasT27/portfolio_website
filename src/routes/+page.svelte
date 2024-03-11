@@ -31,7 +31,7 @@
 			to make them <span class="text-rose-800">real, accessible.</span>
 		</h1>
 		<div id="image-div">
-			<img class="lg:h-96 lg:w-full border border-black" src="sayhi.gif" alt="..." />
+			<img class="lg:h-96 lg:w-full" src="sayhi.gif" alt="..." />
 		</div>
 	</div>
 </div>

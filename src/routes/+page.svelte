@@ -112,7 +112,7 @@
 		#image-div {
 			width: 300px;
 			height: 300px;
-			margin-left: 90px;
+			margin-left: 60px;
 			margin-top: 20px;
 		}
 

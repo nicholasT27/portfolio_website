@@ -51,8 +51,8 @@
 		}
 
 		#image-div {
-			width: 300px;
-			height: 300px;
+			width: 200px;
+			height: 200px;
 			margin-left: 90px;
 			margin-top: 20px;
 		}
@@ -110,8 +110,8 @@
 		}
 
 		#image-div {
-			width: 250px;
-			height: 250px;
+			width: 300px;
+			height: 300px;
 			margin-left: 90px;
 			margin-top: 20px;
 		}

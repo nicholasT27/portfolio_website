@@ -47,7 +47,7 @@
 
 <div id="navBar" class="fixed bottom-24 w-full">
 	<div
-		class="flex justify-center items-end h-10 ml-8 mt-8 absolute inline-block slide-up w-full bg-transparent"
+		class="flex justify-center items-end h-10 mt-8 absolute inline-block slide-up w-full bg-transparent"
 	>
 		<div
 			class="rounded-s-full rounded-e-full backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl font-semibold grid grid-cols-4"
@@ -104,7 +104,7 @@
 					<button
 						id="backToTop"
 						on:click={backToTop}
-						class="mr-8 bg-white/60 drop-shadow-xl shadow-xl absolute lg:right-6 p-3 rounded-lg hs-tooltip-toggle"
+						class="bg-white/60 drop-shadow-xl shadow-xl absolute lg:right-6 p-3 rounded-lg hs-tooltip-toggle"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

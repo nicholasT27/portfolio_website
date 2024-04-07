@@ -182,7 +182,7 @@
 					<!-- End Item -->
 				</div>
 				<!-- End Timeline -->
-				<img src="certificate.png" alt="" class="lg:w-36 w-28 absolute right-1 sm:bottom-1 bottom-36" />
+				<img src="certificate.png" alt="" class="lg:w-36 w-28 absolute right-1 sm:bottom-1 bottom-40" />
 			</div>
 		</div>
 	</div>

@@ -22,16 +22,19 @@
 
 <div class="bg-gradient-to-br from-indigo-200 via-fuchsia-200 to-blue-200 h-screen">
 	<img id="logo" class="h-16 w-16" src="logo.png" alt="..." />
-	<div id="title-div" class="flex slide-down justify-center">
-		<h1 id="title" class="h-fit text-center text-3xl lg:my-16 font-bold md:ml-10 lg:ml-12">
+	<div id="title-div" class="flex slide-down justify-center flex-col sm:flex-row md:flex-col lg:flex-row">
+		<div class="flex justify-center">
+			<h1 id="title" class="h-fit text-center text-3xl lg:my-16 font-bold md:ml-10 lg:ml-12">
 			Hi My name is Siang. A passionate young <span class="text-violet-800"> web developer</span>
 			that loves <span class="text-indigo-800">creating</span>,
 			<span class="text-fuchsia-800">imaginating</span> and
 			<span class="text-pink-700">coding things</span>
 			to make them <span class="text-rose-800">real, accessible.</span>
-		</h1>
-		<div id="image-div">
-			<img class="lg:h-96 lg:w-full" src="sayhi.gif" alt="..." />
+			</h1>
+		</div>
+		
+		<div id="image-div w-full">
+			<img class="lg:h-96" src="sayhi.gif" alt="..." />
 		</div>
 	</div>
 </div>
@@ -45,16 +48,8 @@
 	@media (min-width: 360px) and (max-width: 400px) {
 		#title {
 			font-size: 27px;
-			margin-left: 40px;
 			margin-top: 20px;
 			width: 300px;
-		}
-
-		#image-div {
-			width: 200px;
-			height: 200px;
-			margin-left: 90px;
-			margin-top: 20px;
 		}
 
 		#title-div {
@@ -76,13 +71,6 @@
 			width: 230px;
 		}
 
-		#image-div {
-			width: 200px;
-			height: 200px;
-			margin-left: 45px;
-			margin-top: 20px;
-		}
-
 		#title-div {
 			flex-direction: column;
 			text-align: center;
@@ -97,7 +85,6 @@
 	@media (width: 390px) {
 		#title {
 			margin-top: 80px;
-			margin-left: 50px;
 		}
 	}
 
@@ -107,13 +94,6 @@
 			margin-left: 15px;
 			margin-top: 60px;
 			width: 390px;
-		}
-
-		#image-div {
-			width: 300px;
-			height: 300px;
-			margin-left: 60px;
-			margin-top: 20px;
 		}
 
 		#title-div {
@@ -132,13 +112,8 @@
 			width: 700px;
 		}
 
-		#image-div {
-			width: 800px;
-			height: 700px;
-		}
-
 		#title-div {
-			margin-top: 200px;
+			margin-top: 50px;
 		}
 	}
 

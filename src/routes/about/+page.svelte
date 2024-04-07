@@ -1,29 +1,46 @@
 <script>
-  import { PUBLIC_GOOGLE_DRIVE_URL_RESUME, PUBLIC_GOOGLE_DRIVE_URL_CERT } from '$env/static/public';
+	import { PUBLIC_GOOGLE_DRIVE_URL_RESUME, PUBLIC_GOOGLE_DRIVE_URL_CERT } from '$env/static/public';
 	import { onMount } from 'svelte';
+	import { writable } from 'svelte/store';
 
-  let eduDivision;
-  let resumeDivision;
+	let introDivision;
+	let eduDivision;
+	let resumeDivision;
+	let isScrollToEnd = writable(true);
 
-  onMount ( () => {
-    eduDivision = document.getElementById("eduDiv");
-    resumeDivision = document.getElementById("resumeDiv");
-  })
-  
-  const scrollFunc = () => {
-     const y = window.scrollY;
-     console.log(y)
-     if( y >= 100 ) {
-       eduDivision.style.display = "flex";
-     }
-     
-     if ( y >= 550 ) {
-      resumeDivision.style.display = "flex";
-     }
-  }
+	onMount(() => {
+		introDivision = document.getElementById('introDiv');
+		eduDivision = document.getElementById('eduDiv');
+		resumeDivision = document.getElementById('resumeDiv');
+		isScrollToEnd.set(false);
+	});
 
-  window.addEventListener("scroll", scrollFunc);
+	const scrollFunc = () => {
+		const y = window.scrollY;
 
+
+		
+		if (!$isScrollToEnd) {
+		if (y >= 0) {
+			eduDivision.classList.add('opacity-0');
+			eduDivision.classList.remove('Up');
+			resumeDivision.classList.add('opacity-0');
+			resumeDivision.classList.remove('Up');
+		}
+
+		if (y >= 500) {
+			eduDivision.classList.add('Up');
+			eduDivision.classList.remove('opacity-0');
+		}
+
+		if (y >= 500) {
+			resumeDivision.classList.add('Up');
+			resumeDivision.classList.remove('opacity-0');
+			isScrollToEnd.set(true);
+		}
+		};
+	}
+	window.addEventListener('scroll', scrollFunc);
 </script>
 
 <svelte:head>
@@ -31,139 +48,270 @@
 </svelte:head>
 
 <div class="bg-gradient-to-br from-orange-200 via-rose-300 to-yellow-200 h-full overflow-x-hidden">
-    <img class="h-16 w-16"src="logo.png" alt="..."/>
-    <h1 class="text-9xl font-semibold mt-20 ml-10" id="about-page-title">
-        About
-    </h1>
+	<img class="h-16 w-16" src="logo.png" alt="..." />
 
-    <div class="flex justify-center flex-col md:flex-row md:ml-36 p-2 lg:ml-44 w-fit" >
-        <div class="flex flex-col">
-          <div id="title" class="w-10 text-center md:ml-16 ml-10 mt-8 font-semibold slideRight text-cyan-800">Info</div>
-          <h1 class="md:max-w-lg slideRight text-2xl p-5 font-bold backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl rounded-lg">A web developer passionate about creating <span class="text-fuchsia-700">clean</span> and <span class="text-pink-600">intuitive user experiences</span>. Proficient in <span class="text-blue-600">HTML</span>, <span class="text-teal-600">CSS</span>, and <span class="text-lime-600">JavaScript</span>, I enjoy turning ideas into interactive websites. Eager to learn and contribute to dynamic projects, I'm excited about the possibilities in <span class="text-purple-500">web development</span> !!!</h1>
-        </div>
-        <div class="flex justify-center">
-          <img src="profile-image-2.png" class="w-96 h-96 slideLeft" alt=""/>
-        </div>
-    </div>
+	<div class="flex">
+		<div class="relative w-96 sm:h-80 h-64">
+			<h1
+				class="text-6xl sm:text-9xl font-semibold mt-20 lg:ml-10 ml-2 absolute z-20"
+				id="about-page-title"
+			>
+				About
+			</h1>
 
-    <div id="eduDiv" class="flex flex-col md:flex-row p-2 mt-24 justify-center">
-        <div class="flex justify-center">
-            <img src="profile-image-4.png" class="w-80 h-80 mt-8 slideRight" alt=""  id="image1"/>
-        </div>
-        <div class="flex flex-col slideLeft" id="div1">
-        <div id="title" class="w-10 text-center ml-10 mb-2 font-semibold text-blue-800">Education</div>
-        <h1 class="md:max-w-lg text-2xl font-bold pt-10 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl p-5 rounded-lg flex flex-col">
-            Next Academy - Full Stack Web Development
-            <div class="flex mt-5">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right text-orange-600 mt-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                <a href={PUBLIC_GOOGLE_DRIVE_URL_CERT} target="_blank" class="ml-1 font-semibold text-base mt-0.5 hover:text-red-500">Cert</a>
-            </div>
+			<h1
+				class="text-6xl sm:text-9xl font-semibold mt-20 lg:ml-10 ml-2 absolute z-10 top-10 left-5 text-gray-200 opacity-50"
+				id="about-page-title"
+			>
+				About
+			</h1>
+		</div>
 
-            <div class="mt-10">
-                <span class="mt-10">Wawasan Open University</span>
-                <div class="mt-2 text-base capitalize">bachelor of information technology (honours) multimedia systems</div>
-                <span class="mt-2 text-sm capitalize">major in multimedia and web development</span>
-                <div class="mt-2 text-xs">2019 - 2025 (expected)</div>
-            </div>
-        </h1>
-        </div>
-    </div>
+		<div class="relative flex items-center">
+			<img src="about.png" class="w-72" alt="" />
+		</div>
+	</div>
 
-    <div id="resumeDiv" class="flex flex-col md:flex-row justify-center p-2 mt-10 pb-10">
-        <div class="flex flex-col h-fit mt-10">
-        <div id="title" class="text-indigo-700 font-semibold slideRight h-fit w-fit ml-10">Resume</div>
-        <h1 class="lg:max-w-md text-2xl h-56 font-bold mt-3 backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl p-5 rounded-lg slideRight">
-            My resume
-            <div class="flex mt-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right text-orange-600 mt-0.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                <a href={PUBLIC_GOOGLE_DRIVE_URL_RESUME} target="_blank" class="text-base font-semibold ml-2 hover:text-red-500">Click here to view my resume</a>
-            </div>
-        </h1>
-        </div>
-        <div class="flex justify-center">
-            <img src="profile-image-5.png" class="w-96 h-96 slideLeft" alt=""/>
-        </div>
-        
-    </div>
+	<div class="w-full flex justify-center">
+		<div id="introDiv" class="flex flex-wrap bg-white w-11/12 sm:w-7/12 justify-center relative rounded-xl Up">
+			<div class="p-4 flex flex-col h-fit sm:p-7">
+				<h3 class="text-2xl font-bold text-rose-400">Info</h3>
+				<p class="mt-1 text-gray-500 text-xl text-justify">
+					A web developer passionate about creating <span class="text-orange-400">clean</span>
+					and <span class="text-rose-500">intuitive user experiences</span>. Proficient in
+					<span class="text-yellow-400">HTML</span>, <span class="text-orange-400">CSS</span>, and
+					<span class="text-rose-500">JavaScript</span>, I enjoy turning ideas into interactive
+					websites. Eager to learn and contribute to dynamic projects, I'm excited about the
+					possibilities in
+					<span class="text-yellow-400">web development</span> !!!
+				</p>
+			</div>
+			<img src="web-developer.png" alt="" class="w-56 sm:ml-64 ml-36" />
+		</div>
+	</div>
+
+	<div class="vl-dotted-long my-8" />
+
+	<div class="w-full flex justify-center">
+		<div id="eduDiv" class="flex flex-wrap bg-white w-11/12 sm:w-7/12 relative rounded-xl Up">
+			<div class="p-4 flex flex-col h-full sm:p-7 justify-center">
+				<h3 class="text-2xl font-bold text-rose-400">Education</h3>
+
+				<!-- Timeline -->
+				<div>
+					<!-- Heading -->
+					<div class="ps-2 my-2 first:mt-5">
+						<h3 class="text-xs font-medium uppercase text-gray-500">Jul, 2023</h3>
+					</div>
+					<!-- End Heading -->
+
+					<!-- Item -->
+					<div class="flex gap-x-3">
+						<!-- Icon -->
+						<div
+							class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700"
+						>
+							<div class="relative z-10 size-7 flex justify-center mt-2.5">
+								<div class="size-2 rounded-full bg-rose-400" />
+							</div>
+						</div>
+						<!-- End Icon -->
+
+						<!-- Right Content -->
+						<div class="grow pt-0.5 pb-16">
+							<h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
+								Next Academy - Full Stack Web Development
+							</h3>
+							<p class="mt-1 text-sm text-gray-600">
+								Certificate of Completion
+								<a
+									class="hover:text-gray-500"
+									href={PUBLIC_GOOGLE_DRIVE_URL_CERT}
+									target="_blank">
+									<button type="button" class="my-1 flex items-center gap-x-2 text-gray-500 hover:text-rose-500 whitespace-nowrap">
+        								<svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          									<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          									<polyline points="7 10 12 15 17 10"></polyline>
+          									<line x1="12" x2="12" y1="15" y2="3"></line>
+        								</svg>
+        								Download
+      								</button>
+									</a
+								>
+							</p>
+						</div>
+						<!-- End Right Content -->
+					</div>
+					<!-- End Item -->
+
+					<!-- Heading -->
+					<div class="ps-2 my-2 first:mt-0">
+						<h3 class="text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
+							Dec, 2025 (expected)
+						</h3>
+					</div>
+					<!-- End Heading -->
+
+					<!-- Item -->
+					<div class="flex gap-x-3">
+						<!-- Icon -->
+						<div
+							class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700"
+						>
+							<div class="relative z-10 size-7 flex justify-center items-center">
+								<div class="size-2 rounded-full bg-rose-400" />
+							</div>
+						</div>
+						<!-- End Icon -->
+
+						<!-- Right Content -->
+						<div class="grow pt-0.5 pb-8">
+							<h3 class="flex gap-x-1.5 font-semibold text-gray-800">Wawasan Open University</h3>
+							<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+								Bachelor of information technology (honours) multimedia systems
+							</p>
+							<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+								Major in multimedia and web development
+							</p>
+							<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+								Expected graduate in 2025.
+							</p>
+						</div>
+						<!-- End Right Content -->
+					</div>
+					<!-- End Item -->
+				</div>
+				<!-- End Timeline -->
+				<img src="certificate.png" alt="" class="lg:w-36 w-28 absolute right-1 sm:bottom-1 bottom-36" />
+			</div>
+		</div>
+	</div>
+
+	<div class="vl-dotted-long my-8" />
+
+	<div class="w-full flex justify-center pb-24">
+		<div id="resumeDiv" class="flex flex-wrap bg-white w-11/12 sm:w-7/12 relative rounded-xl Up">
+			<div class="p-4 flex flex-col h-full sm:p-7 justify-center">
+				<h3 class="text-2xl font-bold text-rose-400">Resume</h3>
+
+				<!-- Timeline -->
+				<div>
+
+					<!-- Item -->
+					<div class="flex gap-x-3 mt-2">
+						<!-- Icon -->
+						<div
+							class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700"
+						>
+							<div class="relative z-10 size-7 flex justify-center mt-2.5">
+								<div class="size-2 rounded-full bg-rose-400" />
+							</div>
+						</div>
+						<!-- End Icon -->
+
+						<!-- Right Content -->
+						<div class="grow pt-0.5 pb-16">
+							<h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
+								My Resume
+							</h3>
+							<p class="mt-1 text-sm text-gray-600">
+								A more details document about me.
+								<a
+									class="hover:text-gray-500"
+									href={PUBLIC_GOOGLE_DRIVE_URL_RESUME}
+									target="_blank">
+									<button type="button" class="my-1 flex items-center gap-x-2 text-gray-500 hover:text-rose-500 whitespace-nowrap">
+        								<svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          									<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          									<polyline points="7 10 12 15 17 10"></polyline>
+          									<line x1="12" x2="12" y1="15" y2="3"></line>
+        								</svg>
+        								Download
+      								</button>
+									</a
+								>
+							</p>
+						</div>
+						<!-- End Right Content -->
+					</div>
+					<!-- End Item -->
+				</div>
+				<!-- End Timeline -->
+				<img src="resume.png" alt="" class="lg:w-40 w-28 absolute right-1 bottom-1" />
+			</div>
+		</div>
+	</div>
 </div>
 
 <style>
-
-#eduDiv{
-  display: none;
-}
-
-#resumeDiv{
-  display: none;
-}
-
-    @keyframes text-clip {
-  from {
-    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-  }
-  to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-
-#about-page-title{
-    animation: text-clip 1s;
-}
-
-#title, #about-page-title{
-    font-family: 'Young-serif', serif;
-}
-
-@keyframes slide-to-right {
-	0% {
-		opacity: 0;
-    visibility: hidden;
-		transform: translateX(-100%);
+	.vl-dotted-long {
+		position: relative;
+		height: 130px; /* Adjust the height as needed */
+	}
+	.vl-dotted-long::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 10px;
+		transform: translateX(-50%);
+		border-left: 5px dotted rgb(244 63 94);
+		height: 100%;
 	}
 
-	100% {
-		opacity: 1;
-    visibility: visible;
-		transform: translateX(0);
+	h1 {
+		font-family: 'Young Serif', serif;
 	}
-}
 
-.slideRight {
-	animation: slide-to-right 2s;
-}
+	@keyframes text-clip {
+		from {
+			clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+		}
+		to {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		}
+	}
 
-	@keyframes slide-to-left {
+	#about-page-title {
+		animation: text-clip 1s;
+	}
+
+	@keyframes slide-to-right {
 		0% {
 			opacity: 0;
-			transform: translateX(100%);
+			visibility: hidden;
+			transform: translateX(-100%);
 		}
 
 		100% {
 			opacity: 1;
+			visibility: visible;
 			transform: translateX(0);
 		}
 	}
 
-	.slideLeft {
-		animation: slide-to-left 2s ease;
+	@media (min-width: 290px) and (max-width: 400px) {
+		#about-page-title {
+			font-size: 70px;
+		}
 	}
 
-@media(max-width: 289px) {
-  #about-page-title{
-    font-size: 60px;
-    margin-left: 30px;
-  }
-}
+	@media (width: 540px) {
+		#about-page-title {
+			font-size: 100px;
+		}
+	}
 
-@media (min-width: 290px) and (max-width: 400px){
-  #about-page-title{
-    font-size: 70px;
-  }
-}
+	@keyframes slideUp {
+		0% {
+			transform: translateY(10%);
+		}
 
-@media (min-width: 401px) and (max-width: 800px){
-  #about-page-title{
-    font-size: 60px;
-  }
-}
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	.Up {
+		animation: slideUp 2s ease forwards;
+	}
 </style>

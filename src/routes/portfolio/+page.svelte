@@ -361,7 +361,7 @@
 						>
 					</p>
 
-					<img src="crypto.png" alt="" class="sm:w-28 md:w-20 lg:w-36 w-32 absolute right-0 bottom-1 md:bottom-10" />
+					<img src="crypto.png" alt="" class="sm:w-28 md:w-20 lg:w-36 w-28 absolute right-0 bottom-1 md:bottom-10" />
 				</div>
 			</div>
 		</div>

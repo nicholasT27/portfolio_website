@@ -48,7 +48,7 @@
 </svelte:head>
 
 <div class="bg-gradient-to-br from-orange-200 via-rose-300 to-yellow-200 h-full overflow-x-hidden">
-	<img class="h-16 w-16" src="logo.png" alt="..." />
+	<img rel="preload" class="h-16 w-16" src="logo.png" alt="..." />
 
 	<div class="flex">
 		<div class="relative w-96 sm:h-80 h-64">
@@ -68,7 +68,7 @@
 		</div>
 
 		<div class="relative flex items-center">
-			<img src="about.png" class="w-72" alt="" />
+			<img rel="preload" src="about.png" class="w-72" alt="" />
 		</div>
 	</div>
 
@@ -86,7 +86,7 @@
 					<span class="text-yellow-400">web development</span> !!!
 				</p>
 			</div>
-			<img src="web-developer.png" alt="" class="w-56 sm:ml-64 ml-36" />
+			<img rel="preload" src="web-developer.png" alt="" class="w-56 sm:ml-64 ml-36" />
 		</div>
 	</div>
 
@@ -182,7 +182,7 @@
 					<!-- End Item -->
 				</div>
 				<!-- End Timeline -->
-				<img src="certificate.png" alt="" class="lg:w-36 w-28 absolute right-1 sm:bottom-1 bottom-40" />
+				<img rel="preload" src="certificate.png" alt="" class="lg:w-36 w-28 absolute right-1 sm:bottom-1 bottom-40" />
 			</div>
 		</div>
 	</div>
@@ -237,7 +237,7 @@
 					<!-- End Item -->
 				</div>
 				<!-- End Timeline -->
-				<img src="resume.png" alt="" class="lg:w-40 w-28 absolute right-1 bottom-1" />
+				<img rel="preload" src="resume.png" alt="" class="lg:w-40 w-28 absolute right-1 bottom-1" />
 			</div>
 		</div>
 	</div>

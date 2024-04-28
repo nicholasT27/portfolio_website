@@ -34,7 +34,7 @@
 		</div>
 		
 		<div id="image-div w-full">
-			<img class="lg:h-96" src="sayhi.gif" alt="..." />
+			<img rel="preload" class="lg:h-96" src="sayhi.gif" alt="..." />
 		</div>
 	</div>
 </div>

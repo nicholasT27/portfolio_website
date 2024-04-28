@@ -60,7 +60,7 @@
 </svelte:head>
 
 <div class="bg-gradient-to-br from-blue-200 via-sky-300 to-blue-400" id="contact-page-background">
-	<img class="h-16 w-16" src="logo.png" alt="..." />
+	<img rel="preload" class="h-16 w-16" src="logo.png" alt="..." />
 
 	<div class="flex">
 		<div class="relative w-96 sm:h-80 h-56">
@@ -80,7 +80,7 @@
 		</div>
 
 		<div class="relative flex items-center ml-24">
-			<img src="contact.png" class="w-72" alt="" />
+			<img rel="preload" src="contact.png" class="w-72" alt="" />
 		</div>
 	</div>
 
@@ -96,7 +96,7 @@
 						Project in mind ?
 					</span>
 					</h2>
-					<img src="idea.png" class="w-24" alt="" />
+					<img rel="preload" src="idea.png" class="w-24" alt="" />
 				</div>
 				
 				

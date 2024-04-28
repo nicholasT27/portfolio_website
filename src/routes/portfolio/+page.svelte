@@ -54,7 +54,7 @@
 </svelte:head>
 
 <div class="bg-gradient-to-br from-teal-300 via-bg-indigo-400 to-purple-200">
-	<img class="h-16 w-16" src="logo.png" alt="..." />
+	<img rel="preload" class="h-16 w-16" src="logo.png" alt="..." />
 
 	<div class="flex">
 		<div class="relative w-60 sm:h-80 h-40">
@@ -73,7 +73,7 @@
 			</h1>
 		</div>
 		<div class="relative flex items-center ml-16 sm:mb-7 sm:ml-72 mt-10">
-			<img src="portfolio-img.png" class="w-56" alt="" />
+			<img rel="preload" src="portfolio-img.png" class="w-56" alt="" />
 		</div>
 		
 	</div>
@@ -83,7 +83,7 @@
 		<div id="job-div" class="Up">
 
 		<div class="relative h-28 w-full">
-			<img class="w-56 sm:w-72 h-48 sm:w-56 absolute z-40 right-24 top-6 sm:top-2 md:top-6" src="online-resume.png" alt="" />
+			<img rel="preload" class="w-56 sm:w-72 h-48 sm:w-56 absolute z-40 right-24 top-6 sm:top-2 md:top-6" src="online-resume.png" alt="" />
 		</div>
 
 		<div class="w-full flex justify-center mb-5">
@@ -99,6 +99,7 @@
 							class="p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]"
 						>
 							<img
+								rel="preload"
 								class="max-w-full h-auto rounded-[1.25rem]"
 								src="/portfolio-pic-1(phone).png"
 								alt=""
@@ -125,7 +126,7 @@
 						</div>
 
 						<div class="rounded-b-lg w-full overflow-hidden md:h-60 h-fit">
-							<img class="w-full rounded-b-lg" src="/portfolio-pic-1(desktop).png" alt="" />
+							<img rel="preload" class="w-full rounded-b-lg" src="/portfolio-pic-1(desktop).png" alt="" />
 						</div>
 					</figure>
 				</div>
@@ -187,6 +188,7 @@
 							class="p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]"
 						>
 							<img
+								rel="preload"
 								class="max-w-full h-auto rounded-[1.25rem]"
 								src="/portfolio-pic-2(phone).png"
 								alt=""
@@ -213,7 +215,7 @@
 						</div>
 
 						<div class="rounded-b-lg overflow-hidden h-fit">
-							<img class="w-full rounded-b-lg" src="/portfolio-pic-2(desktop).png" alt="" />
+							<img rel="preload" class="w-full rounded-b-lg" src="/portfolio-pic-2(desktop).png" alt="" />
 						</div>
 					</figure>
 				</div>
@@ -241,7 +243,7 @@
 							>
 						</p>
 
-						<img src="maintenance.png" class="w-36 lg:w-48 absolute right-0.5 lg:right-1 bottom-1 sm:bottom-5" alt="" />
+						<img rel="preload" src="maintenance.png" class="w-36 lg:w-48 absolute right-0.5 lg:right-1 bottom-1 sm:bottom-5" alt="" />
 					</div>
 				</div>
 			</div>
@@ -272,7 +274,7 @@
 					</div>
 
 					<div class="rounded-b-lg overflow-hidden h-fit">
-						<img class="w-full rounded-b-lg" src="/portfolio-pic-3.png" alt="" />
+						<img rel="preload" class="w-full rounded-b-lg" src="/portfolio-pic-3.png" alt="" />
 					</div>
 				</figure>
 			</div>
@@ -301,7 +303,7 @@
 						>
 					</p>
 
-					<img src="email.png" alt="" class="w-24 lg:w-36 absolute right-1 bottom-1" />
+					<img rel="preload" src="email.png" alt="" class="w-24 lg:w-36 absolute right-1 bottom-1" />
 				</div>
 			</div>
 		</div>
@@ -331,7 +333,7 @@
 					</div>
 
 					<div class="rounded-b-lg overflow-hidden h-fit">
-						<img class="w-full rounded-b-lg" src="/portfolio-pic-4.png" alt="" />
+						<img rel="preload" class="w-full rounded-b-lg" src="/portfolio-pic-4.png" alt="" />
 					</div>
 				</figure>
 			</div>
@@ -361,7 +363,7 @@
 						>
 					</p>
 
-					<img src="crypto.png" alt="" class="sm:w-28 md:w-20 lg:w-36 w-28 absolute right-0 bottom-1 md:bottom-10" />
+					<img rel="preload" src="crypto.png" alt="" class="sm:w-28 md:w-20 lg:w-36 w-28 absolute right-0 bottom-1 md:bottom-10" />
 				</div>
 			</div>
 		</div>

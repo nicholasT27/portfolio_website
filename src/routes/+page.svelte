@@ -1,21 +1,3 @@
-<script>
-	// import { writable } from 'svelte/store';
-	// let audio;
-	// let play = writable(true);
-
-	// function togglePlayPause(){
-
-	//     play.update(state => !state);
-
-	//     if($play == false){
-	//         audio.play()
-	//     }else{
-	//         audio.pause()
-	//     }
-
-	// }
-</script>
-
 <svelte:head>
 	<title>Nicholas | Web Developer</title>
 </svelte:head>

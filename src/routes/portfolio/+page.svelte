@@ -8,7 +8,7 @@
 	let isScrollToEnd = writable(true);
 
 	onMount(() => {
-		wordpressDiv = document.getElementById('wordpress-div');
+		recipeDiv = document.getElementById('recipe-div');
 		emailDivision = document.getElementById('email-div');
 		lunoDivision = document.getElementById('luno-div');
 		isScrollToEnd.set(false);
@@ -19,8 +19,8 @@
 
 		if (!$isScrollToEnd) {
 		if (y >= 0) {
-			wordpressDiv.classList.add('opacity-0');
-			wordpressDiv.classList.remove('Up');
+			recipeDiv.classList.add('opacity-0');
+			recipeDiv.classList.remove('Up');
 			emailDivision.classList.add('opacity-0');
 			emailDivision.classList.remove('Up');
 			lunoDivision.classList.add('opacity-0');
@@ -28,8 +28,8 @@
 		}
 
 		if (y >= 500) {
-			wordpressDiv.classList.add('Up');
-			wordpressDiv.classList.remove('opacity-0');
+			recipeDiv.classList.add('Up');
+			recipeDiv.classList.remove('opacity-0');
 		}
 
 		if (y >= 1200) {
@@ -73,7 +73,7 @@
 			</h1>
 		</div>
 		<div class="relative flex items-center ml-16 sm:mb-7 sm:ml-72 mt-10">
-			<img rel="preload" src="portfolio-img.png" class="w-56" alt="" />
+			<img rel="preload" src="portfolio-img.png" class="w-56" alt="portfolio-img" />
 		</div>
 		
 	</div>
@@ -83,7 +83,7 @@
 		<div id="job-div" class="Up">
 
 		<div class="relative h-28 w-full">
-			<img rel="preload" class="w-56 sm:w-72 h-48 sm:w-56 absolute z-40 right-24 top-6 sm:top-2 md:top-6" src="online-resume.png" alt="" />
+			<img rel="preload" class="w-56 sm:w-72 h-48 sm:w-56 fixed z-40 right-56 top-6 sm:top-2 md:top-6" src="online-resume.png" alt="" />
 		</div>
 
 		<div class="w-full flex justify-center mb-5">
@@ -175,7 +175,7 @@
 
 		<div class="vl-dotted-long sm:mt-0 sm:my-8" />
 
-		<div id="wordpress-div" class="w-full flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
+		<div id="recipe-div" class="w-full flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
 			
 			<div
 				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem]"
@@ -190,7 +190,7 @@
 							<img
 								rel="preload"
 								class="max-w-full h-auto rounded-[1.25rem]"
-								src="/portfolio-pic-2(phone).png"
+								src="/Recipe-Page-Phone.png"
 								alt=""
 							/>
 						</div>
@@ -210,36 +210,47 @@
 							<div
 								class="flex justify-center items-center size-full bg-gray-700 text-[.25rem] text-gray-400 rounded-sm sm:text-[.5rem]"
 							>
-								nphonerepair.com
+								Recipe Page
 							</div>
 						</div>
 
 						<div class="rounded-b-lg overflow-hidden h-fit">
-							<img rel="preload" class="w-full rounded-b-lg" src="/portfolio-pic-2(desktop).png" alt="" />
+							<img rel="preload" class="w-full rounded-b-lg" src="/Recipe-Page-Desktop.png" alt="" />
 						</div>
 					</figure>
 				</div>
 				<div class="flex flex-wrap bg-white w-full lg:w-7/12">
 					<div class="p-4 flex flex-col h-full sm:p-7 justify-center relative">
-						<h3 class="text-lg font-bold text-indigo-400">NPhone & Laptop Repair Landing Page</h3>
+						<h3 class="text-lg font-bold text-indigo-400">Recipe Page</h3>
 						<p class="mt-1 text-gray-500">
-							A simple landing page portfolio built by Wordpress and Elementor.
+							A simple Recipe Page build by HTML and CSS
 						</p>
 						<p class="my-3" />
 						<p>
-							<span class="text-teal-600">Tools/Language Use:</span> <br />Wordpress and Elementor<br
-							/>
+							<span class="text-teal-600">Tools/Language Use:</span> <br />HTML and CSS
 						</p>
 
 						<p class="my-1" />
-						<p class="mb-6">
+						<p class="">
 							<span class="text-indigo-600">Live Preview:</span>
 							<br />
 							<a
 								class="hover:text-gray-500"
 								id="preview"
-								href="https://nphonerepair.com/"
-								target="_blank">nphonerepair.com</a
+								href="https://recipepage-ten.vercel.app"
+								target="_blank">Recipe_Page</a
+							>
+						</p>
+
+						<p class="my-1" />
+						<p>
+							<span class="text-purple-600">Source Code: </span>
+							<br />
+							<a
+								class="hover:text-gray-500"
+								id="source"
+								href="https://github.com/nicholasT27/Recipe_Page"
+								target="_blank">github/Recipe_Page</a
 							>
 						</p>
 

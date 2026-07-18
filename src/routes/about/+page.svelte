@@ -282,7 +282,7 @@
 					<!-- Heading -->
 					<div class="ps-2 my-2 first:mt-0">
 						<h3 class="text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
-							Dec, 2025 (expected)
+						  2027 (expected)
 						</h3>
 					</div>
 					<!-- End Heading -->
@@ -303,13 +303,13 @@
 						<div class="grow pt-0.5 pb-8">
 							<h3 class="flex gap-x-1.5 font-semibold text-gray-800">Wawasan Open University</h3>
 							<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-								Bachelor of information technology (honours) multimedia systems
+								Bachelor Of Information Technology (Hons) In Computer Systems And Networks
 							</p>
 							<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-								Major in multimedia and web development
+								Major in computer systems and networking
 							</p>
 							<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-								Expected graduate in 2025.
+								Expected graduate in 2027.
 							</p>
 						</div>
 						<!-- End Right Content -->

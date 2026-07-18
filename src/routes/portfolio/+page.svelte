@@ -219,8 +219,8 @@
 						</div>
 					</figure>
 				</div>
-				<div class="flex flex-wrap bg-white w-full lg:w-7/12">
-					<div class="p-4 flex flex-col h-full sm:p-7 justify-center relative">
+				<div class="flex flex-wrap bg-white w-full lg:w-7/12 relative">
+					<div class="p-4 flex flex-col h-full sm:p-7 justify-center">
 						<h3 class="text-lg font-bold text-indigo-400">Recipe Page</h3>
 						<p class="mt-1 text-gray-500">
 							A simple Recipe Page build by HTML and CSS
@@ -255,6 +255,180 @@
 						</p>
 
 						<img rel="preload" src="maintenance.png" class="w-36 lg:w-48 absolute right-0.5 lg:right-1 bottom-1 sm:bottom-5" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vl-dotted-long sm:mt-0 sm:my-8" />
+
+		<div id="recipe-div" class="w-full flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
+			
+			<div
+				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem]"
+			>
+				<div
+					class="bg-white/60 p-5 relative flex items-center w-full rounded-t-xl overflow-hidden py-28 sm:py-10 sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-md"
+				>
+					<figure class="absolute right-2 top-32 z-10 mx-auto max-w-full w-28">
+						<div
+							class="p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]"
+						>
+							<img
+								rel="preload"
+								class="max-w-full h-auto rounded-[1.25rem]"
+								src="/Single-Page-Mobile.png"
+								alt=""
+							/>
+						</div>
+					</figure>
+
+					<figure
+						class="relative mb-10 max-w-full w-11/12 h-auto rounded-b-lg shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)]"
+					>
+						<div
+							class="relative flex items-center max-w-[50rem] bg-gray-800 rounded-t-lg py-2 px-24"
+						>
+							<div class="flex space-x-1 absolute top-2/4 start-4 -translate-y-1">
+								<span class="size-2 bg-gray-600 rounded-full" />
+								<span class="size-2 bg-gray-600 rounded-full" />
+								<span class="size-2 bg-gray-600 rounded-full" />
+							</div>
+							<div
+								class="flex justify-center items-center size-full bg-gray-700 text-[.25rem] text-gray-400 rounded-sm sm:text-[.5rem]"
+							>
+								Single Page Portfolio
+							</div>
+						</div>
+
+						<div class="rounded-b-lg overflow-hidden h-fit">
+							<img rel="preload" class="w-full rounded-b-lg" src="/Single-Page-Desktop.png" alt="" />
+						</div>
+					</figure>
+				</div>
+				<div class="flex flex-wrap bg-white w-full lg:w-7/12 relative">
+					<div class="p-4 flex flex-col h-full sm:p-7 justify-center">
+						<h3 class="text-lg font-bold text-indigo-400">Single Page Portfolio</h3>
+						<p class="mt-1 text-gray-500">
+							A Single Page Portfolio Build By Using HTML, CSS and Javascript
+						</p>
+						<p class="my-3" />
+						<p>
+							<span class="text-teal-600">Tools/Language Use:</span> <br />HTML, CSS and Javascript
+						</p>
+
+						<p class="my-1" />
+						<p class="">
+							<span class="text-indigo-600">Live Preview:</span>
+							<br />
+							<a
+								class="hover:text-gray-500"
+								id="preview"
+								href="https://nicholast27.github.io/single-page-portfolio/"
+								target="_blank">Single Page Portfolio</a
+							>
+						</p>
+
+						<p class="my-1" />
+						<p>
+							<span class="text-purple-600">Source Code: </span>
+							<br />
+							<a
+								class="hover:text-gray-500"
+								id="source"
+								href="https://github.com/nicholasT27/single-page-portfolio"
+								target="_blank">github/Single_Page_Portfolio</a
+							>
+						</p>
+
+						<img rel="preload" src="portfolio-update.svg" class="w-36 lg:w-48 absolute right-0.5 lg:right-1 bottom-1 sm:bottom-5" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vl-dotted-long sm:mt-0 sm:my-8" />
+
+		<div id="recipe-div" class="w-full flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
+			
+			<div
+				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem]"
+			>
+				<div
+					class="bg-white/60 p-5 relative flex items-center w-full rounded-t-xl overflow-hidden py-28 sm:py-10 sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-md"
+				>
+					<figure class="absolute right-2 top-32 z-10 mx-auto max-w-full w-28">
+						<div
+							class="p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]"
+						>
+							<img
+								rel="preload"
+								class="max-w-full h-auto rounded-[1.25rem]"
+								src="/Techbook-Mobile.png"
+								alt=""
+							/>
+						</div>
+					</figure>
+
+					<figure
+						class="relative mb-10 max-w-full w-11/12 h-auto rounded-b-lg shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)]"
+					>
+						<div
+							class="relative flex items-center max-w-[50rem] bg-gray-800 rounded-t-lg py-2 px-24"
+						>
+							<div class="flex space-x-1 absolute top-2/4 start-4 -translate-y-1">
+								<span class="size-2 bg-gray-600 rounded-full" />
+								<span class="size-2 bg-gray-600 rounded-full" />
+								<span class="size-2 bg-gray-600 rounded-full" />
+							</div>
+							<div
+								class="flex justify-center items-center size-full bg-gray-700 text-[.25rem] text-gray-400 rounded-sm sm:text-[.5rem]"
+							>
+								Techbook Landing Page
+							</div>
+						</div>
+
+						<div class="rounded-b-lg overflow-hidden h-fit">
+							<img rel="preload" class="w-full rounded-b-lg" src="/Techbook-Desktop.png" alt="" />
+						</div>
+					</figure>
+				</div>
+				<div class="flex flex-wrap bg-white w-full lg:w-7/12 relative">
+					<div class="p-4 flex flex-col h-full sm:p-7 justify-center">
+						<h3 class="text-lg font-bold text-indigo-400">Tech Book Club Landing Page</h3>
+						<p class="mt-1 text-gray-500">
+							A Simple Landing Page build by HTML and CSS
+						</p>
+						<p class="my-3" />
+						<p>
+							<span class="text-teal-600">Tools/Language Use:</span> <br />HTML and CSS
+						</p>
+
+						<p class="my-1" />
+						<p class="">
+							<span class="text-indigo-600">Live Preview:</span>
+							<br />
+							<a
+								class="hover:text-gray-500"
+								id="preview"
+								href="https://nicholast27.github.io/tech-book-club-landing-page/"
+								target="_blank">Tech Book Club Landing Page</a
+							>
+						</p>
+
+						<p class="my-1" />
+						<p>
+							<span class="text-purple-600">Source Code: </span>
+							<br />
+							<a
+								class="hover:text-gray-500"
+								id="source"
+								href="https://github.com/nicholasT27/tech-book-club-landing-page"
+								target="_blank">Tech Book Club Landing Page</a
+							>
+						</p>
+
+						<img rel="preload" src="reading.svg" class="absolute bottom-5 right-5 w-20 sm:w-24 lg:w-28" alt="" />
 					</div>
 				</div>
 			</div>

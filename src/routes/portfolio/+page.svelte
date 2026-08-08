@@ -53,7 +53,7 @@
 	<title>Nicholas | Portfolio</title>
 </svelte:head>
 
-<div class="bg-gradient-to-br from-teal-300 via-bg-indigo-400 to-purple-200">
+<div class="bg-gradient-to-br from-teal-300 via-bg-indigo-400 to-purple-200 ">
 	<img rel="preload" class="h-16 w-16" src="logo.png" alt="..." />
 
 	<div class="flex">
@@ -86,10 +86,10 @@
 			<img rel="preload" class="w-56 sm:w-72 h-48 sm:w-56 fixed z-40 right-56 top-6 sm:top-2 md:top-6" src="online-resume.png" alt="" />
 		</div>
 
-		<div class="w-full flex justify-center mb-5">
+		<div class="w-screen relative left-1/2 -translate-x-1/2 flex justify-center mb-5">
 
 			<div
-				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl md:h-[28rem]"
+				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl md:h-[28rem] justify-center"
 			>
 				<div
 					class="bg-white/60 p-5 relative flex flex-col items-center relative w-full rounded-t-xl overflow-hidden sm:py-10 py-16 sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-md"
@@ -131,7 +131,7 @@
 					</figure>
 				</div>
 				<div class="flex flex-wrap bg-white w-full lg:w-7/12">
-					<div class="p-4 flex flex-col h-full sm:p-7">
+					<div class="p-4 flex flex-col h-full sm:p-7 justify-center">
 						<h3 class="text-lg font-bold text-indigo-400">Next Job Website</h3>
 						<p class="mt-1 text-gray-500 text-justify">
 							serves as a dynamic job portal, facilitating job seekers in their search for
@@ -178,23 +178,23 @@
 		<div id="recipe-div" class="w-full flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
 			
 			<div
-				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem]"
+				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl min-h-[25rem] sm:h-[25rem] justify-center"
 			>
 				<div
 					class="bg-white/60 p-5 relative flex items-center w-full rounded-t-xl overflow-hidden py-28 sm:py-10 sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-md"
 				>
 					<figure class="absolute right-2 top-32 z-10 mx-auto max-w-full w-28">
-	<div
-		class="h-56 overflow-hidden p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]"
-	>
-		<img
-			rel="preload"
-			class="w-full h-full object-cover object-top rounded-[1.25rem]"
-			src="/agency-mobile.png"
-			alt=""
-		/>
-	</div>
-</figure>
+						<div
+							class="h-56 overflow-hidden p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]"
+						>
+							<img
+							rel="preload"
+							class="w-full h-full object-cover object-top rounded-[1.25rem]"
+							src="/agency-mobile.png"
+							alt=""
+							/>
+					</div>
+				</figure>
 
 					<figure
 						class="relative mb-10 max-w-full w-11/12 h-auto rounded-b-lg shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)]"
@@ -265,18 +265,18 @@
 		<div id="recipe-div" class="w-full flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
 			
 			<div
-				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem]"
+				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl min-h-[25rem] sm:h-[25rem] justify-center"
 			>
 				<div
 					class="bg-white/60 p-5 relative flex items-center w-full rounded-t-xl overflow-hidden py-28 sm:py-10 sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-md"
 				>
 					<figure class="absolute right-2 top-32 z-10 mx-auto max-w-full w-28">
 						<div
-							class="p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]"
+							class="h-56 overflow-hidden p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]"
 						>
 							<img
 								rel="preload"
-								class="max-w-full h-auto rounded-[1.25rem]"
+								class="w-full h-full object-cover object-top rounded-[1.25rem]"
 								src="/Single-Page-Mobile.png"
 								alt=""
 							/>
@@ -349,21 +349,22 @@
 
 		<div class="vl-dotted-long sm:mt-0 sm:my-8" />
 
-		<div id="recipe-div" class="w-full flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
+		<section class="flex justify-center">
+		<div id="recipe-div" class="w-10/12 flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
 			
 			<div
-				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem]"
+				class="rounded-xl shadow-sm sm:flex w-full drop-shadow-xl min-h-[25rem] sm:h-[25rem] justify-center"
 			>
 				<div
 					class="bg-white/60 p-5 relative flex items-center w-full rounded-t-xl overflow-hidden py-28 sm:py-10 sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-md"
 				>
 					<figure class="absolute right-2 top-32 z-10 mx-auto max-w-full w-28">
 						<div
-							class="p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]"
+							class="h-56 overflow-hidden p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]"
 						>
 							<img
 								rel="preload"
-								class="max-w-full h-auto rounded-[1.25rem]"
+								class="w-full h-full object-cover object-top rounded-[1.25rem]"
 								src="/Techbook-Mobile.png"
 								alt=""
 							/>
@@ -424,7 +425,7 @@
 								class="hover:text-gray-500"
 								id="source"
 								href="https://github.com/nicholasT27/tech-book-club-landing-page"
-								target="_blank">github/Tech_Book_Club_Landing_Page</a
+								target="_blank">github/Tech.Book.C_Landing_Page</a
 							>
 						</p>
 
@@ -433,12 +434,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
+		</section>
 
-	<div class="vl-dotted-long mt-80 sm:mt-0 my-8" />
+		<div class="vl-dotted-long mt-80 sm:mt-0 my-8" />
 
 	<div class="w-full flex justify-center mb-5">
-		<div id="email-div" class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem] Up">
+		<div id="email-div" class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem] Up flex justify-center">
 			<div
 				class="bg-white/60 p-5 relative flex justify-center items-center relative w-full rounded-t-xl overflow-hidden py-10 sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-md"
 			>
@@ -497,7 +498,7 @@
 	<div class="vl-dotted-long my-8 mt-52 sm:mt-0 lg:mt-5" />
 
 	<div class="w-full flex justify-center">
-		<div id="luno-div" class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem] Up">
+		<div id="luno-div" class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem] Up flex justify-center">
 			<div
 				class="bg-white/60 p-5 relative flex justify-center items-center relative w-full rounded-t-xl overflow-hidden py-10 sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-md"
 			>
@@ -555,22 +556,25 @@
 	</div>
 
 	<div class="sm:py-16 py-32" />
+
+	</div>
 </div>
+
 
 <style>
 	.vl-dotted-long {
-		position: relative;
-		height: 130px; /* Adjust the height as needed */
-	}
-	.vl-dotted-long::after {
-		content: '';
-		position: absolute;
-		left: 50%;
-		top: 10px;
-		transform: translateX(-50%);
-		border-left: 5px dotted rgb(40, 102, 53);
-		height: 100%;
-	}
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* centers vertically */
+    align-items: center;      /* centers horizontally, replaces left:50%/transform */
+}
+.vl-dotted-long::after {
+    content: '';
+    border-left: 5px dotted rgb(40, 102, 53);
+    height: 100px; /* now this is an explicit dot-line length, not tied to parent % */
+	margin-top: 40px;
+}
 
 	h1 {
 		font-family: 'Young Serif', serif;

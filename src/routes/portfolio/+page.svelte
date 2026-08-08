@@ -86,7 +86,7 @@
 			<img rel="preload" class="w-56 sm:w-72 h-48 sm:w-56 fixed z-40 right-56 top-6 sm:top-2 md:top-6" src="online-resume.png" alt="" />
 		</div>
 
-		<div class="w-screen relative left-1/2 -translate-x-1/2 flex justify-center mb-5">
+		<div class="w-screen relative left-1/2 -translate-x-1/2 flex justify-center">
 
 			<div
 				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl md:h-[28rem] justify-center"
@@ -173,7 +173,7 @@
 			</div>
 		</div>
 
-		<div class="vl-dotted-long sm:mt-0 sm:my-8" />
+		<div class="vl-dotted-long sm:mt-0" />
 
 		<div id="recipe-div" class="w-full flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
 			
@@ -260,7 +260,7 @@
 			</div>
 		</div>
 
-		<div class="vl-dotted-long sm:mt-0 sm:my-8" />
+		<div class="vl-dotted-long sm:mt-0" />
 
 		<div id="recipe-div" class="w-full flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
 			
@@ -347,7 +347,7 @@
 			</div>
 		</div>
 
-		<div class="vl-dotted-long sm:mt-0 sm:my-8" />
+		<div class="vl-dotted-long sm:mt-0" />
 
 		<section class="flex justify-center">
 		<div id="recipe-div" class="w-10/12 flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
@@ -436,10 +436,10 @@
 		</div>
 		</section>
 
-		<div class="vl-dotted-long mt-80 sm:mt-0 my-8" />
+		<div class="vl-dotted-long sm:mt-0 mb-8" />
 
-	<div class="w-full flex justify-center mb-5">
-		<div id="email-div" class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem] Up flex justify-center">
+	<div class="w-full flex justify-center">
+		<div id="email-div" class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl min-h-[25rem] sm:h-[25rem] Up justify-center">
 			<div
 				class="bg-white/60 p-5 relative flex justify-center items-center relative w-full rounded-t-xl overflow-hidden py-10 sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-md"
 			>
@@ -495,10 +495,10 @@
 		</div>
 	</div>
 
-	<div class="vl-dotted-long my-8 mt-52 sm:mt-0 lg:mt-5" />
+	<div class="vl-dotted-long sm:mt-0 mb-8" />
 
 	<div class="w-full flex justify-center">
-		<div id="luno-div" class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl h-[25rem] Up flex justify-center">
+		<div id="luno-div" class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl min-h-[25rem] sm:h-[25rem] Up justify-center">
 			<div
 				class="bg-white/60 p-5 relative flex justify-center items-center relative w-full rounded-t-xl overflow-hidden py-10 sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-md"
 			>

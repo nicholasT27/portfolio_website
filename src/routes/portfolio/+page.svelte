@@ -173,9 +173,96 @@
 			</div>
 		</div>
 
-		<div class="vl-dotted-long sm:mt-0" />
+		<div class="vl-dotted-long sm:mt-0 mb-8" />
 
-		<div id="recipe-div" class="w-full flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
+		<div id="recipe-div" class="w-full flex justify-center Up sm:mt-0">
+			
+			<div
+				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl min-h-[25rem] sm:h-[25rem] justify-center"
+			>
+				<div
+					class="bg-white/60 p-5 relative flex items-center w-full rounded-t-xl overflow-hidden py-28 sm:py-10 sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-md"
+				>
+					<figure class="absolute right-2 top-32 z-10 mx-auto max-w-full w-28">
+						<div
+							class="h-56 overflow-hidden p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]"
+						>
+							<img
+							rel="preload"
+							class="w-full h-full object-cover object-top rounded-[1.25rem]"
+							src="/tip-calculator-mobile.png"
+							alt=""
+							/>
+					</div>
+				</figure>
+
+					<figure
+						class="relative mb-10 max-w-full w-11/12 h-auto rounded-b-lg shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)]"
+					>
+						<div
+							class="relative flex items-center max-w-[50rem] bg-gray-800 rounded-t-lg py-2 px-24"
+						>
+							<div class="flex space-x-1 absolute top-2/4 start-4 -translate-y-1">
+								<span class="size-2 bg-gray-600 rounded-full" />
+								<span class="size-2 bg-gray-600 rounded-full" />
+								<span class="size-2 bg-gray-600 rounded-full" />
+							</div>
+							<div
+								class="flex justify-center items-center size-full bg-gray-700 text-[.25rem] text-gray-400 rounded-sm sm:text-[.5rem]"
+							>
+								Tip Calculator App
+							</div>
+						</div>
+
+						<div class="rounded-b-lg overflow-hidden h-fit">
+							<img rel="preload" class="w-full rounded-b-lg" src="/tip-calculator-desktop.png" alt="" />
+						</div>
+					</figure>
+				</div>
+				<div class="flex flex-wrap bg-white w-full lg:w-7/12 relative">
+					<div class="p-4 flex flex-col h-full sm:p-7 justify-center">
+						<h3 class="text-lg font-bold text-indigo-400">Tip Calculator App</h3>
+						<p class="mt-1 text-gray-500">
+							A Tip Calculator App built with React and Tailwind CSS.
+						</p>
+						<p class="my-3" />
+						<p>
+							<span class="text-teal-600">Tools/Language Use:</span> <br />React and Tailwind CSS
+						</p>
+
+						<p class="my-1" />
+						<p class="">
+							<span class="text-indigo-600">Live Preview:</span>
+							<br />
+							<a
+								class="hover:text-gray-500"
+								id="preview"
+								href="https://nicholast27.github.io/tip-calculator-app/"
+								target="_blank">Tip_Calculator_App</a
+							>
+						</p>
+
+						<p class="my-1" />
+						<p>
+							<span class="text-purple-600">Source Code: </span>
+							<br />
+							<a
+								class="hover:text-gray-500"
+								id="source"
+								href="https://github.com/nicholasT27/tip-calculator-app"
+								target="_blank">Tip_Calculator_App</a
+							>
+						</p>
+
+						<img rel="preload" src="calculator.png" class="w-36 lg:w-48 absolute right-0.5 lg:right-1 bottom-1 sm:bottom-5" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vl-dotted-long sm:mt-0 mb-8" />
+
+		<div id="recipe-div" class="w-full flex justify-center Up sm:mt-0">
 			
 			<div
 				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl min-h-[25rem] sm:h-[25rem] justify-center"
@@ -260,9 +347,9 @@
 			</div>
 		</div>
 
-		<div class="vl-dotted-long sm:mt-0" />
+		<div class="vl-dotted-long sm:mt-0 mb-8" />
 
-		<div id="recipe-div" class="w-full flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
+		<div id="recipe-div" class="w-full flex justify-center Up sm:mt-0">
 			
 			<div
 				class="rounded-xl shadow-sm sm:flex w-10/12 drop-shadow-xl min-h-[25rem] sm:h-[25rem] justify-center"
@@ -347,10 +434,10 @@
 			</div>
 		</div>
 
-		<div class="vl-dotted-long sm:mt-0" />
+		<div class="vl-dotted-long sm:mt-0 mb-8" />
 
 		<section class="flex justify-center">
-		<div id="recipe-div" class="w-10/12 flex justify-center Up mt-10 sm:mt-0 sm:mb-5">
+		<div id="recipe-div" class="w-10/12 flex justify-center Up sm:mt-0">
 			
 			<div
 				class="rounded-xl shadow-sm sm:flex w-full drop-shadow-xl min-h-[25rem] sm:h-[25rem] justify-center"

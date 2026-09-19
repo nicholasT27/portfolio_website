@@ -1,159 +1,54 @@
 <script>
-	import { afterNavigate, goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import '../app.css';
-	import { writable } from 'svelte/store';
 
-	afterNavigate(() => {
-		window.HSStaticMethods.autoInit();
-	});
-
-	function backToTop() {
-		document.body.scrollTop = 0; //For Safari.
-		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera.
-	}
-
-	function goToPortfolio() {
-		window.scrollTo(0, 0);
-		goto('/portfolio');
-	}
-
-	function goToAbout() {
-		window.scroll(0, 0);
-		goto('/about');
-	}
-
-	function goToContact() {
-		window.scroll(0, 0);
-		goto('/contact');
-	}
+	const links = [
+		{ href: '/', label: 'Home' },
+		{ href: '/portfolio', label: 'Work' },
+		{ href: '/about', label: 'About' },
+		{ href: '/contact', label: 'Contact' }
+	];
 </script>
 
-<slot />
+<svelte:head>
+	<meta
+		name="description"
+		content="Siang Nicholas — web developer building thoughtful, accessible digital products."
+	/>
+</svelte:head>
 
-<div id="navBar" class="fixed bottom-24 w-full">
-	<div
-		class="flex justify-center items-end h-10 mt-8 absolute inline-block slide-up w-full bg-transparent"
-	>
-		<div
-			class="rounded-s-full rounded-e-full backdrop-blur-lg bg-white/60 drop-shadow-xl shadow-xl font-semibold grid grid-cols-4"
-		>
-			<a
-				class="button text-center p-4 text-lg hover:bg-gradient-to-br from-indigo-200 via-fuchsia-200 to-blue-200 rounded-s-full"
-				href="/">Home</a
-			>
-			<button
-				on:click={goToPortfolio}
-				class="button text-center p-4 text-lg hover:bg-gradient-to-br from-teal-300 via-bg-indigo-400 to-purple-200"
-				>Portfolio</button
-			>
-			<button
-				on:click={goToAbout}
-				class="button text-center p-4 text-lg hover:bg-gradient-to-br from-yellow-200 via-rose-300 to-orange-200"
-				>About</button
-			>
-			<button
-				on:click={goToContact}
-				class="button text-center p-4 text-lg hover:bg-gradient-to-br from-blue-200 via-sky-300 to-blue-400 rounded-e-full"
-				>Contact</button
-			>
-		</div>
-				
-		
-		<div class="hs-tooltip">
-				<button
-					id="backToTop"
-					on:click={backToTop}
-					class="bg-white/60 drop-shadow-xl shadow-xl absolute lg:right-6 p-3 rounded-lg hs-tooltip-toggle flex items-center"
+<div class="site-shell">
+	<header class="site-header">
+		<a class="brand" href="/" aria-label="Siang Nicholas, home">
+			<span class="brand-mark">S</span>
+			<span class="brand-name">Siang Nicholas</span>
+		</a>
+
+		<nav class="main-nav" aria-label="Main navigation">
+			{#each links as link, index}
+				<a
+					class:active={$page.url.pathname === link.href}
+					aria-current={$page.url.pathname === link.href ? 'page' : undefined}
+					href={link.href}
 				>
-				<lord-icon
-    				src="https://cdn.lordicon.com/dwoxxgps.json"
-    				trigger="hover"
-    				>
-				</lord-icon>
-				</button>
-				<span
-					class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-white rounded-lg drop-shadow-xl shadow-xl"
-					role="tooltip"
-				>
-					back to top
-				</span>
+					<span>0{index + 1}</span>{link.label}
+				</a>
+			{/each}
+		</nav>
+
+		<a class="availability" href="/contact"><span />Available for projects</a>
+	</header>
+
+	<main><slot /></main>
+
+	<footer class="site-footer">
+		<div>
+			<p class="eyebrow">LET'S BUILD SOMETHING USEFUL</p>
+			<a class="footer-cta" href="/contact">Start a conversation <span>↗</span></a>
 		</div>
-	</div>
+		<div class="footer-meta">
+			<a href="https://github.com/nicholasT27" target="_blank" rel="noreferrer">GitHub ↗</a>
+			<p>Based in Malaysia · © {new Date().getFullYear()}</p>
+		</div>
+	</footer>
 </div>
-
-<style>
-	@media (min-width: 270px) and (max-width: 350px) {
-		/* #music-button{
-            position:absolute;
-            right: 8px;
-            bottom: 150px;
-        } */
-
-		#backToTop {
-			position: absolute;
-			right: 8px;
-			bottom: 80px;
-		}
-
-		.button {
-			font-family: "Verdana", sans-serif;
-			font-size: 14px;
-			padding: 10px;
-		}
-
-		#navBar {
-			bottom: 80px;
-		}
-	}
-
-	@media (min-width: 360px) and (max-width: 400px) {
-		/* #music-button{
-            position:absolute;
-            right: 8px;
-            bottom: 150px;
-        } */
-
-		#backToTop {
-			position: absolute;
-			right: 8px;
-			bottom: 80px;
-		}
-	}
-
-	@media (min-width: 410px) and (max-width: 699px) {
-		/* #music-button{
-            position:absolute;
-            right: 8px;
-            bottom: 150px;
-        } */
-
-		#backToTop {
-			position: absolute;
-			right: 8px;
-			bottom: 80px;
-		}
-
-		.button {
-			font-size: 20px;
-		}
-	}
-
-	@media (min-width: 700px) and (max-width: 1000px) {
-		.button {
-			font-size: 20px;
-			padding: 20px;
-		}
-
-		/* #music-button{
-            position:absolute;
-            right: 8px;
-            bottom: 150px;
-        } */
-
-		#backToTop {
-			position: absolute;
-			right: 8px;
-			bottom: 80px;
-		}
-	}
-</style>

@@ -1,107 +1,74 @@
-<svelte:head>
-	<title>Nicholas | Web Developer</title>
-</svelte:head>
+<script>
+	import { featuredProjects } from '$lib/projects';
+</script>
 
-<div class="bg-gradient-to-br from-indigo-200 via-fuchsia-200 to-blue-200 h-screen">
-	<img id="logo" class="h-16 w-16" src="logo.png" alt="..." />
-	<div id="title-div" class="flex slide-down justify-center flex-col sm:flex-row md:flex-col lg:flex-row">
-		<div class="flex justify-center">
-			<h1 id="title" class="h-fit text-center text-3xl lg:my-16 font-bold md:ml-10 lg:ml-12">
-			Hi My name is Siang. A passionate young <span class="text-violet-800"> web developer</span>
-			that loves <span class="text-indigo-800">creating</span>,
-			<span class="text-fuchsia-800">imaginating</span> and
-			<span class="text-pink-700">coding things</span>
-			to make them <span class="text-rose-800">real, accessible.</span>
-			</h1>
+<svelte:head><title>Siang Nicholas — Web Developer</title></svelte:head>
+
+<div class="page">
+	<section class="home-hero">
+		<div class="hero-copy">
+			<div>
+				<p class="eyebrow">WEB DEVELOPER · MALAYSIA</p>
+				<h1 class="display">I turn ideas into <em>useful</em> digital things.</h1>
+			</div>
+			<div class="hero-bottom">
+				<p>
+					I’m Siang, a developer focused on clean interfaces, thoughtful interactions, and web
+					experiences that feel effortless to use.
+				</p>
+				<div class="button-row">
+					<a class="btn primary" href="/portfolio">Explore my work <span>↗</span></a>
+					<a class="btn light" href="/about">More about me</a>
+				</div>
+			</div>
 		</div>
-		
-		<div id="image-div w-full">
-			<img rel="preload" class="lg:h-96" src="sayhi.gif" alt="..." />
+		<div class="hero-art">
+			<div class="hero-monogram" aria-hidden="true">SN</div>
+			<div class="hero-proof">
+				<p class="eyebrow">CURRENTLY OPEN TO</p>
+				<h2>Freelance projects<br />& new opportunities.</h2>
+				<a href="/contact">Discuss a project <span>↗</span></a>
+			</div>
+		</div>
+	</section>
+
+	<div class="marquee" aria-hidden="true">
+		<div class="marquee-track">
+			SVELTEKIT · JAVASCRIPT · RESPONSIVE UI · TAILWIND CSS · NODE.JS · ACCESSIBLE EXPERIENCES ·
+			SVELTEKIT · JAVASCRIPT · RESPONSIVE UI · TAILWIND CSS · NODE.JS · ACCESSIBLE EXPERIENCES ·
 		</div>
 	</div>
+
+	<section class="section-intro">
+		<p class="eyebrow">SELECTED WORK / 01—04</p>
+		<h2 class="display">A few projects where <em>code meets craft.</em></h2>
+	</section>
+
+	<section class="work-grid">
+		<!-- Curated cards share their content with the complete work archive. -->
+		{#each featuredProjects as project, index}
+			<a
+				class:featured={index === 0}
+				class:compact={index === 1}
+				class="project-card"
+				href={project.live}
+				target="_blank"
+				rel="noreferrer"
+			>
+				<div class="project-visual">
+					<span class="project-index"
+						>{String(index + 1).padStart(2, '0')}{index === 0 ? ' / FEATURED' : ''}</span
+					>
+					<img src={project.image} alt={`${project.title} project interface`} />
+				</div>
+				<div class="project-info">
+					<h2>{project.title}</h2>
+					<p>{project.homeDescription ?? project.description}</p>
+					<div class="tag-list">
+						{#each project.tags as tag}<span class="tag">{tag}</span>{/each}
+					</div>
+				</div>
+			</a>
+		{/each}
+	</section>
 </div>
-
-<style>
-	#title {
-		font-family: 'Verdana', sans-serif;
-		width: 400px;
-	}
-
-	@media (min-width: 360px) and (max-width: 400px) {
-		#title {
-			font-size: 27px;
-			margin-top: 20px;
-			width: 300px;
-		}
-
-		#title-div {
-			flex-direction: column;
-			text-align: center;
-		}
-
-		#logo {
-			width: 60px;
-			height: 60px;
-		}
-	}
-
-	@media (min-width: 270px) and (max-width: 350px) {
-		#title {
-			font-size: 20px;
-			margin-left: 30px;
-			margin-top: 20px;
-			width: 230px;
-		}
-
-		#title-div {
-			flex-direction: column;
-			text-align: center;
-		}
-
-		#logo {
-			width: 60px;
-			height: 60px;
-		}
-	}
-
-	@media (width: 390px) {
-		#title {
-			margin-top: 80px;
-		}
-	}
-
-	@media (min-width: 410px) and (max-width: 500px) {
-		#title {
-			font-size: 30px;
-			margin-left: 15px;
-			margin-top: 60px;
-			width: 390px;
-		}
-
-		#title-div {
-			flex-direction: column;
-			text-align: center;
-		}
-
-		#logo {
-			width: 60px;
-			height: 60px;
-		}
-	}
-
-	@media (min-width: 700px) and (max-width: 1000px) {
-		#title {
-			width: 700px;
-		}
-
-		#title-div {
-			margin-top: 50px;
-		}
-	}
-
-	@media (width: 820px) {
-		#title {
-			margin-top: 60px;
-		}
-	}
-</style>

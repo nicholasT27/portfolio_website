@@ -1,0 +1,37 @@
+{
+	"name": "siang-portfolio",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.20.4",
+		"@tailwindcss/forms": "^0.5.7",
+		"autoprefixer": "^10.4.16",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte": "^2.30.0",
+		"postcss": "^8.4.33",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.10.1",
+		"svelte": "^4.0.5",
+		"tailwindcss": "^3.4.1",
+		"vite": "^4.4.2"
+	},
+	"type": "module",
+	"dependencies": {
+		"@emailjs/browser": "^3.12.1",
+		"@preline/tooltip": "^2.0.2",
+		"@sendgrid/mail": "^8.1.0",
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"nodemailer": "^6.9.8",
+		"preline": "^2.0.3"
+	}
+}

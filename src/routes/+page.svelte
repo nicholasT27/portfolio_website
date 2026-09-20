@@ -2,7 +2,7 @@
 	import { featuredProjects } from '$lib/projects';
 </script>
 
-<svelte:head><title>Siang Nicholas — Web Developer</title></svelte:head>
+<svelte:head><title>Siang — Web Developer</title></svelte:head>
 
 <div class="page">
 	<section class="home-hero">
@@ -23,7 +23,9 @@
 			</div>
 		</div>
 		<div class="hero-art">
-			<div class="hero-monogram" aria-hidden="true">SN</div>
+			<div class="code-mark hero-code-mark" aria-hidden="true">
+				<span>&lt;</span><strong>/</strong><span>&gt;</span>
+			</div>
 			<div class="hero-proof">
 				<p class="eyebrow">CURRENTLY OPEN TO</p>
 				<h2>Freelance projects<br />& new opportunities.</h2>

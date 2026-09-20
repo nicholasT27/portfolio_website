@@ -13,15 +13,15 @@
 <svelte:head>
 	<meta
 		name="description"
-		content="Siang Nicholas — web developer building thoughtful, accessible digital products."
+		content="Siang — web developer building thoughtful, accessible digital products."
 	/>
 </svelte:head>
 
 <div class="site-shell">
 	<header class="site-header">
-		<a class="brand" href="/" aria-label="Siang Nicholas, home">
+		<a class="brand" href="/" aria-label="Siang, home">
 			<span class="brand-mark">S</span>
-			<span class="brand-name">Siang Nicholas</span>
+			<span class="brand-name">Siang</span>
 		</a>
 
 		<nav class="main-nav" aria-label="Main navigation">
@@ -47,7 +47,6 @@
 			<a class="footer-cta" href="/contact">Start a conversation <span>↗</span></a>
 		</div>
 		<div class="footer-meta">
-			<a href="https://github.com/nicholasT27" target="_blank" rel="noreferrer">GitHub ↗</a>
 			<p>Based in Malaysia · © {new Date().getFullYear()}</p>
 		</div>
 	</footer>

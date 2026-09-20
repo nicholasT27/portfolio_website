@@ -6,7 +6,7 @@
 	}
 </script>
 
-<svelte:head><title>Contact — Siang Nicholas</title></svelte:head>
+<svelte:head><title>Contact — Siang</title></svelte:head>
 
 <div class="page contact-layout">
 	<section class="contact-pitch">
@@ -19,11 +19,6 @@
 				Whether it’s a freelance opportunity, a collaboration, or simply a good conversation about
 				the web, my inbox is open.
 			</p>
-			<div class="contact-details">
-				<a href="https://github.com/nicholasT27" target="_blank" rel="noreferrer">GitHub ↗</a><span
-					>Malaysia · GMT+8</span
-				>
-			</div>
 		</div>
 	</section>
 	<section class="contact-form">

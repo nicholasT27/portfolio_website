@@ -1,4 +1,4 @@
-<svelte:head><title>About — Siang Nicholas</title></svelte:head>
+<svelte:head><title>About — Siang</title></svelte:head>
 
 <div class="page">
 	<section class="inner-hero">
@@ -17,7 +17,9 @@
 
 	<section class="about-grid">
 		<div class="about-portrait">
-			<span class="about-monogram" aria-hidden="true">SN</span>
+			<div class="code-mark about-code-mark" aria-hidden="true">
+				<span>&lt;</span><strong>/</strong><span>&gt;</span>
+			</div>
 			<p>Thoughtful interfaces.<br />Practical code.<br />Continuous learning.</p>
 		</div>
 		<div class="about-copy">
@@ -87,6 +89,39 @@
 				<h3>Wawasan Open University</h3>
 				<p>Bachelor of Information Technology (Hons), Computer Systems and Networks</p>
 			</div>
+		</div>
+	</section>
+
+	<section class="documents">
+		<div class="documents-heading">
+			<p class="eyebrow">DOCUMENTS / 01—02</p>
+			<h2>Résumé & credentials</h2>
+		</div>
+		<div class="documents-grid">
+			<article class="document-card">
+				<span>01</span>
+				<div>
+					<p class="document-type">RÉSUMÉ</p>
+					<h3>Experience, education, and technical skills.</h3>
+				</div>
+				<a
+					href="https://drive.google.com/file/d/17U7lxEtt_aCQndFmK9MwfnHy6z7P5BKO/view?usp=share_link"
+					target="_blank"
+					rel="noreferrer">View résumé <span>↗</span></a
+				>
+			</article>
+			<article class="document-card accent">
+				<span>02</span>
+				<div>
+					<p class="document-type">CERTIFICATE</p>
+					<h3>Full Stack Web Development — Next Academy.</h3>
+				</div>
+				<a
+					href="https://drive.google.com/file/d/1TC5cQ-ors8yiV2AKKXMkgwWDJolJhBmW/view?usp=drive_link"
+					target="_blank"
+					rel="noreferrer">View certificate <span>↗</span></a
+				>
+			</article>
 		</div>
 	</section>
 </div>

@@ -2,7 +2,7 @@
 	import { projects } from '$lib/projects';
 </script>
 
-<svelte:head><title>Selected Work — Siang Nicholas</title></svelte:head>
+<svelte:head><title>Selected Work — Siang</title></svelte:head>
 
 <div class="page">
 	<section class="inner-hero">
@@ -12,10 +12,7 @@
 		</div>
 		<div class="inner-title">
 			<h1 class="display">Selected work.</h1>
-			<p>
-				Projects across product design, front-end development, and practical automation — each built
-				to solve a clear problem.
-			</p>
+			<p>A selection of front-end projects, each built to solve a clear problem.</p>
 		</div>
 	</section>
 

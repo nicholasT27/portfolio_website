@@ -1,6 +1,19 @@
 # Siang Portfolio
 
-A responsive SvelteKit portfolio for Siang Nicholas. The editorial prototype is implemented as four connected pages: home, selected work, about, and contact.
+A responsive SvelteKit portfolio for Siang. It is designed to present his front-end work clearly to potential clients and employers across four connected pages: Home, Work, About, and Contact.
+
+## Refurbished layout
+
+The original portfolio was refurbished with a minimalist editorial direction that feels professional, simple, and memorable without distracting from the work.
+
+- Clear typography and stronger content hierarchy
+- Focused calls to action for viewing projects and making contact
+- Curated front-end project cards with live and source links
+- An About page with education, capabilities, résumé, and certificate links
+- Responsive layouts for desktop, tablet, and mobile screens
+- Accessible semantic structure and reduced-motion support
+
+The `main` branch contains the publish-ready website. Future layout experiments can continue on `feature/siang-portfolio-prototype` before being reviewed and merged into `main`.
 
 ## Stack
 

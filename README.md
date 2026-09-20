@@ -2,6 +2,10 @@
 
 A responsive SvelteKit portfolio for Siang. It is designed to present his front-end work clearly to potential clients and employers across four connected pages: Home, Work, About, and Contact.
 
+## Preview
+
+![Siang portfolio Home page](docs/home-layout.png)
+
 ## Refurbished layout
 
 The original portfolio was refurbished with a minimalist editorial direction that feels professional, simple, and memorable without distracting from the work.

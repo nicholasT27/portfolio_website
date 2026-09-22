@@ -17,7 +17,7 @@
 	</section>
 
 	<section class="section-intro">
-		<p class="eyebrow">ALL PROJECTS / 07</p>
+		<p class="eyebrow">ALL PROJECTS / {String(projects.length).padStart(2, '0')}</p>
 		<h2 class="display">Built to be <em>used,</em> not just viewed.</h2>
 	</section>
 

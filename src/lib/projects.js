@@ -3,14 +3,26 @@ export const projects = [
 	{
 		title: 'Next Job',
 		description:
-			'A dynamic job portal where candidates discover roles and employers manage vacancies.',
+			'A two-sided job portal whose responsive layout was redesigned with the aid of Codex, helping candidates discover roles and employers manage vacancies more clearly.',
 		homeDescription:
-			'A two-sided job platform designed to make discovering roles and managing vacancies more direct.',
+			'A two-sided job platform with a Codex-assisted redesign that makes discovering roles and managing vacancies more direct.',
 		featured: true,
 		image: '/portfolio-pic-1(desktop).png',
 		tags: ['SvelteKit', 'Tailwind CSS', 'PocketBase', 'AWS'],
 		live: 'https://portfolio-next-job.pages.dev/',
 		source: 'https://github.com/nicholasT27/portfolio_next_job'
+	},
+	{
+		title: 'Sneakers Ecommerce',
+		description:
+			'A responsive full-stack storefront with a Supabase product catalog, customer accounts, cart, wishlist, inventory, and simulated checkout, built and tested with the aid of Codex.',
+		homeDescription:
+			'A Codex-assisted full-stack ecommerce prototype backed by Supabase, from product discovery through no-payment order confirmation.',
+		featured: true,
+		image: '/ecommerce-product-gallery.png',
+		tags: ['React', 'Tailwind CSS', 'Express', 'Supabase'],
+		live: 'https://ecommerce-product-page-five-ashen.vercel.app',
+		source: 'https://github.com/nicholasT27/Ecommerce_Product_Page'
 	},
 	{
 		title: 'Tip Calculator',

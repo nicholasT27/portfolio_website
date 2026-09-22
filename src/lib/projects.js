@@ -3,7 +3,7 @@ export const projects = [
 	{
 		title: 'Next Job',
 		description:
-			'A two-sided job portal whose responsive layout was redesigned with the aid of Codex, helping candidates discover roles and employers manage vacancies more clearly.',
+			'A job portal whose responsive layout was redesigned with the aid of Codex, helping candidates discover roles and employers manage vacancies more clearly.',
 		homeDescription:
 			'A two-sided job platform with a Codex-assisted redesign that makes discovering roles and managing vacancies more direct.',
 		featured: true,

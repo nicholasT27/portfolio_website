@@ -5,7 +5,7 @@ export const projects = [
 		description:
 			'A job portal whose responsive layout was redesigned with the aid of Codex, helping candidates discover roles and employers manage vacancies more clearly.',
 		homeDescription:
-			'A two-sided job platform with a Codex-assisted redesign that makes discovering roles and managing vacancies more direct.',
+			'A job portal whose responsive layout was redesigned with the aid of Codex, helping candidates discover roles and employers manage vacancies more clearly.',
 		featured: true,
 		image: '/portfolio-pic-1(desktop).png',
 		tags: ['SvelteKit', 'Tailwind CSS', 'PocketBase', 'AWS'],

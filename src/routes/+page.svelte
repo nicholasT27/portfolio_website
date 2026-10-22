@@ -1,5 +1,6 @@
 <script>
 	import { featuredProjects } from '$lib/projects';
+	import Testimonial from '$lib/Testimonial.svelte';
 </script>
 
 <svelte:head><title>Siang — Web Developer</title></svelte:head>
@@ -78,7 +79,9 @@
 	>
 		<div class="ghost" aria-hidden="true">CRAFT</div>
 		<div class="in">
-			<p class="eyebrow">SELECTED WORK / 01—04</p>
+			<p class="eyebrow">
+				SELECTED WORK / 01—{String(featuredProjects.length).padStart(2, '0')}
+			</p>
 			<h2 class="big" data-words>A few projects where <em>code meets craft.</em></h2>
 		</div>
 	</section>
@@ -103,7 +106,11 @@
 					>
 						<div class="sc-info project-info">
 							<span class="project-index"
-								>{String(index + 1).padStart(2, '0')}{index === 0 ? ' / FEATURED' : ''}</span
+								>{String(index + 1).padStart(2, '0')}{project.category === 'client'
+									? ' / CLIENT PROJECT'
+									: index === 0
+									? ' / FEATURED'
+									: ''}</span
 							>
 							<h2>{project.title}</h2>
 							<p>{project.homeDescription ?? project.description}</p>
@@ -119,4 +126,6 @@
 			</div>
 		</div>
 	</section>
+
+	<Testimonial />
 </div>

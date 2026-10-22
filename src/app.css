@@ -812,6 +812,71 @@ h3 {
 	--r: 3deg;
 }
 
+/* Client testimonial chapter. */
+.quote {
+	padding-block: 140px;
+}
+.quote-figure {
+	margin: 22px 0 0;
+}
+.quote .big {
+	font-family: var(--serif);
+	font-weight: 400;
+	letter-spacing: -0.02em;
+	text-wrap: balance;
+	margin: 0 0 40px;
+	max-width: 30ch;
+	font-size: clamp(34px, 5vw, 76px);
+	line-height: 1;
+}
+.quote .ghost {
+	font-size: clamp(260px, 44vw, 700px);
+}
+.quote-by {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 16px 22px;
+}
+.quote-avatar {
+	width: 56px;
+	height: 56px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	background: linear-gradient(135deg, var(--peach), var(--lilac));
+	color: var(--on-accent);
+	font-family: var(--serif);
+	font-size: 30px;
+}
+.quote-who {
+	display: grid;
+	gap: 2px;
+}
+.quote-who strong {
+	font-family: var(--serif);
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 1;
+}
+.quote-who span {
+	color: var(--soft);
+	font-family: var(--mono);
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+.quote-link {
+	margin-left: auto;
+	padding-bottom: 5px;
+	border-bottom: 2px solid var(--peach);
+	font-size: 13px;
+	font-weight: 800;
+}
+.quote-link span {
+	color: var(--peach);
+}
+
 /* About page. */
 .story {
 	padding-block: 140px;
@@ -1194,12 +1259,16 @@ h3 {
 	.main-nav a span {
 		display: none;
 	}
+	.quote-link {
+		margin-left: 0;
+	}
 	.hero-copy .display,
 	.contact-pitch .display,
 	.inner-title .display {
 		font-size: clamp(54px, 17vw, 92px);
 	}
 	.say,
+	.quote,
 	.story,
 	.skills,
 	.timeline,

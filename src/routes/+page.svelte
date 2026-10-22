@@ -45,16 +45,6 @@
 					<div class="code-mark hero-code-mark" aria-hidden="true">
 						<span>&lt;</span><strong>/</strong><span>&gt;</span>
 					</div>
-					<svg viewBox="0 0 200 200" aria-hidden="true">
-						<defs>
-							<path id="ring" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0" />
-						</defs>
-						<text>
-							<textPath href="#ring"
-								>AVAILABLE FOR PROJECTS · OPEN TO NEW OPPORTUNITIES ·
-							</textPath>
-						</text>
-					</svg>
 				</div>
 				<div class="hero-proof">
 					<p class="eyebrow">CURRENTLY OPEN TO</p>

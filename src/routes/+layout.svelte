@@ -1,6 +1,28 @@
 <script>
+	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import '../app.css';
+
+	// Shift the background glow's hue as the page scrolls, unless motion is reduced.
+	onMount(() => {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		let frame = 0;
+		const update = () => {
+			frame = 0;
+			const max = document.documentElement.scrollHeight - window.innerHeight;
+			const progress = max > 0 ? window.scrollY / max : 0;
+			document.documentElement.style.setProperty('--hue', `${Math.round(progress * 70)}deg`);
+		};
+		const onScroll = () => {
+			if (!frame) frame = requestAnimationFrame(update);
+		};
+		window.addEventListener('scroll', onScroll, { passive: true });
+		update();
+		return () => {
+			window.removeEventListener('scroll', onScroll);
+			cancelAnimationFrame(frame);
+		};
+	});
 
 	const links = [
 		{ href: '/', label: 'Home' },
@@ -16,6 +38,8 @@
 		content="Siang — web developer building thoughtful, accessible digital products."
 	/>
 </svelte:head>
+
+<div class="mesh" aria-hidden="true" />
 
 <div class="site-shell">
 	<header class="site-header">

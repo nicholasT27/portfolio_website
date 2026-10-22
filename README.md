@@ -8,14 +8,16 @@ A responsive SvelteKit portfolio for Siang. It is designed to present his front-
 
 ## Refurbished layout
 
-The original portfolio was refurbished with a minimalist editorial direction that feels professional, simple, and memorable without distracting from the work.
+The portfolio uses the **Dusk Glass** theme: a plum and indigo ground with a slowly drifting sunset glow, frosted glass panels, light serif headlines, and peach, lilac, and mint accents. The page structure and content are unchanged from the earlier editorial layout.
 
+- Light serif headlines (Instrument Serif) with gradient italic accents, Manrope body text, and JetBrains Mono labels
+- Frosted glass cards and panels over a background glow whose hue shifts as the page scrolls
 - Clear typography and stronger content hierarchy
 - Focused calls to action for viewing projects and making contact
 - Curated front-end project cards with live and source links
 - An About page with education, capabilities, résumé, and certificate links
 - Responsive layouts for desktop, tablet, and mobile screens
-- Accessible semantic structure and reduced-motion support
+- Accessible semantic structure and reduced-motion support (the glow and hue shift stay still)
 
 The `main` branch contains the publish-ready website. Future layout experiments can continue on `feature/siang-portfolio-prototype` before being reviewed and merged into `main`.
 

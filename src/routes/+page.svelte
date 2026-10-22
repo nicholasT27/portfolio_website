@@ -45,6 +45,16 @@
 					<div class="code-mark hero-code-mark" aria-hidden="true">
 						<span>&lt;</span><strong>/</strong><span>&gt;</span>
 					</div>
+					<svg class="orbit" viewBox="0 0 200 200" aria-hidden="true">
+						<g class="orbit-a">
+							<circle cx="100" cy="100" r="90" />
+							<circle class="dot peach" cx="100" cy="10" r="4" />
+						</g>
+						<g class="orbit-b">
+							<circle cx="100" cy="100" r="97" />
+							<circle class="dot mint" cx="100" cy="197" r="3" />
+						</g>
+					</svg>
 				</div>
 				<div class="hero-proof">
 					<p class="eyebrow">CURRENTLY OPEN TO</p>

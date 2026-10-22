@@ -496,6 +496,51 @@ h3 {
 	color: rgba(27, 11, 42, 0.5);
 	animation: bob 5s ease-in-out infinite;
 }
+.sticker .orbit {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+.orbit g {
+	transform-box: view-box;
+	transform-origin: center;
+}
+.orbit circle {
+	fill: none;
+	stroke: var(--ink);
+	stroke-opacity: 0.45;
+	stroke-width: 1;
+}
+.orbit-a {
+	animation: spin 26s linear infinite;
+}
+.orbit-a circle:first-child {
+	stroke-dasharray: 2 8;
+}
+.orbit-b {
+	animation: spin 38s linear infinite reverse;
+}
+.orbit-b circle:first-child {
+	stroke-opacity: 0.2;
+}
+.orbit .dot {
+	stroke: none;
+}
+.orbit .peach {
+	fill: var(--peach);
+	filter: drop-shadow(0 0 6px var(--peach));
+}
+.orbit .mint {
+	fill: var(--mint);
+	filter: drop-shadow(0 0 6px var(--mint));
+}
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
 @keyframes bob {
 	50% {
 		transform: translateY(-9px) rotate(2deg);

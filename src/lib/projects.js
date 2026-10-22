@@ -35,6 +35,7 @@ export const projects = [
 		image: '/healthy-recipe-finder-desktop.png',
 		tags: ['Next.js', 'React', 'Tailwind CSS'],
 		live: 'https://healthy-recipe-finder.pages.dev',
+		source: 'https://github.com/nicholasT27/healthy-recipe-finder',
 		theme: { bg: '#0f4c4a', ink: '#e2fffb', tx: 'aurora:1,waves:.5' }
 	},
 	{
@@ -67,22 +68,6 @@ export const projects = [
 		live: 'https://nicholast27.github.io/tech-book-club-landing-page/',
 		source: 'https://github.com/nicholasT27/tech-book-club-landing-page',
 		theme: { bg: '#1f2547', ink: '#e8ecff', tx: 'aurora:1,grid:.4' }
-	},
-	{
-		title: 'Email Automator',
-		description: 'A Node.js service that monitors an inbox and responds with predefined logic.',
-		image: '/email.png',
-		tags: ['Node.js', 'Nodemailer', 'IMAP'],
-		source: 'https://github.com/nicholasT27/email_automator',
-		theme: { bg: '#1d4a30', ink: '#e6ffee', tx: 'aurora:1' }
-	},
-	{
-		title: 'Luno Premium',
-		description: 'A command-line tool comparing cryptocurrency pricing across Luno and Binance.',
-		image: '/crypto.png',
-		tags: ['Node.js', 'Luno API', 'Binance API'],
-		source: 'https://github.com/nicholasT27/luno-premium',
-		theme: { bg: '#5a4412', ink: '#fff4d0', tx: 'mesh:1,half:.5' }
 	}
 ];
 

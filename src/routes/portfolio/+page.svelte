@@ -66,7 +66,9 @@
 						<div class="project-links">
 							{#if project.live}<a href={project.live} target="_blank" rel="noreferrer"
 									>Live site ↗</a
-								>{/if}<a href={project.source} target="_blank" rel="noreferrer">Source code ↗</a>
+								>{/if}{#if project.source}<a href={project.source} target="_blank" rel="noreferrer"
+									>Source code ↗</a
+								>{/if}
 						</div>
 					</div>
 					<div class="par" data-par=".08">

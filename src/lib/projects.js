@@ -28,13 +28,13 @@ export const projects = [
 		theme: { bg: '#5a1a45', ink: '#ffe9f3', tx: 'mesh:1' }
 	},
 	{
-		title: 'Tip Calculator',
-		description: 'A focused responsive utility that makes splitting bills quick and clear.',
+		title: 'Healthy Recipe Finder',
+		description:
+			'A responsive recipe finder with quick whole-food recipes you can search by name or ingredient.',
 		featured: true,
-		image: '/tip-calculator-desktop.png',
-		tags: ['React', 'Tailwind CSS'],
-		live: 'https://nicholast27.github.io/tip-calculator-app/',
-		source: 'https://github.com/nicholasT27/tip-calculator-app',
+		image: '/healthy-recipe-finder-desktop.png',
+		tags: ['Next.js', 'React', 'Tailwind CSS'],
+		live: 'https://healthy-recipe-finder.pages.dev',
 		theme: { bg: '#0f4c4a', ink: '#e2fffb', tx: 'aurora:1,waves:.5' }
 	},
 	{

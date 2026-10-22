@@ -478,7 +478,7 @@ h3 {
 }
 .sticker {
 	position: relative;
-	width: min(100%, 360px);
+	width: min(100%, 420px);
 	aspect-ratio: 1;
 }
 .sticker .disc {
@@ -496,45 +496,18 @@ h3 {
 	color: rgba(27, 11, 42, 0.5);
 	animation: bob 5s ease-in-out infinite;
 }
-.sticker .orbit {
+.sticker .orb-ring {
 	position: absolute;
 	inset: 0;
 	width: 100%;
 	height: 100%;
-	overflow: visible;
+	animation: spin 24s linear infinite;
 }
-.orbit g {
-	transform-box: view-box;
-	transform-origin: center;
-}
-.orbit circle {
-	fill: none;
-	stroke: var(--ink);
-	stroke-opacity: 0.45;
-	stroke-width: 1;
-}
-.orbit-a {
-	animation: spin 26s linear infinite;
-}
-.orbit-a circle:first-child {
-	stroke-dasharray: 2 8;
-}
-.orbit-b {
-	animation: spin 38s linear infinite reverse;
-}
-.orbit-b circle:first-child {
-	stroke-opacity: 0.2;
-}
-.orbit .dot {
-	stroke: none;
-}
-.orbit .peach {
-	fill: var(--peach);
-	filter: drop-shadow(0 0 6px var(--peach));
-}
-.orbit .mint {
-	fill: var(--mint);
-	filter: drop-shadow(0 0 6px var(--mint));
+.sticker text {
+	font-family: var(--mono);
+	font-size: 11px;
+	letter-spacing: 0.2em;
+	fill: var(--ink);
 }
 @keyframes spin {
 	to {
@@ -559,31 +532,6 @@ h3 {
 	color: #fff;
 	font-weight: inherit;
 }
-.hero-proof {
-	width: 100%;
-	max-width: 430px;
-	border-top: 1px solid var(--line);
-	padding-top: 24px;
-}
-.hero-proof h2 {
-	margin: 14px 0 22px;
-	font-family: var(--serif);
-	font-size: clamp(34px, 3.6vw, 52px);
-	line-height: 1;
-	font-weight: 400;
-	letter-spacing: -0.02em;
-}
-.hero-proof a {
-	display: inline-flex;
-	gap: 12px;
-	font-size: 13px;
-	font-weight: 800;
-	border-bottom: 2px solid var(--peach);
-	padding-bottom: 5px;
-}
-.hero-proof a span {
-	color: var(--peach);
-}
 .sh {
 	position: absolute;
 	pointer-events: none;
@@ -591,7 +539,7 @@ h3 {
 }
 .s1 {
 	right: 4%;
-	top: 38%;
+	top: 14%;
 	width: clamp(60px, 9vw, 130px);
 	aspect-ratio: 1;
 	border-radius: 50%;

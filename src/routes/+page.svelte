@@ -45,21 +45,16 @@
 					<div class="code-mark hero-code-mark" aria-hidden="true">
 						<span>&lt;</span><strong>/</strong><span>&gt;</span>
 					</div>
-					<svg class="orbit" viewBox="0 0 200 200" aria-hidden="true">
-						<g class="orbit-a">
-							<circle cx="100" cy="100" r="90" />
-							<circle class="dot peach" cx="100" cy="10" r="4" />
-						</g>
-						<g class="orbit-b">
-							<circle cx="100" cy="100" r="97" />
-							<circle class="dot mint" cx="100" cy="197" r="3" />
-						</g>
+					<svg class="orb-ring" viewBox="0 0 200 200" aria-hidden="true">
+						<defs>
+							<path id="ring" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0" />
+						</defs>
+						<text>
+							<textPath href="#ring"
+								>AVAILABLE FOR PROJECTS · OPEN TO NEW OPPORTUNITIES ·
+							</textPath>
+						</text>
 					</svg>
-				</div>
-				<div class="hero-proof">
-					<p class="eyebrow">CURRENTLY OPEN TO</p>
-					<h2>Freelance projects<br />& new opportunities.</h2>
-					<a href="/contact">Discuss a project <span>↗</span></a>
 				</div>
 			</div>
 		</div>

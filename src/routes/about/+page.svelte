@@ -90,10 +90,7 @@
 			<div class="box rv" style="--d:.2s">
 				<i>03</i>
 				<h3>Back-end foundations</h3>
-				<p>
-					Practical experience with Node.js, APIs, PocketBase, AWS, Docker, and automation
-					workflows.
-				</p>
+				<p>Practical experience with Node.js, APIs, PocketBase, AWS, and Docker.</p>
 			</div>
 		</div>
 	</section>

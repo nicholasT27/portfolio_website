@@ -78,8 +78,8 @@ export const projects = [
 	{
 		title: 'Tech Book Club',
 		category: 'personal',
-		description: 'An editorial landing page for developers who like to learn from books.',
-		homeDescription: 'An editorial landing page for curious developers and avid readers.',
+		description: 'A responsive landing page for a tech book club.',
+		homeDescription: 'A responsive landing page for a tech book club.',
 		image: '/Techbook-Desktop.png',
 		tags: ['HTML', 'CSS'],
 		live: 'https://nicholast27.github.io/tech-book-club-landing-page/',

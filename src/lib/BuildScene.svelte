@@ -1,6 +1,6 @@
 <script>
 	// Animated scene inside the hero arch. `variant="wireframe"` fills a grey page with colour,
-	// block by block; `variant="blocks"` drops page blocks into place and "publishes" them.
+	// block by block; `variant="skills"` settles skill pills around a ring.
 	export let variant = 'wireframe';
 </script>
 
@@ -34,32 +34,15 @@
 		<span>Design</span><span>Build</span><span>Launch</span>
 	</div>
 {:else}
-	<div class="ab" id="wf">
-		<div class="tb"><i /><i /><i /></div>
-		<div class="body">
-			<div class="blk hero3" style="--d:0s" />
-			<div class="three">
-				<div class="blk" style="--d:.5s" />
-				<div class="blk" style="--d:.9s" />
-				<div class="blk" style="--d:1.3s" />
-			</div>
-			<div class="foot3">
-				<div class="ln3">
-					<i class="blk" style="--d:1.7s" />
-					<i class="blk" style="--d:1.9s" />
-				</div>
-				<div class="btn3" />
-			</div>
-			<span class="done">Published ✓</span>
-		</div>
-		<svg class="cur2" viewBox="0 0 20 20" aria-hidden="true"
-			><path
-				d="M3 2 L3 15 L7 11.5 L9.8 17 L12 16 L9.3 10.6 L14.5 10.4Z"
-				fill="#1d2a2b"
-				stroke="#fff"
-				stroke-width="1.2"
-				stroke-linejoin="round"
-			/></svg
-		>
+	<div class="sk2" id="wf">
+		<div class="core" />
+		<span class="pill dk" style="--x:14%;--y:30%;--d:0s;--fx:-40px;--fy:-30px">HTML</span>
+		<span class="pill" style="--x:52%;--y:26%;--d:.4s;--fx:40px;--fy:-30px">CSS</span>
+		<span class="pill" style="--x:30%;--y:41%;--d:.8s;--fx:-50px;--fy:10px">SvelteKit</span>
+		<span class="pill dk" style="--x:56%;--y:48%;--d:1.2s;--fx:50px;--fy:10px">React</span>
+		<span class="pill" style="--x:12%;--y:56%;--d:1.6s;--fx:-40px;--fy:40px">Tailwind</span>
+		<span class="pill" style="--x:50%;--y:63%;--d:2s;--fx:40px;--fy:40px">Node.js</span>
+		<span class="pill dk" style="--x:22%;--y:72%;--d:2.4s;--fx:-30px;--fy:50px">Docker</span>
+		<div class="hand">always learning</div>
 	</div>
 {/if}

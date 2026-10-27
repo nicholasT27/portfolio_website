@@ -655,247 +655,75 @@ main.leaving .pg {
 	}
 }
 
-/* About scene: blocks drop in, bounce and snap together, then a click publishes the page. */
-.ab {
-	position: absolute;
-	left: 10%;
-	right: 10%;
-	top: 17%;
-	bottom: 19%;
-	display: grid;
-	grid-template-rows: 20px minmax(0, 1fr);
-	border-radius: 16px;
-	background: #fff;
-	box-shadow: 0 30px 50px rgba(60, 55, 40, 0.18);
-	overflow: hidden;
-	transition: transform 0.25s;
-}
-.ab .tb {
-	display: flex;
-	align-items: center;
-	gap: 5px;
-	padding-left: 10px;
-	background: #f1efe9;
-}
-.ab .tb i {
-	width: 7px;
-	height: 7px;
-	border-radius: 50%;
-	background: #d9d4c9;
-}
-.ab .body {
-	position: relative;
-	display: grid;
-	grid-template-rows: 1.15fr 0.8fr auto;
-	gap: 4.5%;
-	padding: 5%;
-}
-.blk {
-	border-radius: 10px;
-	opacity: 0;
-	animation: drop2 12s infinite;
-	animation-delay: var(--d);
-}
-@keyframes drop2 {
-	0%,
-	2% {
-		opacity: 0;
-		transform: translateY(-90px) scale(0.9);
-	}
-	9% {
-		opacity: 1;
-		transform: translateY(7px);
-	}
-	13% {
-		transform: translateY(-3px);
-	}
-	17%,
-	86% {
-		opacity: 1;
-		transform: none;
-	}
-	94%,
-	100% {
-		opacity: 0;
-		transform: translateY(12px);
-	}
-}
-.ab .hero3 {
-	background: linear-gradient(135deg, #dfe8e4, #c4d4cd);
-}
-.ab .three {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 8%;
-}
-.ab .three .blk {
-	background: #fff;
-	box-shadow: 0 0 0 1.5px #e6e3dc, 0 10px 18px rgba(60, 55, 40, 0.08);
-}
-.ab .three .blk::before {
-	content: '';
-	display: block;
-	width: 34%;
-	height: 5px;
-	margin: 14% 0 0 14%;
-	border-radius: 3px;
-	background: var(--sage);
-}
-.ab .three .blk::after {
-	content: '';
-	display: block;
-	width: 62%;
-	height: 4px;
-	margin: 9% 0 0 14%;
-	border-radius: 3px;
-	background: #d9dfdc;
-	box-shadow: 0 9px 0 #d9dfdc;
-}
-.ab .foot3 {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 10px;
-}
-.ab .ln3 {
-	flex: 1;
-	display: grid;
-	gap: 6px;
-}
-.ab .ln3 i {
-	display: block;
-	height: 6px;
-	border-radius: 3px;
-	background: #dfe3e0;
-}
-.ab .ln3 i:nth-child(2) {
-	width: 60%;
-}
-.ab .btn3 {
-	position: relative;
-	width: 38%;
-	height: 26px;
-	border-radius: 999px;
-	background: var(--dark);
-	opacity: 0;
-	animation: slidein 12s infinite;
-	animation-delay: 2.2s;
-}
-@keyframes slidein {
-	0%,
-	2% {
-		opacity: 0;
-		transform: translateX(-40px);
-	}
-	9%,
-	86% {
-		opacity: 1;
-		transform: none;
-	}
-	94%,
-	100% {
-		opacity: 0;
-	}
-}
-.ab .btn3::after {
-	content: '';
+/* About scene: skill pills drift in and settle around a slowly turning ring. */
+.sk2 {
 	position: absolute;
 	inset: 0;
-	border: 2px solid var(--sage);
-	border-radius: 999px;
-	opacity: 0;
-	animation: ripple 12s infinite;
-	animation-delay: 2.2s;
+	background: #f0e7d8;
 }
-@keyframes ripple {
-	0%,
-	56% {
-		opacity: 0;
-		transform: scale(1);
-	}
-	58% {
-		opacity: 0.8;
-		transform: scale(1);
-	}
-	70%,
-	100% {
-		opacity: 0;
-		transform: scale(1.5, 2.2);
-	}
-}
-.ab .done {
+.sk2 .core {
 	position: absolute;
-	right: 10px;
-	top: 30px;
-	padding: 5px 12px;
-	border-radius: 999px;
-	background: var(--sage);
-	color: #fff;
-	font-size: 12px;
-	opacity: 0;
-	animation: pop 12s infinite;
-	animation-delay: 2.2s;
+	left: 50%;
+	top: 56%;
+	width: 34%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	border: 1.5px dashed var(--sage);
+	opacity: 0.45;
+	transform: translate(-50%, -50%);
+	animation: spin 20s linear infinite;
 }
-@keyframes pop {
-	0%,
-	60% {
-		opacity: 0;
-		transform: scale(0.6);
-	}
-	66% {
-		opacity: 1;
-		transform: scale(1.08);
-	}
-	70%,
-	86% {
-		opacity: 1;
-		transform: scale(1);
-	}
-	94%,
-	100% {
-		opacity: 0;
+@keyframes spin {
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
 	}
 }
-.cur2 {
+.pill {
 	position: absolute;
-	left: 70%;
-	top: 92%;
-	z-index: 3;
-	width: 20px;
-	height: 20px;
-	opacity: 0;
-	animation: aim 12s infinite;
-	animation-delay: 2.2s;
-	filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.25));
+	left: var(--x);
+	top: var(--y);
+	padding: 7px 15px;
+	border-radius: 999px;
+	background: #fff;
+	color: var(--sage);
+	font-size: 13px;
+	font-weight: 500;
+	box-shadow: 0 8px 18px -10px rgba(0, 0, 0, 0.3);
+	animation: settle 7s var(--d) infinite ease-in-out;
 }
-@keyframes aim {
-	0%,
-	40% {
+.pill.dk {
+	background: var(--dark);
+	color: #e8f1ee;
+}
+@keyframes settle {
+	0% {
 		opacity: 0;
-		transform: translate(160%, 160%);
+		transform: translate(var(--fx), var(--fy)) scale(0.8);
 	}
-	46% {
+	18%,
+	80% {
 		opacity: 1;
-		transform: translate(90%, 70%);
+		transform: none;
 	}
-	56% {
-		transform: translate(-120%, -60%);
-	}
-	58% {
-		transform: translate(-120%, -60%) scale(0.82);
-	}
-	62% {
-		transform: translate(-120%, -60%) scale(1);
-	}
-	74% {
+	90% {
 		opacity: 1;
-		transform: translate(-40%, 160%);
+		transform: translateY(-6px);
 	}
-	80%,
 	100% {
 		opacity: 0;
-		transform: translate(120%, 260%);
+		transform: translateY(-6px);
 	}
+}
+.sk2 .hand {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 7%;
+	text-align: center;
+	font-family: 'Caveat', cursive;
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--sage);
 }
 
 /* Sections, headings, and project cards. */
@@ -1432,9 +1260,7 @@ main.leaving .pg {
 	.js .rv,
 	.note,
 	.chipf,
-	.blk,
-	.ab .btn3,
-	.ab .done {
+	.pill {
 		opacity: 1 !important;
 		transform: none !important;
 	}
@@ -1450,8 +1276,7 @@ main.leaving .pg {
 	.sk::after {
 		transform: scaleX(1) !important;
 	}
-	.cur,
-	.cur2 {
+	.cur {
 		display: none;
 	}
 	.card .img img {

@@ -59,9 +59,9 @@
 					class="arch"
 					style="animation-delay: 0.2s"
 					role="img"
-					aria-label="Blocks dropping into place to build a web page, then a click publishes it"
+					aria-label="Skill tags drifting in and settling around a ring"
 				>
-					<div class="in"><BuildScene variant="blocks" /></div>
+					<div class="in"><BuildScene variant="skills" /></div>
 				</div>
 			</div>
 		</div>

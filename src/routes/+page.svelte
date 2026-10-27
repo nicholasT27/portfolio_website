@@ -1,129 +1,89 @@
 <script>
 	import { featuredProjects } from '$lib/projects';
+	import BuildScene from '$lib/BuildScene.svelte';
+	import ProjectCard from '$lib/ProjectCard.svelte';
 	import Testimonial from '$lib/Testimonial.svelte';
 </script>
 
 <svelte:head><title>Siang — Web Developer</title></svelte:head>
 
-<div class="page">
-	<section
-		class="hero home-hero"
-		data-bg="#241038"
-		data-ink="#fdf0f7"
-		data-tx="mesh:1"
-		data-label="Hello"
-	>
-		<i class="sh s1" data-d="34" aria-hidden="true" />
-		<i class="sh s2" data-d="-26" aria-hidden="true" />
-		<div class="in hero-grid">
-			<div class="hero-copy">
-				<p class="eyebrow">WEB DEVELOPER · MALAYSIA</p>
-				<h1 class="display">
-					<span class="w" style="--k:0">I</span>
-					<span class="w" style="--k:1">turn</span>
-					<span class="w" style="--k:2">ideas</span>
-					<span class="w" style="--k:3">into</span>
-					<em>useful</em>
-					<span class="w" style="--k:5">digital</span>
-					<span class="w" style="--k:6">things.</span>
-				</h1>
-				<div class="hero-bottom">
-					<p>
-						I’m Siang, a developer focused on clean interfaces, thoughtful interactions, and web
-						experiences that feel effortless to use.
-					</p>
-					<div class="button-row">
-						<a class="btn primary" href="/portfolio">Explore my work <span>↗</span></a>
-						<a class="btn light" href="/about">More about me</a>
-					</div>
-				</div>
-				<div class="cue"><i />Scroll</div>
-			</div>
-
-			<div class="hero-art">
-				<div class="sticker">
-					<div class="disc" />
-					<div class="code-mark hero-code-mark" aria-hidden="true">
-						<span>&lt;</span><strong>/</strong><span>&gt;</span>
-					</div>
-					<svg class="orb-ring" viewBox="0 0 200 200" aria-hidden="true">
-						<defs>
-							<path id="ring" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0" />
-						</defs>
-						<text>
-							<textPath href="#ring"
-								>AVAILABLE FOR PROJECTS · OPEN TO NEW OPPORTUNITIES ·
-							</textPath>
-						</text>
-					</svg>
-				</div>
-			</div>
-		</div>
-
-		<div class="mq" aria-hidden="true">
-			<div>
-				SVELTEKIT · JAVASCRIPT · RESPONSIVE UI · TAILWIND CSS · NODE.JS · ACCESSIBLE EXPERIENCES ·
-				SVELTEKIT · JAVASCRIPT · RESPONSIVE UI · TAILWIND CSS · NODE.JS · ACCESSIBLE EXPERIENCES ·
-				SVELTEKIT · JAVASCRIPT · RESPONSIVE UI · TAILWIND CSS · NODE.JS · ACCESSIBLE EXPERIENCES ·
-				SVELTEKIT · JAVASCRIPT · RESPONSIVE UI · TAILWIND CSS · NODE.JS · ACCESSIBLE EXPERIENCES ·
-			</div>
-		</div>
-	</section>
-
-	<section
-		class="say section-intro"
-		data-bg="#10264a"
-		data-ink="#eaf3ff"
-		data-tx="aurora:1,dots:.5"
-		data-label="Selected work"
-	>
-		<div class="ghost" aria-hidden="true">CRAFT</div>
-		<div class="in">
-			<p class="eyebrow">
-				SELECTED WORK / 01—{String(featuredProjects.length).padStart(2, '0')}
+<div class="pg">
+	<div class="wrap hero">
+		<div class="copy">
+			<p class="hi ln"><span style="--d:.15s">Hi, I’m</span></p>
+			<h1 class="name ln"><span style="--d:.28s">Siang</span></h1>
+			<p class="role ln"><span style="--d:.42s">Frontend Developer</span></p>
+			<p class="lede fade" style="--d:.7s">
+				I build clean and functional web experiences with a focus on modern technologies and
+				user-friendly design.
 			</p>
-			<h2 class="big" data-words>A few projects where <em>code meets craft.</em></h2>
-		</div>
-	</section>
-
-	<section
-		class="feat"
-		data-bg="#3a1030"
-		data-ink="#ffeef6"
-		data-tx="mesh:1"
-		data-label="Featured projects"
-	>
-		<div class="in">
-			<div class="stack">
-				<!-- Curated cards share their content with the complete work archive. -->
-				{#each featuredProjects as project, index}
-					<a
-						class="sc project-card"
-						style="--i:{index}; background:{project.theme.bg}; color:{project.theme.ink}"
-						href={project.live}
-						target="_blank"
-						rel="noreferrer"
-					>
-						<div class="sc-info project-info">
-							<span class="project-index"
-								>{String(index + 1).padStart(2, '0')}{project.category === 'client'
-									? ' / CLIENT PROJECT'
-									: index === 0
-									? ' / FEATURED'
-									: ''}</span
-							>
-							<h2>{project.title}</h2>
-							<p>{project.homeDescription ?? project.description}</p>
-							<div class="tag-list">
-								{#each project.tags as tag}<span class="tag">{tag}</span>{/each}
-							</div>
-						</div>
-						<div class="dev project-visual">
-							<img src={project.image} alt={`${project.title} project interface`} />
-						</div>
-					</a>
-				{/each}
+			<div class="btns fade" style="--d:.9s">
+				<a class="btn" href="/portfolio"
+					>View My Work
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.6"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg
+					></a
+				>
+				<a class="lnk" href="/contact"
+					>Get in Touch
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.6"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg
+					></a
+				>
 			</div>
+		</div>
+
+		<div class="art">
+			<div
+				class="arch"
+				role="img"
+				aria-label="A wireframe of a web page filling in with colour, block by block"
+			>
+				<div class="in"><BuildScene variant="wireframe" /></div>
+			</div>
+			<span class="chipf">Wireframe</span>
+			<span class="chipf">Component</span>
+			<span class="chipf">Live</span>
+			<div class="note">
+				Turning ideas into websites
+				<svg viewBox="0 0 110 22" aria-hidden="true"><path d="M2 18 C 30 4, 70 4, 108 12" /></svg>
+			</div>
+		</div>
+	</div>
+
+	<section class="sec wrap">
+		<div class="sh">
+			<h2 class="rv">Featured Projects</h2>
+			<a class="lnk rv" href="/portfolio"
+				>View All Projects
+				<svg
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.6"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg
+				></a
+			>
+		</div>
+		<div class="cards">
+			<!-- Featured cards share their content with the full project archive. -->
+			{#each featuredProjects as project, index}
+				<ProjectCard {project} {index} />
+			{/each}
 		</div>
 	</section>
 

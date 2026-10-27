@@ -1,178 +1,150 @@
+<script>
+	import BuildScene from '$lib/BuildScene.svelte';
+</script>
+
 <svelte:head><title>About — Siang</title></svelte:head>
 
-<div class="page">
-	<section
-		class="hero inner-hero"
-		data-bg="#3a1030"
-		data-ink="#ffeef6"
-		data-tx="mesh:1,half:.5"
-		data-label="The person behind the code"
-	>
-		<div class="ghost" aria-hidden="true">HELLO</div>
-		<div class="in inner-grid">
-			<div class="inner-kicker">
-				<p class="eyebrow">THE PERSON BEHIND THE CODE</p>
-				<span class="number">02</span>
-			</div>
-			<div class="inner-title">
-				<h1 class="display">
-					<span class="w" style="--k:0">Curious</span> <span class="w" style="--k:1">by</span>
-					<em>default.</em>
-				</h1>
-				<p>
-					I care about the details that make digital products feel clear, capable, and genuinely
-					pleasant to use.
-				</p>
-				<div class="cue"><i />Scroll</div>
-			</div>
-		</div>
-	</section>
+<div class="pg">
+	<div class="wrap pagehead">
+		<p class="eyebrow ln"><span style="--d:.1s">The person behind the code</span></p>
+		<h1 class="ln"><span style="--d:.2s">Curious by default.</span></h1>
+		<p class="fade" style="--d:.5s">
+			I care about the details that make digital products feel clear, capable, and genuinely
+			pleasant to use.
+		</p>
+	</div>
 
-	<section
-		class="story about-grid"
-		data-bg="#10264a"
-		data-ink="#eaf3ff"
-		data-tx="aurora:1,dots:.5"
-		data-label="Hello, I’m Siang"
-	>
-		<div class="in story-grid">
-			<div class="about-portrait">
-				<div class="sticker">
-					<div class="disc" />
-					<div class="code-mark about-code-mark" aria-hidden="true">
-						<span>&lt;</span><strong>/</strong><span>&gt;</span>
-					</div>
-				</div>
-				<p>Thoughtful interfaces.<br />Practical code.<br />Continuous learning.</p>
-			</div>
-			<div class="about-copy">
-				<p class="eyebrow">HELLO, I’M SIANG</p>
-				<h2 data-words>A developer who enjoys turning rough ideas into polished experiences.</h2>
-				<p class="rv">
+	<section class="sec wrap">
+		<div class="two">
+			<div>
+				<p class="eyebrow rv">Hello, I’m Siang</p>
+				<h2 class="rv">A developer who enjoys turning rough ideas into polished experiences.</h2>
+				<p class="body rv">
 					I build responsive websites and web applications with a focus on clean structure,
 					intuitive interactions, and accessible experiences.
 				</p>
-				<p class="rv">
+				<p class="body rv">
 					I’m happiest when I’m learning something new, untangling a tricky problem, or helping a
 					product become simpler for the people using it.
 				</p>
-				<div class="button-row rv" style="margin-top: 22px;">
-					<a class="btn primary" href="/portfolio">See my projects <span>↗</span></a><a
-						class="btn light"
-						href="/contact">Get in touch</a
+				<div class="btns rv" style="margin-top: 26px">
+					<a class="btn" href="/portfolio"
+						>See my projects
+						<svg
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.6"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg
+						></a
 					>
+					<a class="lnk" href="/contact"
+						>Get in touch
+						<svg
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.6"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg
+						></a
+					>
+				</div>
+			</div>
+			<div class="art">
+				<div
+					class="arch"
+					style="animation-delay: 0.2s"
+					role="img"
+					aria-label="Blocks dropping into place to build a web page, then a click publishes it"
+				>
+					<div class="in"><BuildScene variant="blocks" /></div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section
-		class="skills"
-		data-bg="#0f2f35"
-		data-ink="#e6fffb"
-		data-tx="mesh:.8,waves:.6"
-		data-label="What I bring"
-	>
-		<div class="in">
-			<p class="eyebrow">WHAT I BRING</p>
-			<h2>Capabilities <em>&amp; tools</em></h2>
-			<div class="skills-grid">
-				<div class="skill-block rv">
-					<span>01</span>
-					<h3>Front-end development</h3>
-					<p>
-						Responsive, component-based interfaces with HTML, CSS, JavaScript, React, SvelteKit, and
-						Tailwind CSS.
-					</p>
-				</div>
-				<div class="skill-block rv" style="--d:.1s">
-					<span>02</span>
-					<h3>Product-minded UI</h3>
-					<p>
-						Interfaces shaped around hierarchy, clarity, accessible patterns, and the needs behind
-						each screen.
-					</p>
-				</div>
-				<div class="skill-block rv" style="--d:.2s">
-					<span>03</span>
-					<h3>Back-end foundations</h3>
-					<p>
-						Practical experience with Node.js, APIs, PocketBase, AWS, Docker, and automation
-						workflows.
-					</p>
-				</div>
+	<section class="sec wrap">
+		<p class="eyebrow rv">What I bring</p>
+		<div class="sh"><h2 class="rv">Capabilities &amp; tools</h2></div>
+		<div class="cols3">
+			<div class="box rv">
+				<i>01</i>
+				<h3>Front-end development</h3>
+				<p>
+					Responsive, component-based interfaces with HTML, CSS, JavaScript, React, SvelteKit, and
+					Tailwind CSS.
+				</p>
+			</div>
+			<div class="box rv" style="--d:.1s">
+				<i>02</i>
+				<h3>Product-minded UI</h3>
+				<p>
+					Interfaces shaped around hierarchy, clarity, accessible patterns, and the needs behind
+					each screen.
+				</p>
+			</div>
+			<div class="box rv" style="--d:.2s">
+				<i>03</i>
+				<h3>Back-end foundations</h3>
+				<p>
+					Practical experience with Node.js, APIs, PocketBase, AWS, Docker, and automation
+					workflows.
+				</p>
 			</div>
 		</div>
 	</section>
 
-	<section
-		class="timeline"
-		data-bg="#241038"
-		data-ink="#fdf0f7"
-		data-tx="aurora:1"
-		data-label="Learning journey"
-	>
-		<div class="in">
-			<p class="eyebrow">LEARNING JOURNEY</p>
-			<h2>Education</h2>
-			<div class="tlw" data-draw>
-				<div class="line"><i /></div>
-				<div class="timeline-row rv">
-					<time>JUL 2023</time>
-					<div>
-						<h3>Next Academy — Full Stack Web Development</h3>
-						<p>Certificate of Completion</p>
-					</div>
-				</div>
-				<div class="timeline-row rv" style="--d:.1s">
-					<time>2027 · EXPECTED</time>
-					<div>
-						<h3>Wawasan Open University</h3>
-						<p>Bachelor of Information Technology (Hons), Computer Systems and Networks</p>
-					</div>
-				</div>
+	<section class="sec wrap">
+		<p class="eyebrow rv">Learning journey</p>
+		<div class="sh"><h2 class="rv">Education</h2></div>
+		<div class="tl" data-draw>
+			<i class="fill" />
+			<div class="it rv">
+				<time>JUL 2023</time>
+				<h3>Next Academy — Full Stack Web Development</h3>
+				<p>Certificate of Completion</p>
+			</div>
+			<div class="it rv" style="--d:.1s">
+				<time>2027 · EXPECTED</time>
+				<h3>Wawasan Open University</h3>
+				<p>Bachelor of Information Technology (Hons), Computer Systems and Networks</p>
 			</div>
 		</div>
 	</section>
 
-	<section
-		class="documents"
-		data-bg="#3a1030"
-		data-ink="#ffeef6"
-		data-tx="mesh:1,half:.5"
-		data-label="Documents"
-	>
-		<div class="in">
-			<div class="documents-heading">
-				<p class="eyebrow">DOCUMENTS / 01—02</p>
-				<h2>Résumé <em>&amp; credentials</em></h2>
-			</div>
-			<div class="documents-grid">
-				<article class="document-card rv">
-					<span>01</span>
-					<div>
-						<p class="document-type">RÉSUMÉ</p>
-						<h3>Experience, education, and technical skills.</h3>
-					</div>
-					<a
-						href="https://drive.google.com/file/d/17U7lxEtt_aCQndFmK9MwfnHy6z7P5BKO/view?usp=share_link"
-						target="_blank"
-						rel="noreferrer">View résumé <span>↗</span></a
-					>
-				</article>
-				<article class="document-card accent rv" style="--d:.1s">
-					<span>02</span>
-					<div>
-						<p class="document-type">CERTIFICATE</p>
-						<h3>Full Stack Web Development — Next Academy.</h3>
-					</div>
-					<a
-						href="https://drive.google.com/file/d/1TC5cQ-ors8yiV2AKKXMkgwWDJolJhBmW/view?usp=drive_link"
-						target="_blank"
-						rel="noreferrer">View certificate <span>↗</span></a
-					>
-				</article>
-			</div>
+	<section class="sec wrap">
+		<p class="eyebrow rv">Documents / 01—02</p>
+		<div class="sh"><h2 class="rv">Résumé &amp; credentials</h2></div>
+		<div class="docs">
+			<a
+				class="doc dk rv"
+				href="https://drive.google.com/file/d/17U7lxEtt_aCQndFmK9MwfnHy6z7P5BKO/view?usp=share_link"
+				target="_blank"
+				rel="noreferrer"
+			>
+				<div>
+					<span>RÉSUMÉ</span>
+					<h3>Experience, education, and technical skills.</h3>
+				</div>
+				<u>View résumé ↗</u>
+			</a>
+			<a
+				class="doc rv"
+				style="--d:.1s"
+				href="https://drive.google.com/file/d/1TC5cQ-ors8yiV2AKKXMkgwWDJolJhBmW/view?usp=drive_link"
+				target="_blank"
+				rel="noreferrer"
+			>
+				<div>
+					<span>CERTIFICATE</span>
+					<h3>Full Stack Web Development — Next Academy.</h3>
+				</div>
+				<u>View certificate ↗</u>
+			</a>
 		</div>
 	</section>
 </div>

@@ -2,76 +2,66 @@
 	import { onMount, tick } from 'svelte';
 	import { afterNavigate, beforeNavigate, goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { createDusk } from '$lib/dusk';
+	import { createQuiet } from '$lib/quiet';
 	import '../app.css';
 
 	const links = [
 		{ href: '/', label: 'Home' },
-		{ href: '/portfolio', label: 'Work' },
 		{ href: '/about', label: 'About' },
+		{ href: '/portfolio', label: 'Projects' },
 		{ href: '/contact', label: 'Contact' }
 	];
 
-	// What the page-change curtain shows for each destination.
-	const curtains = {
-		'/': { text: 'Siang', bg: '#241038' },
-		'/portfolio': { text: 'Work', bg: '#241038' },
-		'/about': { text: 'About', bg: '#3a1030' },
-		'/contact': { text: 'Contact', bg: '#241038' }
-	};
-
-	let dusk;
-	let curtain;
-	let curtainText = '';
-	let curtainBg = '#241038';
-	let covering = false;
+	let quiet;
+	let leaving = false;
 	let passing = false;
+	let markLeft = 0;
+	let markWidth = 0;
+
+	// Slide the underline marker under the current page's link.
+	function placeMark() {
+		const current = document.querySelector('.main-nav a.on');
+		if (!current) return;
+		markLeft = current.offsetLeft + 14;
+		markWidth = current.offsetWidth - 28;
+	}
 
 	onMount(() => {
-		dusk = createDusk();
-		dusk.mount();
-		return () => dusk.destroy();
+		quiet = createQuiet();
+		quiet.mount();
+		placeMark();
+		window.addEventListener('resize', placeMark);
+		if (document.fonts && document.fonts.ready) document.fonts.ready.then(placeMark);
+		return () => {
+			quiet.destroy();
+			window.removeEventListener('resize', placeMark);
+		};
 	});
 
 	afterNavigate(async () => {
 		await tick();
-		if (dusk) dusk.refresh();
+		placeMark();
+		if (quiet) quiet.refresh();
 	});
 
-	// A colour curtain wipes across the screen between pages.
+	// The old page fades up and away before the next one rises in.
 	beforeNavigate((navigation) => {
-		if (passing || covering || !navigation.to) return;
+		if (passing || leaving || !navigation.to) return;
 		if (navigation.type !== 'link' && navigation.type !== 'goto') return;
 		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 		const target = navigation.to.url;
 		if (target.pathname === $page.url.pathname) return;
 		navigation.cancel();
-		runCurtain(target);
+		leave(target);
 	});
 
-	async function runCurtain(target) {
-		covering = true;
-		const style = curtains[target.pathname] || curtains['/'];
-		curtainText = style.text;
-		curtainBg = style.bg;
-		await tick();
-		const cover = curtain.animate(
-			[{ transform: 'translateY(101%)' }, { transform: 'translateY(0)' }],
-			{ duration: 420, easing: 'cubic-bezier(.7,0,.2,1)', fill: 'forwards' }
-		);
-		await cover.finished;
+	async function leave(target) {
+		leaving = true;
+		await new Promise((resolve) => setTimeout(resolve, 240));
 		passing = true;
 		await goto(target.pathname + target.search + target.hash);
 		passing = false;
-		await tick();
-		if (dusk) dusk.refresh();
-		const reveal = curtain.animate(
-			[{ transform: 'translateY(0)' }, { transform: 'translateY(-101%)' }],
-			{ duration: 520, easing: 'cubic-bezier(.7,0,.2,1)', fill: 'forwards' }
-		);
-		await reveal.finished;
-		curtain.getAnimations().forEach((animation) => animation.cancel());
-		covering = false;
+		leaving = false;
 	}
 </script>
 
@@ -82,63 +72,45 @@
 	/>
 </svelte:head>
 
-<!-- Fixed backdrop: colour and texture layers that the scroll effects blend between. -->
-<div class="bd" aria-hidden="true">
-	<div class="t-dots" data-layer="dots" />
-	<div class="t-stripes" data-layer="stripes" />
-	<div class="t-grid" data-layer="grid" />
-	<div class="t-half" data-layer="half" />
-	<div class="t-waves" data-layer="waves" />
-	<div class="t-mesh" data-layer="mesh" />
-	<div class="t-aurora" data-layer="aurora"><i /><i /><i /></div>
-	<div class="t-grain" id="grain" />
-</div>
+<div class="fx" aria-hidden="true"><i /><i /><i /></div>
 <div class="prog" id="prog" aria-hidden="true" />
-<div class="curtain" bind:this={curtain} style="background: {curtainBg}" aria-hidden="true">
-	{curtainText}
-</div>
 
 <div class="site-shell">
-	<header class="site-header">
-		<a class="brand" href="/" aria-label="Siang, home">
-			<span class="brand-mark">S</span>
-			<span class="brand-name">Siang</span>
-		</a>
-
-		<nav class="main-nav" aria-label="Main navigation">
-			{#each links as link, index}
-				<a
-					class:active={$page.url.pathname === link.href}
-					aria-current={$page.url.pathname === link.href ? 'page' : undefined}
-					href={link.href}
-				>
-					<span>0{index + 1}</span>{link.label}
-				</a>
-			{/each}
-		</nav>
-
-		<a class="availability" href="/contact"><span />Available for projects</a>
+	<header class="site-header" id="site-header">
+		<div class="wrap">
+			<a class="brand" href="/" aria-label="Siang, home">Siang</a>
+			<nav class="main-nav" aria-label="Main navigation">
+				{#each links as link}
+					<a
+						class:on={$page.url.pathname === link.href}
+						aria-current={$page.url.pathname === link.href ? 'page' : undefined}
+						href={link.href}>{link.label}</a
+					>
+				{/each}
+				<i class="mark" style="left: {markLeft}px; width: {markWidth}px" />
+			</nav>
+		</div>
 	</header>
 
-	<main><slot /></main>
+	<main class:leaving><slot /></main>
 
-	<footer
-		class="site-footer"
-		data-bg="#0f2f35"
-		data-ink="#e6fffb"
-		data-tx="aurora:1"
-		data-label="Let's talk"
-	>
-		<div class="in footer-inner">
-			<div>
-				<p class="eyebrow">LET'S BUILD SOMETHING USEFUL</p>
-				<a class="footer-cta" data-magnet href="/contact">Start a conversation <span>↗</span></a>
-			</div>
-			<div class="footer-meta">
-				<p>Based in Malaysia · © {new Date().getFullYear()}</p>
-			</div>
+	<footer class="site-footer wrap">
+		<p class="eyebrow rv">Let’s build something useful</p>
+		<a class="big rv" href="/contact"
+			>Start a conversation
+			<svg
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="1.6"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" /></svg
+			></a
+		>
+		<div class="meta rv">
+			<span>Based in Malaysia</span>
+			<span>© {new Date().getFullYear()} Siang</span>
 		</div>
 	</footer>
 </div>
-
-<div class="chip" id="chip" aria-hidden="true">Hello</div>

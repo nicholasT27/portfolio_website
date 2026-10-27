@@ -1245,6 +1245,18 @@ main.leaving .pg {
 		font-size: 22px;
 	}
 }
+@media (max-width: 380px) {
+	.main-nav {
+		gap: 0;
+	}
+	.main-nav a {
+		padding: 8px 6px;
+		font-size: 13px;
+	}
+	.brand {
+		font-size: 20px;
+	}
+}
 
 /* Respect system accessibility preferences for all decorative motion. */
 @media (prefers-reduced-motion: reduce) {

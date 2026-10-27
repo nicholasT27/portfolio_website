@@ -1158,11 +1158,6 @@ main.leaving .pg {
 .fld:focus-within::after {
 	transform: scaleX(1);
 }
-.note2 {
-	margin-top: 14px;
-	font-size: 13px;
-	color: var(--faint);
-}
 
 /* Footer. */
 .site-footer {

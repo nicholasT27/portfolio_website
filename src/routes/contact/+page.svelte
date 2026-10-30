@@ -1,7 +1,20 @@
 <script>
+	// Siang's WhatsApp number in international format, digits only (no "+", spaces or dashes).
+	const WHATSAPP_NUMBER = '60123456789';
+
+	let name = '';
+	let phone = '';
+	let message = '';
 	let sent = false;
-	// Prototype-only interaction: keep the form local until a delivery service is chosen.
-	function previewSubmit() {
+
+	// Opens WhatsApp with the form details pre-filled so the visitor only has to press send.
+	function sendToWhatsApp() {
+		const text = `Hi Siang, I'm ${name}.\n\n${message}\n\nContact number: ${phone}`;
+		window.open(
+			`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,
+			'_blank',
+			'noopener'
+		);
 		sent = true;
 	}
 </script>
@@ -25,7 +38,7 @@
 			</h1>
 			<p class="lede">
 				Whether it’s a freelance opportunity, a collaboration, or simply a good conversation about
-				the web, my inbox is open.
+				the web, my WhatsApp is open.
 			</p>
 			<div class="cue"><i />Scroll</div>
 		</div>
@@ -40,7 +53,7 @@
 	>
 		<div class="in">
 			<h2 class="form-title">Tell me about your project.</h2>
-			<form on:submit|preventDefault={previewSubmit}>
+			<form on:submit|preventDefault={sendToWhatsApp}>
 				<div class="field rv">
 					<label for="name">Your name</label><input
 						id="name"
@@ -68,11 +81,11 @@
 				</div>
 				<div class="rv">
 					<button class="btn primary" type="submit"
-						>{sent ? 'Prototype received ✓' : 'Send message'} <span>↗</span></button
+						>{sent ? 'Opened in WhatsApp ✓' : 'Send via WhatsApp'} <span>↗</span></button
 					>
 				</div>
 				<p class="prototype-note">
-					Prototype preview: this form demonstrates the interaction but does not send data yet.
+					Sending opens WhatsApp with your details pre-filled; press send there to deliver them.
 				</p>
 			</form>
 		</div>

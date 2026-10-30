@@ -7,7 +7,7 @@
 		<p class="eyebrow">Client testimonial</p>
 		<blockquote>“{testimonial.quote}”</blockquote>
 		<figcaption class="qby">
-			<span class="qav" aria-hidden="true">{testimonial.name.charAt(0)}</span>
+			<span class="qav" aria-hidden="true">✓</span>
 			<div>
 				<b>{testimonial.name}</b>
 				<span>{testimonial.role}</span>

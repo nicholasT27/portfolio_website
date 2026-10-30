@@ -58,16 +58,18 @@
 					<label for="name">Your name</label><input
 						id="name"
 						name="name"
+						bind:value={name}
 						placeholder="How should I address you?"
 						required
 					/>
 				</div>
 				<div class="field rv">
-					<label for="email">Email address</label><input
-						id="email"
-						name="email"
-						type="email"
-						placeholder="you@example.com"
+					<label for="phone">Contact number</label><input
+						id="phone"
+						name="phone"
+						type="tel"
+						bind:value={phone}
+						placeholder="+60 12-345 6789"
 						required
 					/>
 				</div>
@@ -75,6 +77,7 @@
 					<label for="message">Project or message</label><textarea
 						id="message"
 						name="message"
+						bind:value={message}
 						placeholder="A little context goes a long way..."
 						required
 					/>

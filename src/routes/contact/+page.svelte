@@ -1,7 +1,16 @@
 <script>
+	// The form opens WhatsApp with the details pre-filled; the visitor taps send there.
+	const whatsapp = '601165533097';
 	let sent = false;
-	// Prototype-only interaction: keep the form local until a delivery service is chosen.
-	function previewSubmit() {
+	function sendToWhatsApp(event) {
+		const data = new FormData(event.currentTarget);
+		const text = [
+			'Hi Siang, I found you through your portfolio.',
+			`Name: ${data.get('name')}`,
+			`Contact number: ${data.get('phone')}`,
+			`Message: ${data.get('message')}`
+		].join('\n');
+		window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
 		sent = true;
 	}
 </script>
@@ -20,7 +29,7 @@
 
 	<section class="sec wrap" style="max-width: 820px">
 		<p class="eyebrow rv">Tell me about your project</p>
-		<form on:submit|preventDefault={previewSubmit}>
+		<form on:submit|preventDefault={sendToWhatsApp}>
 			<div class="fld rv">
 				<label for="name">Your name</label><input
 					id="name"
@@ -30,11 +39,13 @@
 				/>
 			</div>
 			<div class="fld rv">
-				<label for="email">Email address</label><input
-					id="email"
-					name="email"
-					type="email"
-					placeholder="you@example.com"
+				<label for="phone">Contact number</label><input
+					id="phone"
+					name="phone"
+					type="tel"
+					inputmode="tel"
+					autocomplete="tel"
+					placeholder="e.g. 012 345 6789"
 					required
 				/>
 			</div>
@@ -48,7 +59,7 @@
 				/>
 			</div>
 			<button class="btn rv" type="submit"
-				>{sent ? 'Prototype received ✓' : 'Send message'}
+				>{sent ? 'Opening WhatsApp ✓' : 'Send via WhatsApp'}
 				<svg
 					viewBox="0 0 24 24"
 					fill="none"

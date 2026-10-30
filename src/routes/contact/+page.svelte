@@ -1,6 +1,6 @@
 <script>
 	// Siang's WhatsApp number in international format, digits only (no "+", spaces or dashes).
-	const WHATSAPP_NUMBER = '60123456789';
+	const WHATSAPP_NUMBER = '601165533097';
 
 	let name = '';
 	let phone = '';

@@ -11,22 +11,27 @@
 	const proof = [
 		{ label: 'Trained', value: 'Full Stack Web Development, Next Academy' },
 		{ label: 'Studying', value: 'BIT (Hons), Wawasan Open University' },
-		{ label: 'Background', value: 'eCommerce on Shopee, Lazada and TikTok Shop' },
+		{ label: 'Focus', value: 'Landing pages and small business websites' },
 		{ label: 'Builds with', value: 'Next.js, React and Tailwind CSS' }
 	];
 
+	// The four kinds of website I'm currently focused on.
 	const services = [
 		{
-			title: 'Business websites',
-			text: 'A custom-coded site that looks professional on phones and laptops, shows what you offer, and makes it easy for customers to contact you.'
+			title: 'A landing page',
+			text: 'One focused page that explains your offer and gets visitors to take the next step.'
 		},
 		{
-			title: 'WordPress edits and updates',
-			text: 'Already have a WordPress site? I can update content, fix layouts and add pages without rebuilding it from scratch.'
+			title: 'A small business website',
+			text: 'A few clear pages that show what you do and make it easy for customers to reach you.'
 		},
 		{
-			title: 'eCommerce setup and management',
-			text: 'Help with running your online store on Shopee, Lazada or TikTok Shop, backed by hands-on experience with all three.'
+			title: 'A portfolio website',
+			text: 'A site that presents your work, skills and story in one clear, professional place.'
+		},
+		{
+			title: 'A simple product or service website',
+			text: 'A straightforward site that presents what you offer, with clear details and a way to enquire.'
 		}
 	];
 
@@ -60,8 +65,8 @@
 				<span style="--d:.28s">I build fast, mobile-friendly websites for small businesses.</span>
 			</h1>
 			<p class="lede fade" style="--d:.7s">
-				Custom-coded sites and online store help, from a developer with a background in eCommerce
-				operations on Shopee, Lazada and TikTok Shop.
+				Custom-coded landing pages, small business sites, portfolios, and simple product or service
+				websites.
 			</p>
 			<div class="btns fade" style="--d:.9s">
 				<a class="btn" href={chat} target="_blank" rel="noreferrer"
@@ -124,9 +129,9 @@
 	</section>
 
 	<section class="sec wrap">
-		<p class="eyebrow rv">What I can help with</p>
-		<div class="sh"><h2 class="rv">Websites and online stores for small businesses</h2></div>
-		<div class="cols3">
+		<p class="eyebrow rv">Currently focused on</p>
+		<div class="sh"><h2 class="rv">Perfect if you need:</h2></div>
+		<div class="cols4">
 			{#each services as service, i}
 				<div class="box rv" style="--d:{i * 0.1}s">
 					<i>0{i + 1}</i>

@@ -55,7 +55,7 @@
 						id="message"
 						name="message"
 						rows="3"
-						placeholder="What does your business do, and what do you need? A new website, updates, or help with an online store?"
+						placeholder="What does your business do, and what do you need? A landing page, business website, portfolio, or product or service site?"
 						required
 					/>
 				</div>
@@ -89,7 +89,7 @@
 				<h3>Helpful to include</h3>
 				<ul>
 					<li>What your business does</li>
-					<li>What you need: a new site, updates, or store help</li>
+					<li>What you need: a landing page, business, portfolio, or product site</li>
 					<li>Any examples of sites you like</li>
 					<li>When you’d like it ready</li>
 				</ul>

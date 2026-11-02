@@ -8,10 +8,10 @@
 <div class="pg">
 	<div class="wrap pagehead">
 		<p class="eyebrow ln"><span style="--d:.1s">About me</span></p>
-		<h1 class="ln"><span style="--d:.2s">Developer with an eCommerce background.</span></h1>
+		<h1 class="ln"><span style="--d:.2s">Web developer for small businesses.</span></h1>
 		<p class="fade" style="--d:.5s">
-			I build websites for small businesses in Malaysia, and I understand what online sellers need
-			because I’ve worked on the platforms they sell on.
+			I build clear, fast websites for small businesses in Malaysia, designed to work well on phones
+			and laptops.
 		</p>
 	</div>
 
@@ -22,12 +22,12 @@
 				<h2 class="rv">Practical websites, built with care.</h2>
 				<p class="body rv">
 					I’m a freelance web developer based in Selangor, Malaysia. I build responsive websites
-					with Next.js, React and Tailwind CSS, and I also take on WordPress edits and eCommerce
-					platform management.
+					with Next.js, React and Tailwind CSS, from landing pages and small business sites to
+					portfolios and simple product or service websites.
 				</p>
 				<p class="body rv">
-					My background is in eCommerce operations on Shopee, Lazada and TikTok Shop. That is why I
-					care about pages that are clear and simple for customers to use.
+					I care about clean structure and pages that are simple for customers to use, from the
+					first message to launch.
 				</p>
 				<div class="btns rv" style="margin-top: 26px">
 					<a class="btn" href="/portfolio"

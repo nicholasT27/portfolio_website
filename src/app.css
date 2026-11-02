@@ -1502,3 +1502,20 @@ main.leaving .pg {
 		gap: 20px;
 	}
 }
+
+/* Four service cards: four across on desktop, two on tablet, one on phones. */
+.cols4 {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 24px;
+}
+@media (max-width: 960px) {
+	.cols4 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+@media (max-width: 520px) {
+	.cols4 {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}

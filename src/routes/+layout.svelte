@@ -69,7 +69,7 @@
 <svelte:head>
 	<meta
 		name="description"
-		content="Siang is a freelance web developer in Selangor, Malaysia, building websites and online store setups for small businesses."
+		content="Siang is a freelance web developer in Selangor, Malaysia, building landing pages, small business websites, portfolios, and simple product or service websites."
 	/>
 </svelte:head>
 

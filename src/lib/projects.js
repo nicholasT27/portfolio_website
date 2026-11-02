@@ -9,6 +9,10 @@ export const projects = [
 			'A portfolio website for a digital marketer and content creator, presenting services, campaign work and contact in one clear, responsive site.',
 		homeDescription:
 			'A portfolio website for a digital marketer and content creator, built for a real client.',
+		brief:
+			'A portfolio site for a digital marketer and content creator, to present their services and campaign work.',
+		built:
+			'A responsive Next.js site that brings services, campaign work and contact together in one place.',
 		featured: true,
 		image: '/bhoomi-desktop.png',
 		tags: ['Next.js', 'React', 'Tailwind CSS'],
@@ -22,6 +26,7 @@ export const projects = [
 			'A job portal whose responsive layout was redesigned with the aid of Codex, helping candidates discover roles and employers manage vacancies more clearly.',
 		homeDescription:
 			'A job portal whose responsive layout was redesigned with the aid of Codex, helping candidates discover roles and employers manage vacancies more clearly.',
+		featured: true,
 		image: '/portfolio-pic-1(desktop).png',
 		tags: ['SvelteKit', 'Tailwind CSS', 'PocketBase', 'AWS'],
 		live: 'https://portfolio-next-job.pages.dev/',
@@ -59,6 +64,7 @@ export const projects = [
 		category: 'personal',
 		description: 'A clean, conversion-minded landing page with a responsive layout.',
 		homeDescription: 'A polished, responsive marketing page built with a lean front-end stack.',
+		practice: true,
 		image: '/agency-desktop.png',
 		tags: ['HTML', 'CSS', 'JavaScript'],
 		live: 'https://nicholast27.github.io/agency-landing-page/',
@@ -69,6 +75,7 @@ export const projects = [
 		title: 'Single Page Portfolio',
 		category: 'personal',
 		description: 'An earlier portfolio experiment built as a smooth single-page experience.',
+		practice: true,
 		image: '/Single-Page-Desktop.png',
 		tags: ['HTML', 'CSS', 'JavaScript'],
 		live: 'https://nicholast27.github.io/single-page-portfolio/',
@@ -80,6 +87,7 @@ export const projects = [
 		category: 'personal',
 		description: 'A responsive landing page for a tech book club.',
 		homeDescription: 'A responsive landing page for a tech book club.',
+		practice: true,
 		image: '/Techbook-Desktop.png',
 		tags: ['HTML', 'CSS'],
 		live: 'https://nicholast27.github.io/tech-book-club-landing-page/',
@@ -88,9 +96,15 @@ export const projects = [
 	}
 ];
 
-// The work page shows client work and personal projects in separate sections.
+// The work page shows client work, full projects, and earlier practice builds in separate
+// sections. `practice: true` marks small exercises that are shown compactly.
 export const clientProjects = projects.filter((project) => project.category === 'client');
-export const personalProjects = projects.filter((project) => project.category === 'personal');
+export const personalProjects = projects.filter(
+	(project) => project.category === 'personal' && !project.practice
+);
+export const practiceProjects = projects.filter((project) => project.practice);
 
-// The home page intentionally shows a smaller, curated subset.
-export const featuredProjects = projects.filter((project) => project.featured);
+// The home page leads with the client case study, then a short set of personal projects.
+export const featuredPersonal = projects.filter(
+	(project) => project.featured && project.category === 'personal'
+);

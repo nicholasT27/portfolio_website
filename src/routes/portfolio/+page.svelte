@@ -1,5 +1,5 @@
 <script>
-	import { clientProjects, personalProjects } from '$lib/projects';
+	import { clientProjects, personalProjects, practiceProjects } from '$lib/projects';
 	import ProjectCard from '$lib/ProjectCard.svelte';
 	import Testimonial from '$lib/Testimonial.svelte';
 
@@ -13,7 +13,7 @@
 		<p class="eyebrow ln"><span style="--d:.1s">Project archive</span></p>
 		<h1 class="ln"><span style="--d:.2s">Selected work.</span></h1>
 		<p class="fade" style="--d:.5s">
-			A selection of front-end projects, each built to solve a clear problem.
+			Real client work first, followed by the full-stack projects I built to sharpen my skills.
 		</p>
 	</div>
 
@@ -47,5 +47,35 @@
 				<ProjectCard {project} {index} detailed />
 			{/each}
 		</div>
+	</section>
+
+	<!-- Earlier practice builds: shown compactly so they don't compete with the work above. -->
+	<section class="sec wrap">
+		<div class="sh">
+			<div>
+				<p class="eyebrow rv">Earlier builds / {pad(practiceProjects.length)}</p>
+				<h2 class="rv">Where I practised the fundamentals</h2>
+			</div>
+		</div>
+		<ul class="mini">
+			{#each practiceProjects as project, index}
+				<li class="rv" style="--d:{index * 0.08}s">
+					<div>
+						<h3>{project.title}</h3>
+						<p>{project.description}</p>
+					</div>
+					<div class="tags">
+						{#each project.tags as tag}<span>{tag}</span>{/each}
+					</div>
+					<div class="links">
+						{#if project.live}<a href={project.live} target="_blank" rel="noreferrer">Live site ↗</a
+							>{/if}
+						{#if project.source}<a href={project.source} target="_blank" rel="noreferrer"
+								>Source code ↗</a
+							>{/if}
+					</div>
+				</li>
+			{/each}
+		</ul>
 	</section>
 </div>

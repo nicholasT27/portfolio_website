@@ -39,7 +39,21 @@
 				>
 			{/if}
 		</h3>
-		<p>{detailed ? project.description : project.homeDescription ?? project.description}</p>
+		{#if detailed && project.brief}
+			<!-- A short case study: what was asked for, and what was delivered. -->
+			<dl class="case">
+				<div>
+					<dt>The brief</dt>
+					<dd>{project.brief}</dd>
+				</div>
+				<div>
+					<dt>What I built</dt>
+					<dd>{project.built}</dd>
+				</div>
+			</dl>
+		{:else}
+			<p>{detailed ? project.description : project.homeDescription ?? project.description}</p>
+		{/if}
 		<div class="tags">
 			{#each project.tags as tag}<span>{tag}</span>{/each}
 		</div>

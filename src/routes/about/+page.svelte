@@ -1,16 +1,17 @@
 <script>
 	import BuildScene from '$lib/BuildScene.svelte';
+	import { resumeUrl, certificateUrl } from '$lib/site';
 </script>
 
 <svelte:head><title>About — Siang</title></svelte:head>
 
 <div class="pg">
 	<div class="wrap pagehead">
-		<p class="eyebrow ln"><span style="--d:.1s">The person behind the code</span></p>
-		<h1 class="ln"><span style="--d:.2s">Curious by default.</span></h1>
+		<p class="eyebrow ln"><span style="--d:.1s">About me</span></p>
+		<h1 class="ln"><span style="--d:.2s">Developer with an eCommerce background.</span></h1>
 		<p class="fade" style="--d:.5s">
-			I care about the details that make digital products feel clear, capable, and genuinely
-			pleasant to use.
+			I build websites for small businesses in Malaysia, and I understand what online sellers need
+			because I’ve worked on the platforms they sell on.
 		</p>
 	</div>
 
@@ -18,14 +19,15 @@
 		<div class="two">
 			<div>
 				<p class="eyebrow rv">Hello, I’m Siang</p>
-				<h2 class="rv">A developer who enjoys turning rough ideas into polished experiences.</h2>
+				<h2 class="rv">Practical websites, built with care.</h2>
 				<p class="body rv">
-					I build responsive websites and web applications with a focus on clean structure,
-					intuitive interactions, and accessible experiences.
+					I’m a freelance web developer based in Selangor, Malaysia. I build responsive websites
+					with Next.js, React and Tailwind CSS, and I also take on WordPress edits and eCommerce
+					platform management.
 				</p>
 				<p class="body rv">
-					I’m happiest when I’m learning something new, untangling a tricky problem, or helping a
-					product become simpler for the people using it.
+					My background is in eCommerce operations on Shopee, Lazada and TikTok Shop. That is why I
+					care about pages that are clear and simple for customers to use.
 				</p>
 				<div class="btns rv" style="margin-top: 26px">
 					<a class="btn" href="/portfolio"
@@ -41,7 +43,7 @@
 						></a
 					>
 					<a class="lnk" href="/contact"
-						>Get in touch
+						>Message me
 						<svg
 							viewBox="0 0 24 24"
 							fill="none"
@@ -114,28 +116,17 @@
 	</section>
 
 	<section class="sec wrap">
-		<p class="eyebrow rv">Documents / 01—02</p>
+		<p class="eyebrow rv">For employers / 01—02</p>
 		<div class="sh"><h2 class="rv">Résumé &amp; credentials</h2></div>
 		<div class="docs">
-			<a
-				class="doc dk rv"
-				href="https://drive.google.com/file/d/17U7lxEtt_aCQndFmK9MwfnHy6z7P5BKO/view?usp=share_link"
-				target="_blank"
-				rel="noreferrer"
-			>
+			<a class="doc dk rv" href={resumeUrl} target="_blank" rel="noreferrer">
 				<div>
 					<span>RÉSUMÉ</span>
 					<h3>Experience, education, and technical skills.</h3>
 				</div>
 				<u>View résumé ↗</u>
 			</a>
-			<a
-				class="doc rv"
-				style="--d:.1s"
-				href="https://drive.google.com/file/d/1TC5cQ-ors8yiV2AKKXMkgwWDJolJhBmW/view?usp=drive_link"
-				target="_blank"
-				rel="noreferrer"
-			>
+			<a class="doc rv" style="--d:.1s" href={certificateUrl} target="_blank" rel="noreferrer">
 				<div>
 					<span>CERTIFICATE</span>
 					<h3>Full Stack Web Development — Next Academy.</h3>

@@ -1,19 +1,7 @@
 <script>
 	import { whatsappUrl, resumeUrl } from '$lib/site';
 
-	// The form opens WhatsApp with the details pre-filled; the visitor taps send there.
-	let sent = false;
-	function sendToWhatsApp(event) {
-		const data = new FormData(event.currentTarget);
-		const text = [
-			'Hi Siang, I found you through your portfolio.',
-			`Name: ${data.get('name')}`,
-			`Contact number: ${data.get('phone')}`,
-			`Message: ${data.get('message')}`
-		].join('\n');
-		window.open(whatsappUrl(text), '_blank', 'noopener');
-		sent = true;
-	}
+	const chat = whatsappUrl('Hi Siang, I found you through your portfolio.');
 </script>
 
 <svelte:head><title>Contact — Siang</title></svelte:head>
@@ -27,40 +15,13 @@
 		</p>
 	</div>
 
-	<section class="sec wrap contact">
-		<div>
-			<p class="eyebrow rv">Tell me about your project</p>
-			<form on:submit|preventDefault={sendToWhatsApp}>
-				<div class="fld rv">
-					<label for="name">Your name</label><input
-						id="name"
-						name="name"
-						placeholder="How should I address you?"
-						required
-					/>
-				</div>
-				<div class="fld rv">
-					<label for="phone">Contact number</label><input
-						id="phone"
-						name="phone"
-						type="tel"
-						inputmode="tel"
-						autocomplete="tel"
-						placeholder="e.g. 012 345 6789"
-						required
-					/>
-				</div>
-				<div class="fld rv">
-					<label for="message">About your project</label><textarea
-						id="message"
-						name="message"
-						rows="3"
-						placeholder="What does your business do, and what do you need? A landing page, business website, portfolio, or product or service site?"
-						required
-					/>
-				</div>
-				<button class="btn rv" type="submit"
-					>{sent ? 'Opening WhatsApp ✓' : 'Send via WhatsApp'}
+	<section class="sec wrap">
+		<div class="cols3 side">
+			<div class="box rv">
+				<h3>Message me on WhatsApp</h3>
+				<p>The quickest way to reach me. Tell me what you need and I’ll reply there.</p>
+				<a class="btn" href={chat} target="_blank" rel="noreferrer"
+					>Chat on WhatsApp
 					<svg
 						viewBox="0 0 24 24"
 						fill="none"
@@ -69,20 +30,7 @@
 						stroke-linecap="round"
 						stroke-linejoin="round"
 						aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg
-					></button
-				>
-			</form>
-		</div>
-
-		<aside class="side">
-			<div class="box rv">
-				<h3>Prefer to chat directly?</h3>
-				<p>Open WhatsApp and message me straight away.</p>
-				<a
-					class="lnk"
-					href={whatsappUrl('Hi Siang, I found you through your portfolio.')}
-					target="_blank"
-					rel="noreferrer">Chat on WhatsApp ↗</a
+					></a
 				>
 			</div>
 			<div class="box rv" style="--d:.1s">
@@ -99,6 +47,6 @@
 				<p>You can read my background and credentials in my résumé.</p>
 				<a class="lnk" href={resumeUrl} target="_blank" rel="noreferrer">View résumé ↗</a>
 			</div>
-		</aside>
+		</div>
 	</section>
 </div>

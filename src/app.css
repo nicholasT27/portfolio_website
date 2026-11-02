@@ -1110,54 +1110,6 @@ main.leaving .pg {
 	font-weight: 500;
 	text-decoration: none;
 }
-.fld {
-	position: relative;
-	display: grid;
-	gap: 6px;
-	margin-bottom: 26px;
-}
-.fld label {
-	font-size: 13px;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: var(--faint);
-}
-.fld input,
-.fld textarea {
-	width: 100%;
-	padding: 10px 0;
-	background: transparent;
-	border: 0;
-	border-bottom: 1.5px solid var(--line);
-	border-radius: 0;
-	color: var(--ink);
-	font-size: 22px;
-	line-height: 1.4;
-	resize: vertical;
-	transition: border-color 0.3s;
-	--tw-ring-shadow: 0 0 #0000;
-}
-.fld input:focus,
-.fld textarea:focus {
-	outline: 0;
-	border-bottom-color: var(--sage);
-	box-shadow: none;
-}
-.fld::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	height: 2px;
-	width: 100%;
-	background: var(--sage);
-	transform: scaleX(0);
-	transform-origin: 0 50%;
-	transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.fld:focus-within::after {
-	transform: scaleX(1);
-}
 
 /* Footer. */
 .site-footer {
@@ -1343,13 +1295,7 @@ main.leaving .pg {
 	padding-bottom: 1px;
 }
 
-/* Contact page: form beside a short guide. */
-.contact {
-	display: grid;
-	grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
-	gap: clamp(32px, 6vw, 80px);
-	align-items: start;
-}
+/* Contact page: WhatsApp call to action and a short guide. */
 .side {
 	display: grid;
 	gap: 18px;
@@ -1486,9 +1432,6 @@ main.leaving .pg {
 	}
 }
 @media (max-width: 860px) {
-	.contact {
-		grid-template-columns: minmax(0, 1fr);
-	}
 	.mini li {
 		grid-template-columns: minmax(0, 1fr);
 	}

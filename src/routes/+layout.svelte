@@ -3,6 +3,7 @@
 	import { afterNavigate, beforeNavigate, goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { createQuiet } from '$lib/quiet';
+	import { resumeUrl } from '$lib/site';
 	import '../app.css';
 
 	const links = [
@@ -68,7 +69,7 @@
 <svelte:head>
 	<meta
 		name="description"
-		content="Siang — web developer building thoughtful, accessible digital products."
+		content="Siang is a freelance web developer in Selangor, Malaysia, building landing pages, small business websites, portfolios, and simple product or service websites."
 	/>
 </svelte:head>
 
@@ -95,9 +96,9 @@
 	<main class:leaving><slot /></main>
 
 	<footer class="site-footer wrap">
-		<p class="eyebrow rv">Let’s build something useful</p>
+		<p class="eyebrow rv">Have a project in mind?</p>
 		<a class="big rv" href="/contact"
-			>Start a conversation
+			>Tell me about your project
 			<svg
 				viewBox="0 0 24 24"
 				fill="none"
@@ -109,7 +110,8 @@
 			></a
 		>
 		<div class="meta rv">
-			<span>Based in Malaysia</span>
+			<span>Based in Selangor, Malaysia</span>
+			<a href={resumeUrl} target="_blank" rel="noreferrer">Résumé ↗</a>
 			<span>© {new Date().getFullYear()} Siang</span>
 		</div>
 	</footer>

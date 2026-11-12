@@ -22,8 +22,8 @@
 				<h2 class="rv">Practical websites, built with care.</h2>
 				<p class="body rv">
 					I’m a freelance web developer based in Selangor, Malaysia. I build responsive websites
-					with Next.js, React and Tailwind CSS, from landing pages and small business sites to
-					portfolios and simple product or service websites.
+					with Next.js, React, SvelteKit and Tailwind CSS, from landing pages and small business
+					sites to portfolios and simple product or service websites.
 				</p>
 				<p class="body rv">
 					I care about clean structure and pages that are simple for customers to use, from the

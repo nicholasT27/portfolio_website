@@ -12,7 +12,7 @@
 		{ label: 'Trained', value: 'Full Stack Web Development, Next Academy' },
 		{ label: 'Studying', value: 'BIT (Hons), Wawasan Open University' },
 		{ label: 'Focus', value: 'Landing pages and small business websites' },
-		{ label: 'Builds with', value: 'Next.js, React and Tailwind CSS' }
+		{ label: 'Builds with', value: 'Next.js, React, SvelteKit and Tailwind CSS' }
 	];
 
 	// The four kinds of website I'm currently focused on.
